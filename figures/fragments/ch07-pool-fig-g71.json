@@ -1,0 +1,8 @@
+{
+  "id": "ch07-pool-fig-g71",
+  "chapter": 7,
+  "caption": "Pool figure G7-1, redrawn for this book: a varactor-tuned variable-frequency oscillator built around the FET (symbol 1), feeding an amplifier/buffer built around the NPN transistor (symbol 2). The tapped inductor (symbol 7) is the oscillator's tank coil, the varactor (symbol 4) does the voltage tuning, the Zener (symbol 5) regulates the +DC rail, and the solid-core transformer (symbol 6) couples the amplified RF to the OUT terminal. Also shown: an ordinary PN diode (3), rail and coupling electrolytics (8, 10), an emitter resistor (9), and a variable resistor (11). Exam questions G7A09–G7A13 ask you to identify symbols 1, 5, 2, 6, and 7 — drill all eleven as one symbol-recognition set, and don't confuse the three diodes (3 plain, 4 varactor, 5 Zener).",
+  "kind": "original",
+  "source": "redrawn from NCVEC pool figure G7-1",
+  "spoken": "a schematic of a two-stage circuit: an FET oscillator with a tapped-inductor tank and varactor tuning on the left, an NPN amplifier on the right, a Zener regulating the supply rail, and a solid-core transformer coupling the output, with eleven numbered component symbols"
+}

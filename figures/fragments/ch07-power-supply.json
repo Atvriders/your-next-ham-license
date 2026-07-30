@@ -1,0 +1,8 @@
+{
+  "id": "ch07-power-supply",
+  "chapter": 7,
+  "caption": "A linear power supply, stage by stage, with the waveform at each step. The transformer steps the 120 V line AC up or down (and isolates). The rectifier turns AC into pulsating DC — a full-wave rectifier conducts through all 360° of the cycle, so the pulses arrive at twice the line frequency, which is exactly why full-wave output is easier to filter. The filter (capacitors and inductors) smooths those pulses to nearly flat DC with a little ripple left; a bleeder resistor discharges the filter capacitors when power is removed — a safety device, not a luxury. The regulator holds the output voltage steady as the load changes. The alternative: a switchmode supply chops at high frequency, which is what allows much smaller, lighter components.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a four-block chain — transformer, rectifier, filter, regulator — with small waveform insets above it showing AC, then pulsating DC, then smoothed DC with ripple, then a steady regulated line"
+}

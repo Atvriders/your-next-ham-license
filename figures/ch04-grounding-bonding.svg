@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="400" y="32" font-size="18" font-weight="bold">GROUNDING &amp; BONDING THE HF SHACK</text>
+    <text x="400" y="53" font-size="12">one bus, short straps, every chassis bonded — and arrestors where the feed lines enter</text>
+  </g>
+
+  <!-- ===== the wall: inside left, outside right ===== -->
+  <line x1="500" y1="75" x2="500" y2="440" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="10.5" font-style="italic">
+    <text x="250" y="78">inside the shack</text>
+    <text x="600" y="78">outside</text>
+  </g>
+
+  <!-- ===== station equipment, each chassis strapped to the bus ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="2.2">
+    <rect x="70" y="105" width="160" height="56"/>
+    <rect x="70" y="181" width="160" height="56"/>
+    <rect x="70" y="257" width="160" height="56"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="150" y="131" font-size="12.5" font-weight="bold">TRANSCEIVER</text>
+    <text x="150" y="147" font-size="9">chassis ground lug</text>
+    <text x="150" y="207" font-size="12.5" font-weight="bold">AMPLIFIER</text>
+    <text x="150" y="223" font-size="9">chassis ground lug</text>
+    <text x="150" y="283" font-size="12" font-weight="bold">COMPUTER + PSU</text>
+    <text x="150" y="299" font-size="9">chassis ground lug</text>
+  </g>
+  <!-- bond straps: one per chassis, star style -->
+  <g stroke="currentColor" fill="none" stroke-width="3">
+    <line x1="230" y1="133" x2="290" y2="133"/>
+    <line x1="230" y1="209" x2="290" y2="209"/>
+    <line x1="230" y1="285" x2="290" y2="285"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <circle cx="230" cy="133" r="3"/>
+    <circle cx="290" cy="133" r="3"/>
+    <circle cx="230" cy="209" r="3"/>
+    <circle cx="290" cy="209" r="3"/>
+    <circle cx="230" cy="285" r="3"/>
+    <circle cx="290" cy="285" r="3"/>
+  </g>
+  <!-- the single-point ground bus -->
+  <rect x="290" y="95" width="16" height="235" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <g fill="currentColor" stroke="none">
+    <text x="315" y="118" font-size="11" font-weight="bold">single-point ground bus</text>
+    <text x="315" y="132" font-size="9.5">copper bar / heavy strap</text>
+    <text x="315" y="295" font-size="9.5">one short strap per chassis —</text>
+    <text x="315" y="308" font-size="9.5">no daisy-chaining</text>
+  </g>
+
+  <!-- ===== feed line out through the entrance panel ===== -->
+  <path d="M150,105 L150,88 L500,88" stroke="currentColor" fill="none" stroke-width="2.2"/>
+  <path d="M522,88 L690,88" stroke="currentColor" fill="none" stroke-width="2.2"/>
+  <text x="240" y="100" font-size="10" fill="currentColor" stroke="none" text-anchor="middle">coax feed line</text>
+  <!-- entrance panel straddling the wall, arrestor inline on the coax -->
+  <rect x="480" y="70" width="60" height="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <rect x="500" y="84" width="22" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="510" y="66" font-size="10.5" font-weight="bold" fill="currentColor" stroke="none" text-anchor="middle">ENTRANCE PANEL</text>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="400" y="178" font-size="9.5">lightning arrestors on the panel —</text>
+    <text x="400" y="191" font-size="9.5">one per feed line</text>
+  </g>
+  <path d="M445,172 L498,112" stroke="currentColor" stroke-width="0.9" fill="none"/>
+
+  <!-- ===== antenna mast outside ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="3">
+    <line x1="690" y1="88" x2="690" y2="520"/>
+    <line x1="678" y1="98" x2="702" y2="98"/>
+    <line x1="681" y1="110" x2="699" y2="110"/>
+    <line x1="684" y1="122" x2="696" y2="122"/>
+  </g>
+  <circle cx="690" cy="88" r="3" fill="currentColor" stroke="none"/>
+  <text x="690" y="76" font-size="12" font-weight="bold" fill="currentColor" stroke="none" text-anchor="middle">ANTENNA</text>
+
+  <!-- lightning bolt near the antenna -->
+  <polygon points="745,150 723,196 737,196 717,246 751,188 735,188 757,150"
+           fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- ===== grounding conductors: panel and bus share the path to the entry rod ===== -->
+  <path d="M540,110 L580,110 L580,520" stroke="currentColor" fill="none" stroke-width="3"/>
+  <path d="M298,330 L298,405 L580,405" stroke="currentColor" fill="none" stroke-width="3"/>
+  <circle cx="580" cy="405" r="3.5" fill="currentColor" stroke="none"/>
+  <text x="420" y="397" font-size="9.5" fill="currentColor" stroke="none" text-anchor="middle">short, direct path to earth</text>
+
+  <!-- never solder lightning-protection joints (G4C07) -->
+  <g fill="currentColor" stroke="none">
+    <text x="596" y="424" font-size="9.5">never solder lightning grounds —</text>
+    <text x="596" y="437" font-size="9.5">lightning heat destroys solder</text>
+  </g>
+  <path d="M594,427 L584,435" stroke="currentColor" stroke-width="0.9" fill="none"/>
+
+  <!-- ===== earth ===== -->
+  <line x1="20" y1="470" x2="780" y2="470" stroke="currentColor" stroke-width="2.4"/>
+  <g stroke="currentColor" fill="none" stroke-width="1.2">
+    <line x1="40" y1="470" x2="30" y2="480"/>
+    <line x1="110" y1="470" x2="100" y2="480"/>
+    <line x1="180" y1="470" x2="170" y2="480"/>
+    <line x1="250" y1="470" x2="240" y2="480"/>
+    <line x1="330" y1="470" x2="320" y2="480"/>
+    <line x1="410" y1="470" x2="400" y2="480"/>
+    <line x1="470" y1="470" x2="460" y2="480"/>
+    <line x1="540" y1="470" x2="530" y2="480"/>
+    <line x1="630" y1="470" x2="620" y2="480"/>
+    <line x1="740" y1="470" x2="730" y2="480"/>
+  </g>
+
+  <!-- ===== the crucial bond between the rods ===== -->
+  <path d="M580,498 L690,498" stroke="currentColor" fill="none" stroke-width="3.5"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="635" y="534" font-size="10" font-weight="bold">bond ALL ground rods together — heavy wire or strap</text>
+    <text x="580" y="556" font-size="9.5">rod at the entry</text>
+    <text x="690" y="556" font-size="9.5">rod at the mast</text>
+    <text x="640" y="578" font-size="9.5">bond the entry rod to the house AC service ground too</text>
+  </g>
+
+  <!-- ===== why, in the margin ===== -->
+  <g fill="currentColor" stroke="none" font-size="10">
+    <text x="70" y="358">bonding kills ground loops (hum on</text>
+    <text x="70" y="371">your transmitted audio) and RF hot</text>
+    <text x="70" y="384">spots — every chassis to the one bus</text>
+    <text x="70" y="422">keep ground leads short + direct — a</text>
+    <text x="70" y="435">long wire can be resonant at RF: high</text>
+    <text x="70" y="448">impedance, RF-hot chassis, RF burns</text>
+    <text x="70" y="486">ground every metal enclosure, so no</text>
+    <text x="70" y="499">hazardous voltage can appear on it</text>
+  </g>
+
+  <!-- ===== bottom note ===== -->
+  <text x="400" y="608" font-size="11.5" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">one potential everywhere — bonded chassis, one bus, arrestors at the entry, all rods bonded</text>
+
+</svg>

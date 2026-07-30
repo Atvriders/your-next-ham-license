@@ -1,0 +1,8 @@
+{
+  "id": "ch03-ionosphere-layers",
+  "chapter": 3,
+  "caption": "The ionospheric regions from lowest to highest - D, E, F1, F2 - by day and by night. In daylight the D region absorbs everything below about 10 MHz (40/60/80/160 m stay local) while the F2 region refracts the higher bands; at night the D region fades, F1 merges into F2, and the low bands open for long-distance skywave.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Two panels compare the ionosphere by day and by night, with the layers stacked in the same order, lowest to highest: D, E, F1, F2. In the day panel, an 80 or 40 meter signal launched from a station dies inside the D region - absorbed, so no long-distance skip - while a 20 meter signal passes through and is refracted by the F2 layer back to Earth far away. In the night panel the D region has faded away and F1 and F2 have merged into a single F layer, so now the 80 meter signal is refracted and reaches distant stations. F2, the highest region, gives the longest skip."
+}

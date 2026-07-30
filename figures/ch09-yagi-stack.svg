@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" font-family="sans-serif">
+
+  <!-- ===== Titles ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="380" y="32" font-size="17" font-weight="bold">THE YAGI - GAIN FROM PARASITIC ELEMENTS</text>
+    <text x="380" y="53" font-size="12.5">one driven element does the work; the reflector and directors shape the beam (top view)</text>
+  </g>
+
+  <!-- ===== Yagi top view ===== -->
+  <!-- elements first, boom over them -->
+  <g stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none">
+    <line x1="200" y1="75" x2="200" y2="225"/>   <!-- reflector: longest -->
+    <line x1="310" y1="85" x2="310" y2="145"/>   <!-- driven, upper half -->
+    <line x1="310" y1="165" x2="310" y2="225"/>  <!-- driven, lower half -->
+    <line x1="415" y1="93" x2="415" y2="217"/>   <!-- director 1 -->
+    <line x1="510" y1="99" x2="510" y2="211"/>   <!-- director 2 -->
+    <line x1="595" y1="105" x2="595" y2="205"/>  <!-- director 3 -->
+  </g>
+  <line x1="150" y1="155" x2="640" y2="155" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- driven element feed point -->
+  <circle cx="310" cy="150" r="2.8" fill="currentColor" stroke="none"/>
+  <circle cx="310" cy="160" r="2.8" fill="currentColor" stroke="none"/>
+
+  <!-- boom label -->
+  <text x="360" y="145" font-size="11.5" fill="currentColor" stroke="none" text-anchor="middle">boom</text>
+
+  <!-- element labels -->
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="11.5">
+    <text x="200" y="243">reflector</text>
+    <text x="200" y="257">(longer)</text>
+    <text x="310" y="243">driven ≈ λ/2</text>
+    <text x="310" y="257">(fed here)</text>
+    <text x="415" y="235">directors</text>
+    <text x="415" y="249">(shorter)</text>
+  </g>
+
+  <!-- main-lobe direction arrow -->
+  <g stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round">
+    <line x1="648" y1="155" x2="712" y2="155"/>
+  </g>
+  <polygon points="722,155 708,149 708,161" fill="currentColor" stroke="none"/>
+  <text x="680" y="143" font-size="12" fill="currentColor" stroke="none" text-anchor="middle">main lobe</text>
+
+  <!-- mnemonic note -->
+  <text x="130" y="243" font-size="11.5" fill="currentColor" stroke="none" text-anchor="middle">the big one</text>
+  <text x="130" y="257" font-size="11.5" fill="currentColor" stroke="none" text-anchor="middle">goes behind</text>
+
+  <line x1="60" y1="295" x2="700" y2="295" stroke="currentColor" stroke-width="1" stroke-dasharray="2,6" opacity="0.45" fill="none"/>
+  <line x1="380" y1="315" x2="380" y2="545" stroke="currentColor" stroke-width="1" stroke-dasharray="2,6" opacity="0.45" fill="none"/>
+
+  <!-- ===== Bottom left: front-to-back pattern ===== -->
+  <text x="200" y="330" font-size="13" font-weight="bold" fill="currentColor" stroke="none" text-anchor="middle">FRONT-TO-BACK RATIO</text>
+
+  <!-- pattern lobes around the antenna point -->
+  <ellipse cx="278" cy="420" rx="75" ry="32" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.8"/>
+  <ellipse cx="150" cy="420" rx="32" ry="18" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.8"/>
+  <circle cx="200" cy="420" r="3.2" fill="currentColor" stroke="none"/>
+
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="11.5">
+    <text x="278" y="474">main lobe</text>
+    <text x="150" y="456">back lobe</text>
+    <text x="200" y="512">F/B = power in the main lobe</text>
+    <text x="200" y="528">÷ power in the back lobe</text>
+  </g>
+
+  <!-- ===== Bottom right: stacking ===== -->
+  <text x="570" y="330" font-size="13" font-weight="bold" fill="currentColor" stroke="none" text-anchor="middle">STACK TWO - GAIN ≈ 3 dB</text>
+
+  <!-- two small yagis, side view -->
+  <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <line x1="470" y1="432" x2="660" y2="432"/>
+    <line x1="490" y1="418" x2="490" y2="446"/>
+    <line x1="540" y1="420" x2="540" y2="444"/>
+    <line x1="620" y1="424" x2="620" y2="440"/>
+    <line x1="470" y1="512" x2="660" y2="512"/>
+    <line x1="490" y1="498" x2="490" y2="526"/>
+    <line x1="540" y1="500" x2="540" y2="524"/>
+    <line x1="620" y1="504" x2="620" y2="520"/>
+  </g>
+  <!-- feed stubs at the driven elements, joined in phase -->
+  <g stroke="currentColor" stroke-width="1.6" fill="none">
+    <line x1="540" y1="432" x2="540" y2="472"/>
+    <line x1="540" y1="512" x2="540" y2="472"/>
+    <line x1="540" y1="472" x2="672" y2="472"/>
+  </g>
+  <polygon points="682,472 670,467 670,477" fill="currentColor" stroke="none"/>
+  <circle cx="540" cy="432" r="2.4" fill="currentColor" stroke="none"/>
+  <circle cx="540" cy="512" r="2.4" fill="currentColor" stroke="none"/>
+
+  <!-- spacing bracket -->
+  <g stroke="currentColor" stroke-width="1.2" fill="none">
+    <line x1="452" y1="432" x2="452" y2="512"/>
+    <line x1="446" y1="432" x2="458" y2="432"/>
+    <line x1="446" y1="512" x2="458" y2="512"/>
+    <polygon points="452,432 448,441 456,441" fill="currentColor" stroke="none"/>
+    <polygon points="452,512 448,503 456,503" fill="currentColor" stroke="none"/>
+  </g>
+  <text x="443" y="476" font-size="11.5" fill="currentColor" stroke="none" text-anchor="middle" transform="rotate(-90 443 476)">λ/2 apart</text>
+
+  <g fill="currentColor" stroke="none" font-size="11.5">
+    <text x="680" y="446" text-anchor="end">feed both in phase -</text>
+    <text x="680" y="460" text-anchor="end">equal line lengths</text>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="11.5">
+    <text x="570" y="552">two identical Yagis, half a wavelength apart:</text>
+    <text x="570" y="568">twice the capture - ≈ 3 dB over one</text>
+  </g>
+
+  <!-- ===== Takeaway ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle" font-size="12">
+    <text x="380" y="596">Gain, front-to-back, and SWR bandwidth all trade off through boom length, element count, and spacing -</text>
+    <text x="380" y="612">and however you measure it, dBi = dBd + 2.15 (dBi is the bigger number).</text>
+  </g>
+
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 530" font-family="sans-serif">
+
+  <!-- ===== Panel divider ===== -->
+  <line x1="485" y1="20" x2="485" y2="512" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4,5" opacity="0.35"/>
+
+  <!-- ===== Left panel: ionosphere (dashed arcs) ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <path d="M 30,120 Q 245,84 470,120" stroke-dasharray="8,5"/>
+    <path d="M 30,150 Q 245,114 470,150" stroke-dasharray="8,5"/>
+  </g>
+
+  <!-- ===== Left panel: ground (curvature exaggerated) with hatching ===== -->
+  <path d="M 30,402 Q 245,384 470,402" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <g stroke="currentColor" stroke-width="1.2" opacity="0.7" fill="none">
+    <line x1="60" y1="399.7" x2="51" y2="409.7"/>
+    <line x1="90" y1="397.8" x2="81" y2="407.8"/>
+    <line x1="120" y1="396.1" x2="111" y2="406.1"/>
+    <line x1="150" y1="394.9" x2="141" y2="404.9"/>
+    <line x1="180" y1="393.9" x2="171" y2="403.9"/>
+    <line x1="210" y1="393.3" x2="201" y2="403.3"/>
+    <line x1="240" y1="393.0" x2="231" y2="403.0"/>
+    <line x1="270" y1="393.1" x2="261" y2="403.1"/>
+    <line x1="300" y1="393.5" x2="291" y2="403.5"/>
+    <line x1="330" y1="394.2" x2="321" y2="404.2"/>
+    <line x1="360" y1="395.3" x2="351" y2="405.3"/>
+    <line x1="390" y1="396.6" x2="381" y2="406.6"/>
+    <line x1="420" y1="398.4" x2="411" y2="408.4"/>
+    <line x1="450" y1="400.4" x2="441" y2="410.4"/>
+  </g>
+
+  <!-- ===== Left panel: TX tower ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+    <line x1="80" y1="398" x2="80" y2="310"/>
+    <line x1="80" y1="310" x2="68" y2="298"/>
+    <line x1="80" y1="310" x2="80" y2="290"/>
+    <line x1="80" y1="310" x2="92" y2="298"/>
+  </g>
+
+  <!-- ===== Rays at one frequency: nested arches, angle decides skip ===== -->
+  <!-- Ray 3: steeper than the critical angle - punches through -->
+  <path d="M 80,306 L 58,140" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <path d="M 58,140 L 44,34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="6,5"/>
+  <path d="M 44,34 L 51.2,46.2 L 40.3,47.6 Z" fill="currentColor" stroke="none"/>
+
+  <!-- Ray 2: high takeoff angle - returns closer in -->
+  <path d="M 80,306 Q 215,-140.5 350,395" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M 274.4,172.2 L 263.5,163.2 L 273.3,158.2 Z" fill="currentColor" stroke="none"/>
+  <circle cx="350" cy="395" r="3.5" fill="currentColor" stroke="none"/>
+
+  <!-- Ray 1: low takeoff angle - returns farther out -->
+  <path d="M 80,306 Q 262.5,-140.5 445,399" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M 342.8,174.3 L 330.9,166.7 L 339.9,160.5 Z" fill="currentColor" stroke="none"/>
+  <circle cx="445" cy="399" r="3.5" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Skip-distance dimensions ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <line x1="80" y1="398" x2="80" y2="464"/>
+    <line x1="350" y1="394" x2="350" y2="436"/>
+    <line x1="445" y1="399" x2="445" y2="464"/>
+    <line x1="80" y1="430" x2="350" y2="430"/>
+    <line x1="80" y1="458" x2="445" y2="458"/>
+  </g>
+
+  <!-- ===== Right panel: the usable window (LUF to MUF) ===== -->
+  <line x1="530" y1="80" x2="530" y2="425" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <path d="M 530,68 L 524.5,80 L 535.5,80 Z" fill="currentColor" stroke="none"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.8">
+    <line x1="524" y1="95" x2="536" y2="95"/>
+    <line x1="524" y1="148" x2="536" y2="148"/>
+    <line x1="524" y1="210" x2="536" y2="210"/>
+    <line x1="524" y1="270" x2="536" y2="270"/>
+    <line x1="524" y1="340" x2="536" y2="340"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="505" y1="130" x2="700" y2="130" stroke-dasharray="8,5"/>
+    <line x1="505" y1="300" x2="700" y2="300" stroke-dasharray="8,5"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <line x1="715" y1="130" x2="715" y2="300"/>
+    <line x1="708" y1="130" x2="722" y2="130"/>
+    <line x1="708" y1="300" x2="722" y2="300"/>
+  </g>
+
+  <!-- ===== Labels ===== -->
+  <g fill="currentColor" stroke="none">
+    <text x="245" y="26" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="1.5">TAKEOFF ANGLE vs SKIP DISTANCE</text>
+    <text x="460" y="76" text-anchor="end" font-size="12" letter-spacing="2">IONOSPHERE</text>
+    <text x="70" y="48" font-size="11.5">steeper than the critical angle:</text>
+    <text x="70" y="62" font-size="11.5">the signal punches through - lost to space</text>
+    <text x="72" y="332" text-anchor="end" font-size="12" font-weight="bold">TX</text>
+    <text x="200" y="186" text-anchor="middle" font-size="11.5">high angle</text>
+    <text x="348" y="253" text-anchor="middle" font-size="11.5">low angle</text>
+    <text x="215" y="422" text-anchor="middle" font-size="11">higher angle = shorter skip</text>
+    <text x="262" y="450" text-anchor="middle" font-size="11">low angle = longer skip</text>
+
+    <text x="30" y="484" font-size="11">Same frequency, same layer - only the takeoff angle changes.</text>
+    <text x="30" y="501" font-size="11">Critical angle = highest takeoff angle that still returns; steeper is lost to space.</text>
+    <text x="30" y="518" font-size="11">One F2-region hop can span ~2,500 miles; an E-region hop ~1,200 miles.</text>
+
+    <text x="622" y="30" text-anchor="middle" font-size="13" font-weight="bold" letter-spacing="1.5">THE USABLE WINDOW: LUF TO MUF</text>
+    <text x="530" y="58" text-anchor="middle" font-size="10">higher frequency</text>
+    <text x="500" y="122" font-size="12.5" font-weight="bold">MUF</text>
+    <text x="500" y="318" font-size="12.5" font-weight="bold">LUF</text>
+    <text x="545" y="98" font-size="11">10 m - above MUF: no path</text>
+    <text x="545" y="152" font-size="11" font-weight="bold">15 m - just below MUF: best DX</text>
+    <text x="545" y="214" font-size="11">20 m - solid mid-window</text>
+    <text x="545" y="274" font-size="11">40 m - works, more absorption</text>
+    <text x="545" y="344" font-size="11">80 m - below LUF: absorbed</text>
+    <text x="732" y="215" text-anchor="middle" font-size="10.5" transform="rotate(-90 732 215)">refracting window</text>
+
+    <text x="500" y="450" font-size="11">The window moves with path, time of day,</text>
+    <text x="500" y="465" font-size="11">season, and solar activity.</text>
+    <text x="500" y="486" font-size="11">More sunspots = higher MUF: high bands open</text>
+    <text x="500" y="501" font-size="11">only when the MUF climbs above them -</text>
+    <text x="500" y="516" font-size="11">low solar activity kills 15/12/10 m first.</text>
+  </g>
+</svg>

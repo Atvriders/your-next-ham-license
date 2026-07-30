@@ -1,0 +1,8 @@
+{
+  "id": "ch09-feedline-basics",
+  "chapter": 9,
+  "caption": "The two feed-line families. Coax (unbalanced): jacket, braided shield, dielectric, center conductor - about 50 ohms, velocity factor ~0.66, and loss that climbs fast with frequency. Ladder/open-wire line (balanced): two wires held a fixed spacing apart by spacers in a mostly-air dielectric - about 450 ohms, velocity factor ~0.9, and far lower loss. Characteristic impedance is set by the geometry, never by length or frequency.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A coax cross-section on the left shows four concentric parts: outer jacket, braided shield, dielectric, and center conductor, giving about 50 ohms and a velocity factor around 0.66. On the right, ladder line is two parallel wires held a spacing D apart by spacers, with air as most of the dielectric: about 450 ohms and a velocity factor around 0.9. For both, impedance comes from geometry - conductor sizes and spacing - not from the line's length or the frequency. A chart at the bottom plots loss against frequency: the coax curve climbs steeply while the ladder-line curve stays nearly flat, because loss is quoted in dB per 100 feet and a lossy line loses even more when SWR is high."
+}

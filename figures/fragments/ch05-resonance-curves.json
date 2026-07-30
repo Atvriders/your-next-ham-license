@@ -1,0 +1,8 @@
+{
+  "id": "ch05-resonance-curves",
+  "chapter": 5,
+  "caption": "Impedance versus frequency near a 7.0 MHz resonance, where X_L = X_C and the reactances cancel (G5A12). Left: a series LC circuit's impedance dips very low at resonance, bottoming at the circuit's resistance — 10 Ω for the high-Q curve, 100 Ω for the lower-Q one, which is shallower and broader. Right: a parallel LC circuit's impedance peaks very high at resonance — 88 kΩ for the high-Q curve, 8.8 kΩ for the lower-Q one, which is low and broad. Higher Q sharpens the notch or peak, which is why Q sets selectivity. Series low, parallel high (G5A01 — the swapped pairing is the classic distractor).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "two plots of impedance against frequency: series resonance showing an impedance minimum at 7 MHz, parallel resonance showing an impedance maximum, each with a sharp high-Q curve and a broad low-Q curve"
+}

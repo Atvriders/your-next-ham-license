@@ -1,0 +1,8 @@
+{
+  "id": "ch01-general-band-chart",
+  "chapter": 1,
+  "caption": "General-class HF privileges band by band (ITU Region 2, §97.301(d)/§97.305): CW+data and phone+CW segments on 80/75, 40, 20, 15, and 10 m with the Extra-only slices left bare; 17 and 12 m entire; 30 m CW and data only at the General 200 W PEP limit; 60 m in its current two-part form (contiguous 5351.5–5366.5 kHz at 9.15 W ERP plus four channels at 100 W ERP); up to 1.5 kW PEP everywhere else; VHF/UHF unchanged from Technician. CW is permitted on every authorized frequency.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "one bar per HF band from 80 meters to 10 meters showing the General CW-and-data and phone segments, the bare Extra-only slices, and each band's power limit, plus a VHF-UHF row unchanged from Technician"
+}

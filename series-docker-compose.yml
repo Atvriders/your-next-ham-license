@@ -1,0 +1,46 @@
+# Series site: all three "Your First Ham License" books behind one nginx
+# proxy, plus the landing page. Runnable today with the Technician and
+# General books:
+#
+#   docker compose -f series-docker-compose.yml up -d
+#
+# Browse http://localhost:8080/         -> landing page (series/index.html)
+#        http://localhost:8080/tech/    -> the Technician book + audiobook
+#        http://localhost:8080/general/ -> the General book + audiobook
+#
+# Ports:
+#   proxy          -> host :8080 (the only published port)
+#   tech / general -> container :80, internal only (the book images are
+#                     nginx:alpine listening on 80; not host-published)
+#
+# Extra is a placeholder until that book ships: its service sits behind the
+# "future" profile (so `up` never pulls it) and its proxy block in
+# series/nginx.conf is commented out. When it ships: replace its image with
+# the real GHCR repo, drop its "future" profile, uncomment its block in
+# series/nginx.conf, and flip its flag in SERIES_BOOKS (tools/build_book.py).
+
+services:
+  tech:
+    image: ghcr.io/atvriders/your-first-ham-license:latest
+    restart: unless-stopped
+
+  general:
+    image: ghcr.io/atvriders/your-next-ham-license:latest
+    restart: unless-stopped
+
+  # TODO(until the Extra book ships): placeholder image slug.
+  extra:
+    image: ghcr.io/atvriders/<extra-slug>:latest
+    profiles: ["future"]
+
+  proxy:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./series/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./series:/usr/share/nginx/html:ro
+    depends_on:
+      - tech
+      - general
+    restart: unless-stopped

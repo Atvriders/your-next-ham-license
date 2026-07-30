@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="sans-serif">
+
+  <!-- ===== Night-side and terminator-band washes (currentColor at low opacity) ===== -->
+  <path d="M 280,60 A 170,170 0 0 0 280,400 Z" fill="currentColor" stroke="none" opacity="0.13"/>
+  <path d="M 262,62 L 298,62 L 298,398 L 262,398 Z" fill="currentColor" stroke="none" opacity="0.10"/>
+
+  <!-- ===== Sunlight: parallel rays arriving from the right ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="645" y1="150" x2="434" y2="150"/>
+    <line x1="645" y1="190" x2="449" y2="190"/>
+    <line x1="645" y1="230" x2="454" y2="230"/>
+    <line x1="645" y1="270" x2="449" y2="270"/>
+    <line x1="645" y1="310" x2="434" y2="310"/>
+  </g>
+  <path d="M 428,150 L 439,144.5 L 439,155.5 Z" fill="currentColor" stroke="none"/>
+  <path d="M 443,190 L 454,184.5 L 454,195.5 Z" fill="currentColor" stroke="none"/>
+  <path d="M 448,230 L 459,224.5 L 459,235.5 Z" fill="currentColor" stroke="none"/>
+  <path d="M 443,270 L 454,264.5 L 454,275.5 Z" fill="currentColor" stroke="none"/>
+  <path d="M 428,310 L 439,304.5 L 439,315.5 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Sun glyph ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="690" cy="230" r="20"/>
+    <line x1="716" y1="230" x2="724" y2="230"/>
+    <line x1="708.4" y1="248.4" x2="714" y2="254"/>
+    <line x1="690" y1="256" x2="690" y2="264"/>
+    <line x1="671.6" y1="248.4" x2="666" y2="254"/>
+    <line x1="664" y1="230" x2="656" y2="230"/>
+    <line x1="671.6" y1="211.6" x2="666" y2="206"/>
+    <line x1="690" y1="204" x2="690" y2="196"/>
+    <line x1="708.4" y1="211.6" x2="714" y2="206"/>
+  </g>
+
+  <!-- ===== Earth disc ===== -->
+  <circle cx="280" cy="230" r="170" fill="none" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- ===== The gray line: terminator band straddling the day/night line ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6">
+    <line x1="262" y1="62" x2="262" y2="398" stroke-dasharray="8,5"/>
+    <line x1="298" y1="62" x2="298" y2="398" stroke-dasharray="8,5"/>
+  </g>
+
+  <!-- ===== Stations on the terminator ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <line x1="272" y1="140" x2="272" y2="120"/>
+    <line x1="272" y1="120" x2="264" y2="113"/>
+    <line x1="272" y1="120" x2="272" y2="108"/>
+    <line x1="272" y1="120" x2="280" y2="113"/>
+    <line x1="272" y1="320" x2="272" y2="300"/>
+    <line x1="272" y1="300" x2="264" y2="293"/>
+    <line x1="272" y1="300" x2="272" y2="288"/>
+    <line x1="272" y1="300" x2="280" y2="293"/>
+  </g>
+
+  <!-- ===== Signal path along the gray line (both directions) ===== -->
+  <line x1="291" y1="157" x2="291" y2="303" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  <path d="M 291,146 L 285.5,157 L 296.5,157 Z" fill="currentColor" stroke="none"/>
+  <path d="M 291,314 L 285.5,303 L 296.5,303 Z" fill="currentColor" stroke="none"/>
+
+  <!-- ===== Labels ===== -->
+  <g fill="currentColor" stroke="none">
+    <text x="30" y="46" font-size="12.5" font-weight="bold" letter-spacing="1">THE GRAY LINE</text>
+    <text x="30" y="60" font-size="10.5">the day/night terminator,</text>
+    <text x="30" y="74" font-size="10.5">a twilight band around the globe</text>
+    <text x="256" y="143" text-anchor="end" font-size="10.5">station A</text>
+    <text x="256" y="323" text-anchor="end" font-size="10.5">station B</text>
+    <text x="310" y="230" text-anchor="middle" font-size="11" transform="rotate(-90 310 230)">signal travels along the gray line</text>
+
+    <text x="330" y="222" font-size="10.5">DAY side:</text>
+    <text x="330" y="236" font-size="10.5">D layer absorbs</text>
+    <text x="330" y="250" font-size="10.5">the low bands</text>
+    <text x="215" y="218" text-anchor="end" font-size="10.5">NIGHT side:</text>
+    <text x="215" y="232" text-anchor="end" font-size="10.5">D layer has faded</text>
+    <text x="215" y="246" text-anchor="end" font-size="10.5">F layer remains</text>
+    <text x="690" y="300" text-anchor="middle" font-size="11">Sun</text>
+
+    <text x="380" y="430" text-anchor="middle" font-size="12">Along the terminator the D layer is quiet but the F layer still refracts -</text>
+    <text x="380" y="447" text-anchor="middle" font-size="12">enhanced paths at sunrise and sunset, especially on the low bands.</text>
+  </g>
+
+  <!-- leader from label to the band -->
+  <line x1="160" y1="80" x2="256" y2="102" fill="none" stroke="currentColor" stroke-width="1"/>
+</svg>

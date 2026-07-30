@@ -1,0 +1,8 @@
+{
+  "id": "ch07-filter-responses",
+  "chapter": 7,
+  "caption": "The four filter personalities, gain versus frequency. A low-pass filter passes everything below its cutoff frequency — the point where output falls to half power — and rejects energy above it. A high-pass does the mirror image. A band-pass filter passes one band, and its bandwidth is measured between the upper and lower half-power frequencies. A notch (band-reject) filter digs out one narrow band — the tool for removing an interfering carrier inside the receiver passband. Two vocabulary traps: insertion loss is attenuation inside the passband, where the filter is supposed to pass signals; ultimate rejection is the maximum attenuation it can deliver in the stopband.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "four response curves — low-pass, high-pass, band-pass, and notch — showing gain versus frequency with the half-power level marked"
+}

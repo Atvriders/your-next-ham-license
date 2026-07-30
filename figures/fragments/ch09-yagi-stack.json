@@ -1,0 +1,8 @@
+{
+  "id": "ch09-yagi-stack",
+  "chapter": 9,
+  "caption": "Yagi anatomy and stacking. Top view: the driven element is about a half wavelength and takes the feed line; the reflector behind it is longer, the directors ahead are shorter, and the beam fires off the director end. Front-to-back ratio compares the main lobe to the back lobe. Two identical Yagis stacked a half-wavelength apart capture twice the power - about 3 dB over one.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "The top of the figure is a Yagi seen from above: a boom carrying, from back to front, a reflector longer than the driven element, the driven element itself at about a half wavelength with the feed point at its center, and progressively shorter directors - the main lobe points off the director end. Below left, a pattern sketch shows a large forward lobe and a small back lobe: front-to-back ratio is the forward power divided by the backward power. Below right, two identical Yagis are stacked a half-wavelength apart and fed in phase through equal line lengths - twice the capture, about 3 dB more gain than one, and dBi always equals dBd plus 2.15."
+}

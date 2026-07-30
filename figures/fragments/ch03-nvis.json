@@ -1,0 +1,8 @@
+{
+  "id": "ch03-nvis",
+  "chapter": 3,
+  "caption": "NVIS - near vertical incidence skywave. On a frequency below the critical frequency, even a signal launched nearly straight up comes back down, blanketing everything within roughly 0-300 miles. The skip zone disappears - exactly why regional and emergency-communications nets choose it, typically 40 m by day and 80 m by night.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A station in the center launches several rays at steep, nearly vertical angles into the F layer. Each ray refracts and returns close by, landing all around the station out to about 300 miles in every direction - a continuous blanket of coverage with no skip zone. A dashed low-angle ray shows the contrast: it skips over the entire region and lands far beyond 300 miles. NVIS works because the frequency is below the critical frequency, so even a straight-up signal is refracted back; typical bands are 40 meters by day and 80 meters by night."
+}

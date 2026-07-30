@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 665" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Component panel: eleven electronic components with names and roles">
+  <title>Components at General depth — diode family, transistors, op-amp, IC, ferrite, crystal</title>
+  <defs>
+    <!-- ordinary PN junction diode -->
+    <g id="d-pn">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <line x1="-45" y1="0" x2="-14" y2="0"/>
+        <line x1="12" y1="-13" x2="12" y2="13"/>
+        <line x1="12" y1="0" x2="45" y2="0"/>
+      </g>
+      <path d="M-14,-13 L-14,13 L12,0 Z" fill="currentColor"/>
+    </g>
+    <!-- Zener diode: cathode bar ends bent into Z wings -->
+    <g id="d-zen">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <line x1="-45" y1="0" x2="-14" y2="0"/>
+        <path d="M5,-20 L12,-13 L12,13 L5,20"/>
+        <line x1="12" y1="0" x2="45" y2="0"/>
+      </g>
+      <path d="M-14,-13 L-14,13 L12,0 Z" fill="currentColor"/>
+    </g>
+    <!-- varactor diode: diode plus a curved (capacitor) plate -->
+    <g id="d-var">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <line x1="-45" y1="0" x2="-14" y2="0"/>
+        <line x1="12" y1="-13" x2="12" y2="13"/>
+        <path d="M18,-13 Q27,0 18,13"/>
+        <line x1="21" y1="0" x2="45" y2="0"/>
+      </g>
+      <path d="M-14,-13 L-14,13 L12,0 Z" fill="currentColor"/>
+    </g>
+    <!-- LED: diode with two light arrows leaving -->
+    <g id="d-led">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <line x1="-45" y1="0" x2="-14" y2="0"/>
+        <line x1="12" y1="-13" x2="12" y2="13"/>
+        <line x1="12" y1="0" x2="45" y2="0"/>
+        <line x1="-4" y1="-5" x2="7" y2="-17"/>
+        <line x1="4" y1="-1" x2="15" y2="-13"/>
+      </g>
+      <path d="M-14,-13 L-14,13 L12,0 Z" fill="currentColor"/>
+      <path d="M7,-17 L1.5,-14.5 L5.5,-10.5 Z" fill="currentColor"/>
+      <path d="M15,-13 L9.5,-10.5 L13.5,-6.5 Z" fill="currentColor"/>
+    </g>
+    <!-- NPN transistor: emitter arrow points outward -->
+    <g id="t-npn">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="0" cy="0" r="22"/>
+        <line x1="-40" y1="0" x2="-8" y2="0"/>
+        <path d="M-5,-11 L14,-17 L14,-38"/>
+        <path d="M-5,11 L14,17 L14,38"/>
+      </g>
+      <rect x="-8" y="-13" width="5" height="26" fill="currentColor"/>
+      <path d="M12,16.4 L3.7,9.6 L1.2,17.2 Z" fill="currentColor"/>
+    </g>
+    <!-- PNP transistor: emitter arrow points inward, toward the base bar -->
+    <g id="t-pnp">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="0" cy="0" r="22"/>
+        <line x1="-40" y1="0" x2="-8" y2="0"/>
+        <path d="M-5,-11 L14,-17 L14,-38"/>
+        <path d="M-5,11 L14,17 L14,38"/>
+      </g>
+      <rect x="-8" y="-13" width="5" height="26" fill="currentColor"/>
+      <path d="M-4.5,10.5 L6.3,10 L3.6,17.6 Z" fill="currentColor"/>
+    </g>
+    <!-- JFET: vertical channel bar, gate arrow pointing inward -->
+    <g id="t-jfet">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="0" cy="0" r="22"/>
+        <line x1="-40" y1="0" x2="-12" y2="0"/>
+        <path d="M7,-8 L14,-8 L14,-38"/>
+        <path d="M7,8 L14,8 L14,38"/>
+      </g>
+      <rect x="2" y="-14" width="5" height="28" fill="currentColor"/>
+      <path d="M-12,-7 L-12,7 L2,0 Z" fill="currentColor"/>
+    </g>
+    <!-- op-amp: triangle with inverting/non-inverting inputs -->
+    <g id="opamp">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round">
+        <path d="M-25,-28 L-25,28 L30,0 Z"/>
+        <line x1="-45" y1="-10" x2="-25" y2="-10"/>
+        <line x1="-45" y1="10" x2="-25" y2="10"/>
+        <line x1="30" y1="0" x2="48" y2="0"/>
+      </g>
+      <text x="-20" y="-6" font-size="15" text-anchor="middle" fill="currentColor">−</text>
+      <text x="-20" y="16" font-size="15" text-anchor="middle" fill="currentColor">+</text>
+    </g>
+    <!-- integrated circuit: pinned package with pin-1 dot -->
+    <g id="ic">
+      <g fill="none" stroke="currentColor" stroke-width="3">
+        <rect x="-30" y="-20" width="60" height="40"/>
+        <path d="M-40,-12 L-30,-12 M-40,0 L-30,0 M-40,12 L-30,12 M30,-12 L40,-12 M30,0 L40,0 M30,12 L40,12"/>
+      </g>
+      <circle cx="-21" cy="-11" r="2.8" fill="currentColor"/>
+      <text x="2" y="6" font-size="15" font-weight="bold" text-anchor="middle" fill="currentColor">IC</text>
+    </g>
+    <!-- ferrite toroid: winding over a ring core -->
+    <g id="toroid">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="0" cy="0" r="15"/>
+        <path d="M-15,0 a5,5.5 0 1 0 10,0 a5,5.5 0 1 0 10,0 a5,5.5 0 1 0 10,0"/>
+        <line x1="-38" y1="0" x2="-15" y2="0"/>
+        <line x1="15" y1="0" x2="38" y2="0"/>
+      </g>
+    </g>
+    <!-- quartz crystal: slab between two plates -->
+    <g id="xtal">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <line x1="-45" y1="0" x2="-14" y2="0"/>
+        <line x1="-14" y1="-14" x2="-14" y2="14"/>
+        <rect x="-7" y="-10" width="14" height="20"/>
+        <line x1="14" y1="-14" x2="14" y2="14"/>
+        <line x1="14" y1="0" x2="45" y2="0"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- title -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="500" y="30" font-size="19" font-weight="bold">COMPONENTS AT GENERAL DEPTH</text>
+    <text x="500" y="50" font-size="12.5">eleven parts the General exam expects you to recognize on sight</text>
+  </g>
+
+  <!-- row 1: the diode family -->
+  <use href="#d-pn" transform="translate(140 125)"/>
+  <use href="#d-zen" transform="translate(380 125)"/>
+  <use href="#d-var" transform="translate(620 125)"/>
+  <use href="#d-led" transform="translate(860 125)"/>
+
+  <!-- row 2: transistors and the op-amp -->
+  <use href="#t-npn" transform="translate(140 330)"/>
+  <use href="#t-pnp" transform="translate(380 330)"/>
+  <use href="#t-jfet" transform="translate(620 330)"/>
+  <use href="#opamp" transform="translate(860 330)"/>
+
+  <!-- row 3: integrated and frequency-setting parts -->
+  <use href="#ic" transform="translate(260 535)"/>
+  <use href="#toroid" transform="translate(500 535)"/>
+  <use href="#xtal" transform="translate(740 535)"/>
+
+  <!-- names and one-line roles -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="140" y="183" font-size="16" font-weight="bold">PN junction diode</text>
+    <text x="140" y="201" font-size="12.5">conducts one way, past a forward</text>
+    <text x="140" y="216" font-size="12.5">threshold: 0.7 V Si, 0.3 V Ge</text>
+
+    <text x="380" y="183" font-size="16" font-weight="bold">Zener diode</text>
+    <text x="380" y="201" font-size="12.5">conducts in reverse at a set</text>
+    <text x="380" y="216" font-size="12.5">voltage — a shunt regulator</text>
+
+    <text x="620" y="183" font-size="16" font-weight="bold">Varactor diode</text>
+    <text x="620" y="201" font-size="12.5">a diode used as a voltage-variable</text>
+    <text x="620" y="216" font-size="12.5">capacitor — it tunes oscillators</text>
+
+    <text x="860" y="183" font-size="16" font-weight="bold">LED</text>
+    <text x="860" y="201" font-size="12.5">a diode that emits light</text>
+    <text x="860" y="216" font-size="12.5">when forward biased</text>
+
+    <text x="140" y="388" font-size="16" font-weight="bold">NPN transistor</text>
+    <text x="140" y="406" font-size="12.5">current-controlled amp or switch —</text>
+    <text x="140" y="421" font-size="12.5">the emitter arrow points out</text>
+
+    <text x="380" y="388" font-size="16" font-weight="bold">PNP transistor</text>
+    <text x="380" y="406" font-size="12.5">NPN's complement, opposite polarity —</text>
+    <text x="380" y="421" font-size="12.5">the emitter arrow points in</text>
+
+    <text x="620" y="388" font-size="16" font-weight="bold">JFET</text>
+    <text x="620" y="406" font-size="12.5">gate voltage controls channel</text>
+    <text x="620" y="421" font-size="12.5">current; very high input impedance</text>
+
+    <text x="860" y="388" font-size="16" font-weight="bold">Op-amp</text>
+    <text x="860" y="406" font-size="12.5">analog gain block: amplifies</text>
+    <text x="860" y="421" font-size="12.5">the difference of its inputs</text>
+
+    <text x="260" y="593" font-size="16" font-weight="bold">Integrated circuit</text>
+    <text x="260" y="611" font-size="12.5">a whole circuit on one chip —</text>
+    <text x="260" y="626" font-size="12.5">op-amps to MMICs (microwave ICs)</text>
+
+    <text x="500" y="593" font-size="16" font-weight="bold">Ferrite bead / toroid</text>
+    <text x="500" y="611" font-size="12.5">ferrite concentrates the field;</text>
+    <text x="500" y="626" font-size="12.5">a bead chokes common-mode current</text>
+
+    <text x="740" y="593" font-size="16" font-weight="bold">Quartz crystal</text>
+    <text x="740" y="611" font-size="12.5">vibrates on one precise frequency —</text>
+    <text x="740" y="626" font-size="12.5">the stable heart of an oscillator</text>
+  </g>
+</svg>

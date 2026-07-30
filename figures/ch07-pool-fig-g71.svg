@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Pool figure G7-1: varactor-tuned oscillator feeding an amplifier stage">
+  <title>Pool figure G7-1 — varactor-tuned VFO (FET) and amplifier (NPN), redrawn from the NCVEC 2023–2027 General pool</title>
+  <defs>
+    <!-- ground symbol per canon §1.4: three slanted strokes of decreasing length, longest on top; wire enters at (0,0) -->
+    <g id="gnd" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <line x1="14.7" y1="-0.5" x2="-14.7" y2="16.5"/>
+      <line x1="10.5" y1="14.5" x2="-8.5" y2="25.5"/>
+      <line x1="7.2" y1="26" x2="-3.2" y2="32"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- +DC rail across the top, with an unnumbered series resistor before the +DC terminal -->
+    <line x1="297" y1="80" x2="644" y2="80"/>
+    <path d="M644,80 L650,80 L656,69 L668,91 L680,69 L692,91 L698,80"/>
+    <line x1="698" y1="80" x2="800" y2="80"/>
+
+    <!-- +DC terminal: open circle on a stub above the rail end -->
+    <circle cx="800" cy="56" r="7"/>
+    <line x1="800" y1="63" x2="800" y2="80"/>
+
+    <!-- 11 = variable resistor (vertical zigzag, diagonal arrow from the left wire) over an unnumbered fixed resistor to ground -->
+    <line x1="297" y1="80" x2="297" y2="110"/>
+    <path d="M297,110 L297,114 L306,119 L288,128 L306,137 L288,146 L306,155 L297,161"/>
+    <line x1="297" y1="161" x2="297" y2="210"/>
+    <path d="M297,210 L297,214 L306,220 L288,229 L306,238 L288,247 L297,255"/>
+    <line x1="297" y1="255" x2="297" y2="295"/>
+    <line x1="120" y1="140" x2="274" y2="140"/>
+
+    <!-- 4 = varactor diode branch: arc plate, straight cathode bar, filled triangle pointing UP; unnumbered electrolytic to ground below the gate line -->
+    <line x1="120" y1="140" x2="120" y2="206"/>
+    <path d="M102,206 Q120,220 138,206"/>
+    <line x1="102" y1="226" x2="138" y2="226"/>
+    <line x1="120" y1="252" x2="120" y2="400"/>
+    <line x1="102" y1="400" x2="138" y2="400"/>
+    <path d="M102,406 Q120,418 138,406"/>
+    <line x1="120" y1="418" x2="120" y2="486"/>
+
+    <!-- long gate/signal wire, left part -->
+    <line x1="120" y1="345" x2="216" y2="345"/>
+
+    <!-- 10 = polarized coupling capacitor, horizontal in the gate wire: straight plate, then curved -->
+    <line x1="222" y1="328" x2="222" y2="362"/>
+    <path d="M234,328 Q224,345 234,362"/>
+    <line x1="234" y1="345" x2="398" y2="345"/>
+
+    <!-- 7 = tapped inductor: coil from the gate wire down, tap leaving partway up toward the FET source, bottom grounded -->
+    <line x1="179" y1="345" x2="179" y2="479"/>
+    <path d="M179,479 a8.5,7.75 0 1 0 0,15.5 a8.5,7.75 0 1 0 0,15.5 a8.5,7.75 0 1 0 0,15.5 a8.5,7.75 0 1 0 0,15.5"/>
+    <line x1="179" y1="541" x2="179" y2="591"/>
+    <path d="M179,526 L213,526 L213,588 L462,588 L462,352"/>
+
+    <!-- unnumbered gate leak resistor to ground -->
+    <line x1="273" y1="345" x2="273" y2="362"/>
+    <path d="M273,362 L273,367 L282,373 L264,383 L282,393 L264,403 L282,413 L273,422"/>
+    <line x1="273" y1="422" x2="273" y2="490"/>
+
+    <!-- 3 = PN junction diode: filled triangle pointing DOWN onto a horizontal cathode bar, branch to ground -->
+    <line x1="334" y1="345" x2="334" y2="388"/>
+    <line x1="318" y1="414" x2="350" y2="414"/>
+    <line x1="334" y1="414" x2="334" y2="506"/>
+
+    <!-- 1 = field effect transistor: circle, vertical channel bar, gate arrow inward from the left -->
+    <circle cx="419" cy="342" r="33"/>
+    <line x1="398" y1="345" x2="398" y2="345"/>
+    <!-- drain tap from the bar's upper right, out through the circle to the output wire and up to the drain resistor -->
+    <line x1="428" y1="332" x2="522" y2="332"/>
+    <!-- source tap from the bar's lower right, down to the tapped-inductor wire -->
+    <line x1="428" y1="352" x2="462" y2="352"/>
+
+    <!-- unnumbered drain feed resistor from the rail -->
+    <line x1="462" y1="80" x2="462" y2="148"/>
+    <path d="M462,148 L462,152 L471,157 L453,166 L471,175 L453,184 L462,195"/>
+    <line x1="462" y1="195" x2="462" y2="332"/>
+
+    <!-- 8 = polarized capacitor, rail to ground: straight plate over curved plate -->
+    <line x1="396" y1="80" x2="396" y2="110"/>
+    <line x1="378" y1="110" x2="414" y2="110"/>
+    <path d="M378,116 Q396,128 414,116"/>
+    <line x1="396" y1="124" x2="396" y2="191"/>
+
+    <!-- 5 = Zener diode, rail to ground: cathode bar with Z wings, filled triangle pointing UP -->
+    <line x1="550" y1="80" x2="550" y2="120"/>
+    <path d="M518,140 L530,124 L570,124 L582,108"/>
+    <line x1="550" y1="152" x2="550" y2="213"/>
+
+    <!-- unnumbered coupling capacitor between the stages (straight plate, then curved) -->
+    <line x1="522" y1="318" x2="522" y2="346"/>
+    <path d="M534,318 Q524,332 534,346"/>
+    <line x1="534" y1="332" x2="762" y2="332"/>
+
+    <!-- unnumbered base bias resistor, base line down to ground -->
+    <line x1="611" y1="332" x2="611" y2="362"/>
+    <path d="M611,362 L611,367 L620,372 L602,381 L620,390 L602,399 L611,414"/>
+    <line x1="611" y1="414" x2="611" y2="560"/>
+
+    <!-- unnumbered base bias resistor, base line up to the +DC feed -->
+    <line x1="641" y1="127" x2="641" y2="257"/>
+    <path d="M641,257 L641,262 L650,267 L632,276 L650,285 L632,294 L641,306"/>
+    <line x1="641" y1="306" x2="641" y2="332"/>
+    <line x1="641" y1="127" x2="800" y2="127"/>
+
+    <!-- unnumbered bypass capacitor from the collector feed to ground -->
+    <line x1="717" y1="174" x2="800" y2="174"/>
+    <line x1="717" y1="174" x2="717" y2="208"/>
+    <line x1="699" y1="208" x2="735" y2="208"/>
+    <path d="M699,214 Q717,226 735,214"/>
+    <line x1="717" y1="226" x2="717" y2="287"/>
+
+    <!-- collector feed from the rail down to the transformer primary -->
+    <line x1="800" y1="80" x2="800" y2="188"/>
+
+    <!-- 6 = solid-core transformer: primary (4 humps, left) and secondary (2 humps, right) around two core lines -->
+    <path d="M800,188 a8.5,8.125 0 1 0 0,16.25 a8.5,8.125 0 1 0 0,16.25 a8.5,8.125 0 1 0 0,16.25 a8.5,8.125 0 1 0 0,16.25"/>
+    <line x1="800" y1="253" x2="800" y2="313"/>
+    <line x1="811" y1="186" x2="811" y2="255"/>
+    <line x1="817" y1="186" x2="817" y2="255"/>
+    <path d="M825,206 a8.5,7.5 0 1 1 0,15 a8.5,7.5 0 1 1 0,15"/>
+    <line x1="825" y1="206" x2="903" y2="206"/>
+    <circle cx="910" cy="206" r="7"/>
+    <path d="M825,236 L858,236 L858,287"/>
+
+    <!-- 2 = NPN junction transistor: circle, base bar on the left, collector up, emitter down with outward arrow -->
+    <circle cx="772" cy="336" r="24"/>
+    <line x1="770" y1="320" x2="800" y2="313"/>
+    <line x1="770" y1="352" x2="800" y2="359"/>
+    <line x1="800" y1="359" x2="800" y2="398"/>
+
+    <!-- emitter node: unnumbered bypass capacitor left, 9 = fixed resistor down -->
+    <line x1="734" y1="398" x2="800" y2="398"/>
+    <line x1="734" y1="398" x2="734" y2="447"/>
+    <line x1="717" y1="447" x2="751" y2="447"/>
+    <path d="M717,453 Q734,465 751,453"/>
+    <line x1="734" y1="465" x2="734" y2="558"/>
+    <line x1="800" y1="398" x2="800" y2="432"/>
+    <path d="M800,432 L800,437 L809,442 L791,451 L809,460 L791,469 L800,482"/>
+    <line x1="800" y1="482" x2="800" y2="560"/>
+  </g>
+
+  <g fill="currentColor" stroke="none">
+    <!-- 4 varactor filled triangle, pointing UP into the cathode bar -->
+    <path d="M104,252 L136,252 L120,226 Z"/>
+    <!-- 3 PN diode filled triangle, pointing DOWN onto the cathode bar -->
+    <path d="M318,388 L350,388 L334,412 Z"/>
+    <!-- 5 Zener filled triangle, pointing UP into the winged cathode bar -->
+    <path d="M532,152 L568,152 L550,124 Z"/>
+    <!-- 11 variable resistor arrowhead, pointing into the zigzag -->
+    <path d="M272,134 L272,148 L293,142 Z"/>
+    <!-- 1 FET channel bar and gate arrowhead (pointing inward, right) -->
+    <rect x="420" y="322" width="8" height="40"/>
+    <path d="M398,336 L398,354 L420,345 Z"/>
+    <!-- 2 NPN base bar and emitter arrowhead (pointing outward, down-right) -->
+    <rect x="762" y="318" width="8" height="36"/>
+    <path d="M796,358 L784.7,349.3 L781.9,361 Z"/>
+  </g>
+
+  <use href="#gnd" transform="translate(297 295)"/>
+  <use href="#gnd" transform="translate(120 486)"/>
+  <use href="#gnd" transform="translate(179 591)"/>
+  <use href="#gnd" transform="translate(273 490)"/>
+  <use href="#gnd" transform="translate(334 506)"/>
+  <use href="#gnd" transform="translate(550 213)"/>
+  <use href="#gnd" transform="translate(396 191)"/>
+  <use href="#gnd" transform="translate(611 560)"/>
+  <use href="#gnd" transform="translate(717 287)"/>
+  <use href="#gnd" transform="translate(734 558)"/>
+  <use href="#gnd" transform="translate(800 560)"/>
+  <use href="#gnd" transform="translate(858 287)"/>
+
+  <g fill="currentColor" stroke="none" font-weight="bold" text-anchor="middle">
+    <text x="398" y="292" font-size="22">1</text>
+    <text x="812" y="343" font-size="22" text-anchor="start">2</text>
+    <text x="354" y="432" font-size="22" text-anchor="start">3</text>
+    <text x="88" y="232" font-size="22" text-anchor="end">4</text>
+    <text x="524" y="122" font-size="22" text-anchor="end">5</text>
+    <text x="838" y="174" font-size="22">6</text>
+    <text x="158" y="536" font-size="22" text-anchor="end">7</text>
+    <text x="422" y="108" font-size="22" text-anchor="start">8</text>
+    <text x="826" y="464" font-size="22" text-anchor="start">9</text>
+    <text x="228" y="314" font-size="22">10</text>
+    <text x="270" y="122" font-size="22" text-anchor="end">11</text>
+    <text x="800" y="34" font-size="20">+DC</text>
+    <text x="925" y="212" font-size="20" text-anchor="start">OUT</text>
+    <text x="490" y="655" font-size="26">Figure G7-1</text>
+  </g>
+</svg>

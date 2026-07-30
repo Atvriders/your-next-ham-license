@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 384" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="360" y="28" text-anchor="middle" font-size="13.5" font-weight="bold" fill="currentColor" stroke="none">anatomy of an emission designator — 2K80J3E</text>
+  <text x="360" y="50" text-anchor="middle" font-size="10.5" font-style="italic" fill="currentColor" stroke="none">the ITU code for any emission: four bandwidth characters, then three symbols</text>
+
+  <!-- ===== the designator, field by field ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="120" y="80" width="140" height="56" rx="8"/>
+    <rect x="285" y="80" width="90" height="56" rx="8"/>
+    <rect x="415" y="80" width="90" height="56" rx="8"/>
+    <rect x="545" y="80" width="90" height="56" rx="8"/>
+  </g>
+  <g fill="currentColor" stroke="none" font-family="monospace" font-size="19" font-weight="bold" text-anchor="middle">
+    <text x="190" y="111">2K80</text>
+    <text x="330" y="111">J</text>
+    <text x="460" y="111">3</text>
+    <text x="590" y="111">E</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="9.5" text-anchor="middle" font-family="sans-serif">
+    <text x="190" y="128">bandwidth</text>
+    <text x="330" y="128">modulation</text>
+    <text x="460" y="128">signal</text>
+    <text x="590" y="128">information</text>
+  </g>
+
+  <!-- ===== connectors to the decode columns ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <line x1="190" y1="136" x2="190" y2="158"/>
+    <line x1="330" y1="136" x2="330" y2="158"/>
+    <line x1="460" y1="136" x2="460" y2="158"/>
+    <line x1="590" y1="136" x2="590" y2="158"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="190,166 185,156 195,156"/>
+    <polygon points="330,166 325,156 335,156"/>
+    <polygon points="460,166 455,156 465,156"/>
+    <polygon points="590,166 585,156 595,156"/>
+  </g>
+
+  <!-- ===== decode columns ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="190" y="186" font-size="10.5" font-weight="bold">necessary bandwidth</text>
+    <text x="190" y="205" font-size="10">2K80 = 2.80 kHz</text>
+    <text x="190" y="226" font-size="9.5" font-style="italic">the unit letter marks the</text>
+    <text x="190" y="240" font-size="9.5" font-style="italic">decimal point: H = Hz,</text>
+    <text x="190" y="254" font-size="9.5" font-style="italic">K = kHz, M = MHz, G = GHz</text>
+
+    <text x="330" y="186" font-size="10.5" font-weight="bold">carrier modulation</text>
+    <text x="330" y="205" font-size="10">J = single sideband,</text>
+    <text x="330" y="220" font-size="10">suppressed carrier</text>
+    <text x="330" y="241" font-size="9.5" font-style="italic">A = double sideband</text>
+    <text x="330" y="255" font-size="9.5" font-style="italic">F = FM &#183; G = PM</text>
+
+    <text x="460" y="186" font-size="10.5" font-weight="bold">modulating signal</text>
+    <text x="460" y="205" font-size="10">3 = one channel of</text>
+    <text x="460" y="220" font-size="10">analog information</text>
+    <text x="460" y="241" font-size="9.5" font-style="italic">1 = one digital channel</text>
+    <text x="460" y="255" font-size="9.5" font-style="italic">0 = no modulation</text>
+
+    <text x="590" y="186" font-size="10.5" font-weight="bold">information sent</text>
+    <text x="590" y="205" font-size="10">E = telephony</text>
+    <text x="590" y="220" font-size="10">(voice)</text>
+    <text x="590" y="241" font-size="9.5" font-style="italic">A/B = telegraphy</text>
+    <text x="590" y="255" font-size="9.5" font-style="italic">D = data &#183; F = video</text>
+  </g>
+
+  <!-- ===== summary ===== -->
+  <line x1="80" y1="286" x2="640" y2="286" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="360" y="314" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">read it aloud: 2K80J3E is a 2.8 kHz-wide SSB phone signal</text>
+  <text x="360" y="338" text-anchor="middle" font-size="10.5" fill="currentColor" stroke="none">same grammar for modes you know: A3E = AM voice &#183; F3E = FM voice &#183; F1B = FSK RTTY</text>
+  <text x="360" y="362" text-anchor="middle" font-size="10" font-style="italic" fill="currentColor" stroke="none">bandwidth first, then modulation, signal, information — every emission reads the same way</text>
+</svg>

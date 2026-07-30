@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 548" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="360" y="30" text-anchor="middle" font-size="13.5" font-weight="bold" fill="currentColor" stroke="none">heterodyning: mix two frequencies, get the sum and the difference</text>
+
+  <!-- ===== antenna + RF input ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <line x1="80" y1="150" x2="80" y2="96"/>
+    <line x1="80" y1="96" x2="66" y2="82"/>
+    <line x1="80" y1="96" x2="80" y2="76"/>
+    <line x1="80" y1="96" x2="94" y2="82"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="80" y1="150" x2="80" y2="170"/>
+    <line x1="80" y1="170" x2="264" y2="170"/>
+  </g>
+  <polygon points="274,170 264,165 264,175" fill="currentColor" stroke="none"/>
+  <text x="170" y="158" text-anchor="middle" font-size="11.5" font-weight="bold" fill="currentColor" stroke="none">RF in: 14.250 MHz</text>
+  <text x="170" y="186" text-anchor="middle" font-size="10" font-style="italic" fill="currentColor" stroke="none">the station you want to hear</text>
+
+  <!-- ===== mixer symbol ===== -->
+  <circle cx="310" cy="170" r="36" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <line x1="287" y1="147" x2="333" y2="193"/>
+    <line x1="287" y1="193" x2="333" y2="147"/>
+  </g>
+  <text x="310" y="124" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor" stroke="none">MIXER</text>
+
+  <!-- ===== local oscillator input ===== -->
+  <rect x="225" y="300" width="170" height="56" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="310" y="324" text-anchor="middle" font-size="11.5" font-weight="bold" fill="currentColor" stroke="none">local oscillator (LO)</text>
+  <text x="310" y="344" text-anchor="middle" font-size="11.5" fill="currentColor" stroke="none">23.250 MHz</text>
+  <line x1="310" y1="300" x2="310" y2="217" fill="none" stroke="currentColor" stroke-width="2"/>
+  <polygon points="310,206 304,217 316,217" fill="currentColor" stroke="none"/>
+
+  <!-- ===== output splits into the two products ===== -->
+  <line x1="346" y1="170" x2="430" y2="170" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="430" cy="170" r="3.5" fill="currentColor" stroke="none"/>
+  <path d="M 430 170 L 430 110 L 446 110" fill="none" stroke="currentColor" stroke-width="2"/>
+  <polygon points="455,110 445,105 445,115" fill="currentColor" stroke="none"/>
+  <path d="M 430 170 L 430 230 L 446 230" fill="none" stroke="currentColor" stroke-width="2"/>
+  <polygon points="455,230 445,225 445,235" fill="currentColor" stroke="none"/>
+
+  <!-- ===== sum product — rejected ===== -->
+  <rect x="455" y="82" width="250" height="58" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="580" y="102" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">sum product</text>
+  <text x="580" y="120" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">14.250 + 23.250 = 37.500 MHz</text>
+  <text x="580" y="135" text-anchor="middle" font-size="9.5" font-style="italic" fill="currentColor" stroke="none">far from the IF — filtered out</text>
+
+  <!-- ===== difference product — the IF ===== -->
+  <rect x="455" y="202" width="250" height="58" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="580" y="222" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">difference product</text>
+  <text x="580" y="240" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">23.250 &#8722; 14.250 = 9.000 MHz</text>
+  <text x="580" y="255" text-anchor="middle" font-size="9.5" font-style="italic" fill="currentColor" stroke="none">kept — this is the IF</text>
+
+  <!-- ===== IF strip ===== -->
+  <line x1="580" y1="260" x2="580" y2="290" fill="none" stroke="currentColor" stroke-width="2"/>
+  <polygon points="580,296 574,286 586,286" fill="currentColor" stroke="none"/>
+  <rect x="455" y="296" width="250" height="52" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="580" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor" stroke="none">IF amplifier + narrow filter</text>
+  <text x="580" y="336" text-anchor="middle" font-size="9.5" font-style="italic" fill="currentColor" stroke="none">fixed at 9.000 MHz for every station</text>
+
+  <!-- ===== teaching notes ===== -->
+  <text x="360" y="400" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">mixing = heterodyning — the trick behind every superheterodyne (superhet) receiver</text>
+  <text x="360" y="424" text-anchor="middle" font-size="10.5" fill="currentColor" stroke="none">you tune the radio by changing the LO: LO = station + IF (14.250 + 9.000 = 23.250 MHz)</text>
+
+  <!-- ===== the image ===== -->
+  <rect x="90" y="448" width="540" height="62" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="360" y="472" text-anchor="middle" font-size="11.5" font-weight="bold" fill="currentColor" stroke="none">watch for the image — an unwanted response 2 &#215; IF away</text>
+  <text x="360" y="494" text-anchor="middle" font-size="10" font-style="italic" fill="currentColor" stroke="none">14.250 + 2 &#215; 9.000 = 32.250 MHz also mixes to the IF — the front end must reject it</text>
+</svg>

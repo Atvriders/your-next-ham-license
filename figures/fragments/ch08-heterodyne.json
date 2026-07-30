@@ -1,0 +1,8 @@
+{
+  "id": "ch08-heterodyne",
+  "chapter": 8,
+  "caption": "Heterodyning: a mixer fed with the incoming RF (14.250 MHz) and the local oscillator (23.250 MHz) outputs both the sum (37.500 MHz, filtered out) and the difference (9.000 MHz). The difference is the intermediate frequency — the IF — which a fixed IF amplifier and narrow filter process no matter which station is tuned, because tuning a superheterodyne receiver means varying the local oscillator. Watch for the image: an unwanted signal exactly twice the IF away (14.250 + 2 \u00d7 9.000 = 32.250 MHz) also mixes to the IF, and the receiver's front end must reject it.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Mixing two signals is called heterodyning. A mixer outputs the sum and the difference of the radio frequency and the local oscillator. The difference becomes the intermediate frequency, which the rest of the superheterodyne receiver amplifies and filters. You tune the radio by changing the local oscillator. Beware the image: a signal twice the I F away from the one you want also lands on the I F."
+}

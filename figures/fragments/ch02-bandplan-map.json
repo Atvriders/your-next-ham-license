@@ -1,0 +1,8 @@
+{
+  "id": "ch02-bandplan-map",
+  "chapter": 2,
+  "caption": "The 20-meter band plan as a zoning map: CW at the bottom of the band, digital modes at 14.070–14.100 MHz (RTTY, packet, PSK31 at 14.070, FT8 at 14.074), the NCDXF beacon at 14.100 MHz, then SSB phone from 14.150 to 14.350 MHz with SSTV at 14.230 and the AM calling frequency at 14.286. The sideband conventions are custom, not law: voice is LSB below 10 MHz and USB at 10 MHz and above, while AFSK RTTY traditionally uses LSB and FT8, FT4, JT65, and JT9 use USB on every band — only 60-meter phone (USB) is written into FCC rules.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A band plan is a voluntary zoning map. On 20 meters: CW at the bottom of the band, digital modes between 14.070 and 14.100 megahertz, the beacon at 14.100, then SSB phone from 14.150 to 14.350. Sideband use is convention, not law: voice is lower sideband below 10 megahertz and upper sideband at 10 megahertz and above — so 20 meter phone is USB — while digital modes follow their own pair of conventions."
+}

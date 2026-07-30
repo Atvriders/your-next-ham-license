@@ -1,0 +1,8 @@
+{
+  "id": "ch05-transformer",
+  "chapter": 5,
+  "caption": "A transformer sets its voltage ratio by its turns ratio, V_s = V_p × (N_s/N_p) — the pool's worked example: 120 V applied to a 500-turn primary with a 1,500-turn secondary gives 360 V (G5C06). Impedance transforms as the square of the turns ratio, Z_p/Z_s = (N_p/N_s)², so matching a 600 Ω feed point to 50 Ω coax — a 12:1 impedance ratio — needs √12 ≈ 3.5:1 turns (G5C07, drawn as 7 turns to 2; the 12:1 and 144:1 distractors forget the square). Fed backwards the ratio inverts (G5C02), and a step-up's primary carries the higher current, hence heavier wire (G5C05).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a transformer drawn with seven primary turns and two secondary turns stepping 600 ohms down to 50 ohms, with the voltage-ratio formula and the squared impedance-ratio formula worked below"
+}

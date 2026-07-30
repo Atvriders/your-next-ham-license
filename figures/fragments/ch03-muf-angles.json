@@ -1,0 +1,8 @@
+{
+  "id": "ch03-muf-angles",
+  "chapter": 3,
+  "caption": "The two controls on a skywave path. Left: at one frequency, a higher takeoff angle returns closer in - but steeper than the critical angle the signal punches through and is lost to space. Right: the path supports only the window between the LUF (below it, absorption wins) and the MUF (above it, signals escape); the best DX frequency is just below the MUF, so the higher bands open only when solar activity lifts the MUF above them.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "On the left, three rays leave one station at the same frequency. A low takeoff angle refracts off the ionosphere and lands far away - long skip. A higher angle lands nearer - short skip. A ray steeper than the critical angle does not return at all: it punches through the layer and is lost to space. On the right, a vertical frequency scale shows the usable window on one path: below the LUF, absorption kills the signal; above the MUF, the signal escapes to space; between them the ionosphere refracts it back, and just below the MUF is best. In the example, 10 meters is above the MUF - no path; 15 meters, just below the MUF, is best; 20 and 40 meters work; 80 meters is below the LUF. More sunspots mean a higher MUF, so the high bands open only then, and low solar activity kills 15, 12, and 10 meters first."
+}

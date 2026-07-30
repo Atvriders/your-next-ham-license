@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 465" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="380" y="34" font-size="19" font-weight="bold" fill="currentColor" text-anchor="middle">THE /AG INDICATOR</text>
+  <text x="380" y="55" font-size="12" fill="currentColor" text-anchor="middle">your call sign's temporary suffix while the General grant is pending</text>
+
+  <!-- ===== the call sign with its indicator ===== -->
+  <rect x="422" y="82" width="114" height="52" rx="8" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.12"/>
+  <text x="238" y="122" font-size="44" font-weight="bold" fill="currentColor">KX9ABC</text>
+  <text x="434" y="122" font-size="44" font-weight="bold" fill="currentColor">/AG</text>
+
+  <!-- ===== part brackets ===== -->
+  <g stroke="currentColor" fill="none" stroke-width="1.6">
+    <path d="M240,140 L240,146 L420,146 L420,140"/>
+    <path d="M436,140 L436,146 L528,146 L528,140"/>
+  </g>
+  <text x="330" y="166" font-size="12" font-weight="bold" fill="currentColor" text-anchor="middle">YOUR CALL SIGN</text>
+  <text x="330" y="182" font-size="10" fill="currentColor" text-anchor="middle">unchanged by the upgrade</text>
+  <text x="482" y="166" font-size="12" font-weight="bold" fill="currentColor" text-anchor="middle">THE INDICATOR</text>
+  <text x="482" y="182" font-size="10" fill="currentColor" text-anchor="middle">“I passed Element 3 — grant pending”</text>
+
+  <!-- ===== three boxes ===== -->
+  <rect x="30" y="210" width="220" height="170" rx="8" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.06"/>
+  <text x="140" y="236" font-size="12.5" font-weight="bold" fill="currentColor" text-anchor="middle">WHEN YOU NEED IT</text>
+  <g font-size="9.5" fill="currentColor" text-anchor="middle">
+    <text x="140" y="258">both true at the exam session:</text>
+    <text x="140" y="274">1 · Form 605 properly</text>
+    <text x="140" y="289">submitted to the VEs</text>
+    <text x="140" y="305">2 · CSCE in your hand</text>
+    <text x="140" y="321">→ General privileges at once</text>
+    <text x="140" y="337">(§97.9(b)) — and every such</text>
+    <text x="140" y="353">transmission must carry /AG</text>
+    <text x="140" y="369">(§97.119(f))</text>
+  </g>
+
+  <rect x="270" y="210" width="220" height="170" rx="8" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.06"/>
+  <text x="380" y="236" font-size="12.5" font-weight="bold" fill="currentColor" text-anchor="middle">HOW YOU SIGN IT</text>
+  <g font-size="9.5" fill="currentColor" text-anchor="middle">
+    <text x="380" y="258">phone: say the words —</text>
+    <text x="380" y="274">“This is KX9ABC</text>
+    <text x="380" y="289">temporary AG”</text>
+    <text x="380" y="313">CW / digital: send</text>
+    <text x="380" y="329">KX9ABC/AG</text>
+    <text x="380" y="353">(the slant mark, or any</text>
+    <text x="380" y="369">word that denotes it)</text>
+  </g>
+
+  <rect x="510" y="210" width="220" height="170" rx="8" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.06"/>
+  <text x="620" y="236" font-size="12.5" font-weight="bold" fill="currentColor" text-anchor="middle">WHEN YOU DROP IT</text>
+  <g font-size="9.5" fill="currentColor" text-anchor="middle">
+    <text x="620" y="258">watch your ULS record —</text>
+    <text x="620" y="274">once it shows General</text>
+    <text x="620" y="290">(typically within days),</text>
+    <text x="620" y="306">drop the suffix and</text>
+    <text x="620" y="322">operate on the license</text>
+    <text x="620" y="338">itself (§97.9(a))</text>
+  </g>
+
+  <!-- ===== footnotes ===== -->
+  <text x="380" y="424" font-size="10" fill="currentColor" text-anchor="middle">The interim authority runs until final disposition of the application or 365 days after passing, whichever comes first (§97.9(b)).</text>
+  <text x="380" y="442" font-size="10" fill="currentColor" text-anchor="middle">Upgraders only — a brand-new license has no /AG shortcut: no grant in ULS, no transmitting.</text>
+
+</svg>

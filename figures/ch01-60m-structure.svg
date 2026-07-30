@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="400" y="34" font-size="18" font-weight="bold" fill="currentColor" text-anchor="middle">THE 60 M BAND TODAY: ONE SEGMENT + FOUR CHANNELS</text>
+  <text x="400" y="54" font-size="11" fill="currentColor" text-anchor="middle">as the rules read in 2026 — the old five-channel plan is gone</text>
+
+  <!-- ===== PART 1: contiguous segment ===== -->
+  <text x="394" y="92" font-size="12.5" font-weight="bold" fill="currentColor" text-anchor="middle">PART 1 · THE CONTIGUOUS SEGMENT</text>
+  <text x="394" y="108" font-size="10.5" fill="currentColor" text-anchor="middle">5351.5–5366.5 kHz — transmit anywhere inside — 9.15 W ERP max</text>
+  <rect x="352" y="122" width="85" height="50" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.15"/>
+  <text x="394" y="151" font-size="11" font-weight="bold" fill="currentColor" text-anchor="middle">9.15 W ERP</text>
+  <text x="394" y="190" font-size="8.5" fill="currentColor" text-anchor="middle">old 5358.5 kHz channel — now inside the segment (dashed tick on the axis)</text>
+
+  <!-- ===== PART 2: four discrete channels ===== -->
+  <text x="400" y="224" font-size="12.5" font-weight="bold" fill="currentColor" text-anchor="middle">PART 2 · FOUR DISCRETE CHANNELS</text>
+  <text x="400" y="240" font-size="10.5" fill="currentColor" text-anchor="middle">center frequencies below — 100 W ERP on each</text>
+  <g stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.15">
+    <rect x="233.3" y="254" width="16" height="50"/>
+    <rect x="324" y="254" width="16" height="50"/>
+    <rect x="465.3" y="254" width="16" height="50"/>
+    <rect x="646.7" y="254" width="16" height="50"/>
+  </g>
+  <g font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">
+    <text x="241.3" y="322">5332</text>
+    <text x="332" y="322">5348</text>
+    <text x="473.3" y="322">5373</text>
+    <text x="654.7" y="322">5405</text>
+  </g>
+  <g font-size="8.5" fill="currentColor" text-anchor="middle">
+    <text x="241.3" y="334">center kHz</text>
+    <text x="332" y="334">center kHz</text>
+    <text x="473.3" y="334">center kHz</text>
+    <text x="654.7" y="334">center kHz</text>
+  </g>
+
+  <!-- ===== frequency axis ===== -->
+  <line x1="60" y1="348" x2="740" y2="348" stroke="currentColor" stroke-width="2"/>
+  <line x1="391.5" y1="340" x2="391.5" y2="356" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3,2.5"/>
+  <g stroke="currentColor" stroke-width="1.5">
+    <line x1="60" y1="348" x2="60" y2="355"/>
+    <line x1="173.3" y1="348" x2="173.3" y2="355"/>
+    <line x1="286.7" y1="348" x2="286.7" y2="355"/>
+    <line x1="400" y1="348" x2="400" y2="355"/>
+    <line x1="513.3" y1="348" x2="513.3" y2="355"/>
+    <line x1="626.7" y1="348" x2="626.7" y2="355"/>
+    <line x1="740" y1="348" x2="740" y2="355"/>
+  </g>
+  <g font-size="9" fill="currentColor" text-anchor="middle">
+    <text x="60" y="368">5300</text>
+    <text x="173.3" y="368">5320</text>
+    <text x="286.7" y="368">5340</text>
+    <text x="400" y="368">5360</text>
+    <text x="513.3" y="368">5380</text>
+    <text x="626.7" y="368">5400</text>
+    <text x="740" y="368">5420 kHz</text>
+  </g>
+
+  <!-- ===== footnotes ===== -->
+  <text x="400" y="398" font-size="10" fill="currentColor" text-anchor="middle">Emissions are USB phone, CW, RTTY, and data — never wider than 2.8 kHz anywhere on 60 m (§97.303(h)(3)).</text>
+  <text x="400" y="415" font-size="10" fill="currentColor" text-anchor="middle">On the four channels the CW carrier sits at channel center; phone/data carriers may be set 1.5 kHz below center.</text>
+  <text x="400" y="432" font-size="10" fill="currentColor" text-anchor="middle">ERP = transmitter PEP × antenna gain relative to a dipole — keep gain records for non-dipole antennas (§97.313(i)).</text>
+
+</svg>

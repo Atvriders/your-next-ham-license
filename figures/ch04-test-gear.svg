@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="400" y="32" font-size="18" font-weight="bold">TEST GEAR BASICS: WHAT GOES WHERE</text>
+    <text x="400" y="53" font-size="12">three instruments, three different hookups — match the tool to the job</text>
+  </g>
+
+  <!-- ===== Row 1: dummy load — transmitter testing, nothing on the air ===== -->
+  <text x="40" y="98" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">1 · DUMMY LOAD — test the transmitter, nothing goes on the air</text>
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <rect x="40" y="112" width="150" height="80"/>
+    <rect x="250" y="112" width="150" height="80"/>
+    <line x1="190" y1="152" x2="240" y2="152"/>
+  </g>
+  <polygon points="250,152 240,147 240,157" fill="currentColor" stroke="none"/>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="115" y="148" font-size="14" font-weight="bold">TRANSCEIVER</text>
+    <text x="115" y="166" font-size="9.5" font-style="italic">under test</text>
+    <text x="215" y="143" font-size="9">full power</text>
+    <text x="325" y="144" font-size="13" font-weight="bold">DUMMY LOAD</text>
+    <text x="325" y="161" font-size="9.5">50 Ω non-inductive load</text>
+    <text x="325" y="175" font-size="9.5">on a heat sink</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="10">
+    <text x="430" y="146">soaks up the full 100 W — radiates nothing:</text>
+    <text x="430" y="160">tune up and check output any time, no QRM</text>
+  </g>
+
+  <!-- ===== Row 2: directional wattmeter — inline in the feed line ===== -->
+  <text x="40" y="268" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">2 · DIRECTIONAL WATTMETER — inline in the feed line, on the air</text>
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <rect x="40" y="282" width="150" height="80"/>
+    <rect x="250" y="282" width="150" height="80"/>
+    <line x1="190" y1="322" x2="240" y2="322"/>
+    <line x1="400" y1="322" x2="557" y2="322"/>
+    <!-- antenna whip -->
+    <line x1="560" y1="322" x2="560" y2="240"/>
+    <line x1="548" y1="250" x2="572" y2="250"/>
+    <line x1="551" y1="262" x2="569" y2="262"/>
+    <line x1="554" y1="274" x2="566" y2="274"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="250,322 240,317 240,327"/>
+    <polygon points="500,322 490,317 490,327"/>
+    <circle cx="560" cy="322" r="3.2"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="115" y="322" font-size="14" font-weight="bold">TRANSCEIVER</text>
+    <text x="215" y="313" font-size="9">RF</text>
+    <text x="325" y="312" font-size="12" font-weight="bold">DIRECTIONAL</text>
+    <text x="325" y="326" font-size="12" font-weight="bold">WATTMETER</text>
+    <text x="325" y="344" font-size="9">forward + reflected power</text>
+    <text x="480" y="312" font-size="10">coax feed line</text>
+    <text x="560" y="228" font-size="12" font-weight="bold">ANTENNA</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="10">
+    <text x="590" y="300">SWR follows from the pair:</text>
+    <text x="590" y="314">100 W fwd + 4 W refl → 1.5:1</text>
+  </g>
+
+  <!-- ===== Row 3: antenna analyzer — at the antenna system, rig off ===== -->
+  <text x="40" y="438" font-size="12.5" font-weight="bold" fill="currentColor" stroke="none">3 · ANTENNA ANALYZER — at the antenna, transmitter OFF</text>
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <rect x="40" y="452" width="190" height="80"/>
+    <line x1="230" y1="492" x2="467" y2="492"/>
+    <!-- antenna whip -->
+    <line x1="475" y1="492" x2="475" y2="412"/>
+    <line x1="463" y1="422" x2="487" y2="422"/>
+    <line x1="466" y1="434" x2="484" y2="434"/>
+    <line x1="469" y1="446" x2="481" y2="446"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="400,492 390,487 390,497"/>
+    <circle cx="475" cy="492" r="3.2"/>
+  </g>
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="135" y="484" font-size="13" font-weight="bold">ANTENNA ANALYZER</text>
+    <text x="135" y="501" font-size="9.5">its own low-power signal source</text>
+    <text x="135" y="515" font-size="9.5">reads SWR + impedance vs freq</text>
+    <text x="350" y="482" font-size="10">the station's feed line</text>
+    <text x="475" y="400" font-size="12" font-weight="bold">ANTENNA</text>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="10">
+    <text x="510" y="478">hooks to antenna + feed line, rig disconnected</text>
+    <text x="510" y="492">strong nearby signals can corrupt SWR readings</text>
+    <text x="510" y="506">also measures coax impedance</text>
+  </g>
+
+  <!-- ===== bottom note ===== -->
+  <text x="400" y="600" font-size="11.5" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">dummy load = rig testing · wattmeter = the match on the air · analyzer = the antenna itself</text>
+
+</svg>

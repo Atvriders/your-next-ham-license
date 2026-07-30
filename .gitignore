@@ -1,0 +1,7 @@
+audiobook/
+build/
+__pycache__/
+*.pyc
+.venv/
+.superpowers/
+.pytest_cache/

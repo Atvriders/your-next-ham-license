@@ -1,0 +1,8 @@
+{
+  "id": "ch04-hf-station",
+  "chapter": 4,
+  "caption": "An HF station as a signal-flow map. The RF path runs in a straight line — transceiver, optional linear amplifier (dashed), directional wattmeter reading forward and reflected power (SWR follows from the pair), antenna tuner, coax feed line, antenna — while power, audio, and control hook in around it: a 13.8 V supply good for roughly 20 A at 100 W, the microphone or paddle (a keyer forms the dits and dahs), and a computer whose isolated interface carries audio plus PTT while a CAT line carries frequency and mode control. The amplifier's ALC line back to the rig limits drive power, and the tuner makes the rig see a matched load without changing the SWR on the antenna side.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a block diagram of an HF station: the RF path runs transceiver, optional amplifier, directional wattmeter, antenna tuner, feed line, antenna, with the power supply, microphone or paddle, and a computer with a digital interface hooked into the transceiver"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ch04-grounding-bonding",
+  "chapter": 4,
+  "caption": "How an HF shack is grounded. Inside, every chassis — transceiver, amplifier, computer and supply — gets its own short strap to a single-point ground bus; the bonding kills ground loops (whose symptom is hum on your transmitted audio) and RF hot spots. Outside, every feed line enters through a lightning arrestor on a grounded entrance panel, panel and bus share a short, direct path to the entry ground rod, and all rods — entry and mast — are bonded together and to the house AC service ground. Ground leads stay short and direct because a long wire can be resonant at RF and leave the chassis RF-hot, and lightning-protection joints are clamped or welded, never soldered: lightning heat destroys solder.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a diagram of shack grounding: equipment chassis bonded one strap each to a single ground bus, feed lines entering through arrestors on a grounded panel, and all ground rods bonded together with short, direct, never-soldered conductors"
+}

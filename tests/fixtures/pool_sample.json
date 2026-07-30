@@ -1,0 +1,158 @@
+{
+  "G1A01": {
+    "group": "G1A",
+    "subelement": "G1",
+    "question": "On which bands may a General class licensee transmit phone emissions?",
+    "choices": {
+      "A": "No amateur bands",
+      "B": "All amateur bands, with some segments reserved for higher license classes",
+      "C": "The 2 meter band only",
+      "D": "The 70 centimeter band only"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G1A03": {
+    "group": "G1A",
+    "subelement": "G1",
+    "question": "What is the maximum transmitting power a General class licensee may use on the 60 meter band?",
+    "choices": {
+      "A": "50 watts PEP",
+      "B": "100 watts PEP effective radiated power relative to a dipole",
+      "C": "200 watts PEP",
+      "D": "1500 watts PEP"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G1A05": {
+    "group": "G1A",
+    "subelement": "G1",
+    "question": "Which of the following is a frequency segment reserved exclusively for Amateur Extra class licensees?",
+    "choices": {
+      "A": "All of the 80 meter band",
+      "B": "The first 25 kHz of some HF band segments",
+      "C": "All frequencies above 30 MHz",
+      "D": "The 60 meter channels"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G1B01": {
+    "group": "G1B",
+    "subelement": "G1",
+    "question": "What is the maximum symbol rate permitted for RTTY or data emissions below 28 MHz?",
+    "choices": {
+      "A": "56 kilobaud",
+      "B": "300 baud",
+      "C": "19.6 kilobaud",
+      "D": "1200 baud"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G1B02": {
+    "group": "G1B",
+    "subelement": "G1",
+    "question": "How often must an amateur station transmit its call sign during a contact?",
+    "choices": {
+      "A": "Every 5 minutes during a contact",
+      "B": "At least every 10 minutes during and at the end of a contact",
+      "C": "Once per hour while operating",
+      "D": "Only at the beginning of a contact"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G1B03": {
+    "group": "G1B",
+    "subelement": "G1",
+    "question": "When is music permitted on the amateur bands?",
+    "choices": {
+      "A": "Only when incidental to an authorized retransmission",
+      "B": "At any time",
+      "C": "During contests",
+      "D": "On weekends"
+    },
+    "answer": "A",
+    "figure": null
+  },
+  "G2A01": {
+    "group": "G2A",
+    "subelement": "G2",
+    "question": "Which sideband is conventionally used for phone operation below 10 MHz?",
+    "choices": {
+      "A": "Upper sideband",
+      "B": "Lower sideband",
+      "C": "Vestigial sideband",
+      "D": "Double sideband"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G2A02": {
+    "group": "G2A",
+    "subelement": "G2",
+    "question": "What does the Q signal QRM mean?",
+    "choices": {
+      "A": "I am busy",
+      "B": "I am receiving interference from other stations",
+      "C": "I am changing frequency",
+      "D": "I am reducing power"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G2A03": {
+    "group": "G2A",
+    "subelement": "G2",
+    "question": "What should you do first before calling CQ on an HF frequency?",
+    "choices": {
+      "A": "Increase transmitter power",
+      "B": "Tune the antenna",
+      "C": "Listen to be sure the frequency is not in use",
+      "D": "Check your SWR"
+    },
+    "answer": "C",
+    "figure": null
+  },
+  "G5B01": {
+    "group": "G5B",
+    "subelement": "G5",
+    "question": "What is the peak envelope power of a transmitter that develops 100 volts peak-to-peak across a 50 ohm load?",
+    "choices": {
+      "A": "12.5 watts",
+      "B": "25 watts",
+      "C": "50 watts",
+      "D": "100 watts"
+    },
+    "answer": "B",
+    "figure": null
+  },
+  "G5B02": {
+    "group": "G5B",
+    "subelement": "G5",
+    "question": "What is the impedance of a circuit with 30 ohms resistance and 40 ohms reactance?",
+    "choices": {
+      "A": "10 ohms",
+      "B": "35 ohms",
+      "C": "50 ohms",
+      "D": "70 ohms"
+    },
+    "answer": "C",
+    "figure": null
+  },
+  "G5B03": {
+    "group": "G5B",
+    "subelement": "G5",
+    "question": "How does the inductive reactance of a series circuit at resonance compare to its capacitive reactance?",
+    "choices": {
+      "A": "It is zero",
+      "B": "It equals the capacitive reactance",
+      "C": "It is infinite",
+      "D": "It is twice the capacitive reactance"
+    },
+    "answer": "B",
+    "figure": null
+  }
+}

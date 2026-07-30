@@ -1,0 +1,8 @@
+{
+  "id": "ch05-time-constants",
+  "chapter": 5,
+  "caption": "The time constant τ sets how fast energy moves in and out of storage. Left: capacitor voltage — charging climbs to 63% of the supply after one τ = R × C and is effectively full (99%+) by 5τ; discharging falls to 37% after one τ. Right: inductor current builds and decays on the same clock with τ = L / R. This store-and-release is the mechanism behind the G5A reactance concepts: inductors and capacitors oppose AC by storing and returning energy, never by dissipating it. (The 2023–2027 pool tests no time-constant arithmetic; the curves underpin G5A02–G5A06.)",
+  "kind": "original",
+  "source": "original",
+  "spoken": "two plots of exponential curves marked at one time constant — 63 percent for charging, 37 percent for discharging — one for capacitor voltage, one for inductor current"
+}

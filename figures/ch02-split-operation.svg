@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 546" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="360" y="30" text-anchor="middle" font-size="13.5" font-weight="bold" fill="currentColor" stroke="none">split operation — he transmits on one frequency, listens on another</text>
+
+  <!-- ===== the DX station ===== -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <line x1="110" y1="140" x2="110" y2="84"/>
+    <line x1="110" y1="84" x2="96" y2="70"/>
+    <line x1="110" y1="84" x2="110" y2="64"/>
+    <line x1="110" y1="84" x2="124" y2="70"/>
+  </g>
+  <text x="110" y="160" text-anchor="middle" font-size="11.5" fill="currentColor" stroke="none">the rare DX station</text>
+
+  <!-- ===== what he announces ===== -->
+  <rect x="158" y="58" width="230" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="273" y="86" text-anchor="middle" font-size="13" font-style="italic" fill="currentColor" stroke="none">“listening 5 to 10 up”</text>
+  <line x1="124" y1="90" x2="156" y2="84" stroke="currentColor" stroke-width="1.5" fill="none"/>
+
+  <!-- ===== his listening window (shaded) and the pileup ===== -->
+  <rect x="370" y="252" width="140" height="48" fill="currentColor" stroke="none" opacity="0.10"/>
+  <text x="440" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">he listens 5–10 kHz “up”</text>
+  <text x="440" y="190" text-anchor="middle" font-size="10.5" font-style="italic" fill="currentColor" stroke="none">the pileup calls in this window — once, then listen</text>
+  <g stroke="currentColor" stroke-width="2" fill="none">
+    <line x1="395" y1="208" x2="395" y2="288"/>
+    <line x1="440" y1="208" x2="440" y2="288"/>
+    <line x1="485" y1="208" x2="485" y2="288"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="395,296 389,284 401,284"/>
+    <polygon points="440,296 434,284 446,284"/>
+    <polygon points="485,296 479,284 491,284"/>
+  </g>
+
+  <!-- ===== his transmit frequency — stay off ===== -->
+  <text x="230" y="252" text-anchor="middle" font-size="10" font-style="italic" fill="currentColor" stroke="none">never call on his frequency</text>
+  <text x="230" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">the DX transmits here</text>
+  <polygon points="230,298 221,284 239,284" fill="currentColor" stroke="none"/>
+
+  <!-- ===== the frequency axis (20 m example) ===== -->
+  <line x1="90" y1="300" x2="646" y2="300" stroke="currentColor" stroke-width="2" fill="none"/>
+  <polygon points="656,300 646,295 646,305" fill="currentColor" stroke="none"/>
+  <text x="644" y="288" text-anchor="end" font-size="10.5" font-style="italic" fill="currentColor" stroke="none">frequency on 20 m</text>
+  <g stroke="currentColor" stroke-width="1.8" fill="none">
+    <line x1="90" y1="302" x2="90" y2="308"/>
+    <line x1="230" y1="302" x2="230" y2="308"/>
+    <line x1="370" y1="302" x2="370" y2="308"/>
+    <line x1="510" y1="302" x2="510" y2="308"/>
+    <line x1="650" y1="302" x2="650" y2="308"/>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="11" text-anchor="middle">
+    <text x="90" y="324">14.235</text>
+    <text x="230" y="324">14.240</text>
+    <text x="370" y="324">14.245</text>
+    <text x="510" y="324">14.250</text>
+    <text x="650" y="324">14.255</text>
+  </g>
+  <text x="95" y="344" font-size="9.5" font-style="italic" fill="currentColor" stroke="none">all frequencies MHz</text>
+
+  <!-- ===== the split, dimensioned ===== -->
+  <g stroke="currentColor" stroke-width="1.2" fill="none">
+    <line x1="230" y1="348" x2="230" y2="356"/>
+    <line x1="370" y1="348" x2="370" y2="356"/>
+    <line x1="230" y1="352" x2="370" y2="352"/>
+  </g>
+  <text x="300" y="368" text-anchor="middle" font-size="10.5" fill="currentColor" stroke="none">5 kHz “up”</text>
+
+  <!-- ===== your radio ===== -->
+  <rect x="90" y="396" width="540" height="96" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="360" y="420" text-anchor="middle" font-size="12.5" font-weight="bold">your radio — SPLIT on</text>
+    <text x="360" y="443" text-anchor="middle" font-size="11.5">receive (VFO A): 14.240 — hear the DX</text>
+    <text x="360" y="463" text-anchor="middle" font-size="11.5">transmit (VFO B): 14.248 — inside his listening window</text>
+    <text x="360" y="483" text-anchor="middle" font-size="10" font-style="italic">one button splits the job: one VFO receives, the other transmits</text>
+  </g>
+
+  <!-- ===== notes ===== -->
+  <g fill="currentColor" stroke="none" font-size="10.5" font-style="italic" text-anchor="middle">
+    <text x="360" y="518">pileup manners: call as he finishes the previous contact — your full call once, not his — then listen</text>
+    <text x="360" y="536">operating split yourself? check that BOTH frequencies are clear before you transmit</text>
+  </g>
+</svg>

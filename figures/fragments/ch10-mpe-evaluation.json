@@ -1,0 +1,8 @@
+{
+  "id": "ch10-mpe-evaluation",
+  "chapter": 10,
+  "caption": "The RF-exposure evaluation loop. Every station with time-averaged transmission over one milliwatt is covered by the rules and evaluates per FCC OET Bulletin 65 - by estimate (OET-65 tables), by model (computer calculation), or by measurement with a calibrated field-strength meter and antenna; any one of the three works. If accessible areas could exceed the limits, act - cut power, raise the antenna, restrict access, keep the main lobe off people. Then re-evaluate routinely and whenever the station changes.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A flowchart runs top to bottom. First box: the rules apply to every station whose time-averaged transmission exceeds one milliwatt. Next: evaluate per FCC OET Bulletin 65, with three acceptable methods side by side - estimate from the OET-65 tables, model the power density by computer, or measure with a calibrated field-strength meter and calibrated antenna, noting an SWR meter does not qualify. A decision diamond asks whether fields in accessible areas could exceed the limits. If yes, an act box lists the fixes: cut power, raise the antenna, restrict access, keep the main lobe off people. Both paths land in the final box: re-evaluate routinely, and whenever the station changes - new band, more power, new antenna or feed line - with an arrow looping back to the start."
+}

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 530" font-family="sans-serif">
+
+  <!-- ===== title ===== -->
+  <text x="360" y="28" text-anchor="middle" font-size="13.5" font-weight="bold" fill="currentColor" stroke="none">a contest QSO — CQ, the exchange, then the log</text>
+  <text x="360" y="46" text-anchor="middle" font-size="10.5" font-style="italic" fill="currentColor" stroke="none">November Sweepstakes on phone — the runner holds the frequency and calls CQ; you search and pounce</text>
+
+  <!-- ===== time flows down ===== -->
+  <line x1="42" y1="92" x2="42" y2="310" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  <polygon points="42,320 36,308 48,308" fill="currentColor" stroke="none"/>
+  <text x="26" y="202" text-anchor="middle" font-size="10" font-style="italic" fill="currentColor" stroke="none" transform="rotate(-90 26 202)">time</text>
+
+  <!-- ===== the two stations ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="170" y="62" font-size="12" font-weight="bold">the runner — K1ZZ</text>
+    <text x="170" y="78" font-size="10" font-style="italic">Connecticut section</text>
+    <text x="550" y="62" font-size="12" font-weight="bold">you — W9XYZ</text>
+    <text x="550" y="78" font-size="10" font-style="italic">Indiana section</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <line x1="170" y1="88" x2="170" y2="322"/>
+    <line x1="550" y1="88" x2="550" y2="322"/>
+  </g>
+
+  <!-- ===== the transmissions ===== -->
+  <g stroke="currentColor" stroke-width="2" fill="none">
+    <line x1="176" y1="112" x2="534" y2="112"/>
+    <line x1="544" y1="156" x2="186" y2="156"/>
+    <line x1="176" y1="200" x2="534" y2="200"/>
+    <line x1="544" y1="244" x2="186" y2="244"/>
+    <line x1="176" y1="288" x2="534" y2="288"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="542,112 532,107 532,117"/>
+    <polygon points="178,156 188,151 188,161"/>
+    <polygon points="542,200 532,195 532,205"/>
+    <polygon points="178,244 188,239 188,249"/>
+    <polygon points="542,288 532,283 532,293"/>
+  </g>
+  <g fill="currentColor" stroke="none" font-size="11" text-anchor="middle">
+    <text x="355" y="102">“CQ contest, CQ contest — K1ZZ, contest”</text>
+    <text x="355" y="146">your call, once — “W9XYZ”</text>
+    <text x="355" y="190">“W9XYZ — 59, number 127 Alpha, K1ZZ, check 98, Connecticut”</text>
+    <text x="355" y="234">“K1ZZ — 59, number 8 Bravo, W9XYZ, check 04, Indiana”</text>
+    <text x="355" y="278">“QSL, thanks — K1ZZ, contest”</text>
+  </g>
+  <text x="355" y="306" text-anchor="middle" font-size="9.5" font-style="italic" fill="currentColor" stroke="none">(that last line closes the contact, IDs, and re-calls CQ in three words)</text>
+
+  <!-- ===== the Sweepstakes exchange, dissected ===== -->
+  <rect x="566" y="88" width="148" height="144" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+  <g fill="currentColor" stroke="none">
+    <text x="640" y="104" text-anchor="middle" font-size="10" font-weight="bold">the Sweepstakes</text>
+    <text x="640" y="117" text-anchor="middle" font-size="10" font-weight="bold">exchange, in order:</text>
+    <g font-size="9">
+      <text x="574" y="136">59 — signal report</text>
+      <text x="574" y="152">127 — serial number</text>
+      <text x="574" y="168">A — precedence code</text>
+      <text x="574" y="184">K1ZZ — his call sign</text>
+      <text x="574" y="200">98 — check: licensed 1998</text>
+      <text x="574" y="216">CT — ARRL section</text>
+    </g>
+  </g>
+
+  <!-- ===== the log entry ===== -->
+  <rect x="60" y="352" width="600" height="96" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="360" y="374" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">then into the log — dates and times in UTC</text>
+  <g fill="currentColor" stroke="none" font-size="11" font-family="monospace" text-anchor="middle">
+    <text x="360" y="396">2026-11-21   21:14 UTC   14.260 MHz USB   K1ZZ</text>
+    <text x="360" y="416">sent → 59  8 B  W9XYZ  04  IN</text>
+    <text x="360" y="434">rcvd → 59  127 A  K1ZZ   98  CT</text>
+  </g>
+
+  <!-- ===== notes ===== -->
+  <g fill="currentColor" stroke="none" font-size="10.5" font-style="italic" text-anchor="middle">
+    <text x="360" y="470">other contests, other info — ARRL DX: RST + state/province · Field Day: class + section · IARU HF: RST + ITU zone</text>
+    <text x="360" y="488">in a contest the “59” is ritual, sent whatever the conditions — everyday contacts deserve an honest report</text>
+    <text x="360" y="506">contest rules never override FCC ID rules — and on CW the report “599” goes “5NN” (cut numbers)</text>
+  </g>
+</svg>

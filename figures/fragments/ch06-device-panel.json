@@ -1,0 +1,8 @@
+{
+  "id": "ch06-device-panel",
+  "chapter": 6,
+  "caption": "Eleven components to recognize on sight. Four diodes: the ordinary PN junction diode conducts once its forward threshold is reached (about 0.7 V silicon, 0.3 V germanium); the Zener conducts in reverse at a set voltage and works as a shunt regulator; the varactor is a diode run as a voltage-variable capacitor for tuning oscillators; the LED emits light when forward biased. Three transistors: the NPN (emitter arrow points out) and its complement the PNP (arrow in) are current-controlled amplifiers or switches; the JFET's gate voltage controls its channel current with very high input impedance. Around them: the op-amp, an analog gain block; the integrated circuit, a whole circuit on one chip (op-amps through MMICs); the ferrite bead and toroid, which concentrate magnetic fields and choke common-mode current; and the quartz crystal, which vibrates on one precise frequency and anchors oscillators.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a labeled panel of eleven component symbols — PN, Zener, varactor, and light-emitting diodes; NPN, PNP, and junction field-effect transistors; an op-amp; an integrated circuit; a ferrite toroid; and a quartz crystal — each with its name and a one-line role"
+}

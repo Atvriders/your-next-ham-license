@@ -1,0 +1,8 @@
+{
+  "id": "ch05-impedance-vectors",
+  "chapter": 5,
+  "caption": "The impedance plane: resistance R lies along the horizontal axis, reactance X on the vertical — positive (inductive, voltage leads current) above, negative (capacitive, voltage lags) below. Z = R + jX is the vector sum, so 50 Ω of resistance plus 50 Ω of inductive reactance gives not 100 Ω but |Z| = √(R² + X²) = √(50² + 50²) ≈ 70.7 Ω, at phase angle φ = arctan(X/R) = 45° — the pool's 50 Ω family (G5B06 values). A capacitive 50 − j50 mirrors below the axis with the same magnitude and φ = −45°. Resistance dissipates power; reactance only stores and returns it — that is why they add as vectors.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a coordinate plane with a vector from the origin to 50 + j50 ohms, its 70.7 ohm magnitude and 45 degree phase angle marked, and a dashed mirror vector to 50 − j50 below the resistance axis"
+}

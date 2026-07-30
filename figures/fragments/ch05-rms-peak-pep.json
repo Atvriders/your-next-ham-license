@@ -1,0 +1,8 @@
+{
+  "id": "ch05-rms-peak-pep",
+  "chapter": 5,
+  "caption": "Left: one sine wave, three yardsticks — V_pk = 100 V, V_pp = 200 V peak-to-peak, and V_rms = 0.707 × V_pk ≈ 70.7 V, the value that heats a resistor like the same DC voltage (G5B07). The pool's drills: 17 V peak ≈ 12 V RMS (G5B09), 120 V RMS ≈ 339.4 V p-p (G5B08). Right: an SSB signal's power lives at the envelope peak — PEP uses the peak RF voltage, PEP = V_pp²/(8R), so 200 V p-p into 50 Ω is 100 W (G5B06) and 500 V p-p is 625 W (G5B14); average voice power sits well below. For an unmodulated carrier PEP equals average power, ratio 1.00 (G5B11).",
+  "kind": "original",
+  "source": "original",
+  "spoken": "a sine wave with peak, peak-to-peak, and RMS levels marked, and an SSB waveform with its speech envelope, the envelope peak where PEP is figured drawn above the lower average voice power"
+}

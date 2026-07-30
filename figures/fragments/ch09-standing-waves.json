@@ -1,0 +1,8 @@
+{
+  "id": "ch09-standing-waves",
+  "chapter": 9,
+  "caption": "Voltage along the feed line, antenna at the right. Matched (top): no reflection, so the voltage magnitude is flat - SWR 1:1. Mismatched (bottom): a 100 ohm load on 50 ohm line reflects a third of the voltage; forward and reflected waves add to V_max and cancel to V_min in a fixed pattern along the line, and SWR = V_max / V_min = 2:1.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Two plots show voltage magnitude against position along a feed line, in wavelengths from the antenna. The matched plot is a flat line - the load equals the line impedance, nothing reflects, and the SWR is 1:1. The mismatched plot shows a 100 ohm load on 50 ohm line: the reflected wave alternately adds to and cancels the forward wave, so the voltage undulates between V_max and V_min every half wavelength. SWR is V_max divided by V_min - here four-thirds over two-thirds equals 2:1, and by convention the larger number always comes first."
+}

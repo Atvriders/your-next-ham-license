@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Linear power supply chain: transformer, rectifier, filter, regulator, with the waveform at each stage">
+  <title>A linear power supply, stage by stage — AC in, steady DC out</title>
+
+  <!-- title -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="500" y="28" font-size="19" font-weight="bold">A LINEAR POWER SUPPLY, STAGE BY STAGE</text>
+    <text x="500" y="48" font-size="12.5">each stage tames the waveform a little more — watch it change left to right</text>
+  </g>
+
+  <!-- waveform inset captions -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="265" y="78" font-size="12.5" font-weight="bold">AC — stepped</text>
+    <text x="265" y="93" font-size="12.5" font-weight="bold">up or down</text>
+    <text x="495" y="78" font-size="12.5" font-weight="bold">pulsating DC — full-wave</text>
+    <text x="495" y="93" font-size="12.5" font-weight="bold">pulses at twice line frequency</text>
+    <text x="725" y="78" font-size="12.5" font-weight="bold">smoothed DC —</text>
+    <text x="725" y="93" font-size="12.5" font-weight="bold">a little ripple left</text>
+    <text x="940" y="78" font-size="12.5" font-weight="bold">regulated DC —</text>
+    <text x="940" y="93" font-size="12.5" font-weight="bold">steady under load</text>
+  </g>
+
+  <!-- waveform insets (zero-volt baseline + trace) -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <g stroke-width="1.2">
+      <line x1="213" y1="140" x2="317" y2="140"/>
+      <line x1="443" y1="140" x2="547" y2="140"/>
+      <line x1="673" y1="140" x2="777" y2="140"/>
+      <line x1="888" y1="140" x2="992" y2="140"/>
+    </g>
+    <g stroke-width="2.5">
+      <path d="M213,140 Q226,80 239,140 Q252,200 265,140 Q278,80 291,140 Q304,200 317,140"/>
+      <path d="M443,140 Q451.7,85 460.3,140 Q469,85 477.7,140 Q486.3,85 495,140 Q503.7,85 512.3,140 Q521,85 529.7,140 Q538.3,85 547,140"/>
+      <path d="M673,112 Q686,96 699,108 Q712,117 725,107 Q738,97 751,107 Q764,114 777,107"/>
+      <path d="M888,106 L992,106"/>
+    </g>
+  </g>
+
+  <!-- dotted ties from each inset to its point in the chain -->
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,4">
+    <line x1="265" y1="165" x2="265" y2="278"/>
+    <line x1="495" y1="165" x2="495" y2="278"/>
+    <line x1="725" y1="165" x2="725" y2="278"/>
+    <line x1="940" y1="165" x2="940" y2="278"/>
+  </g>
+
+  <!-- chain: blocks, wires, arrowheads -->
+  <g fill="none" stroke="currentColor" stroke-width="2.5">
+    <rect x="80" y="240" width="140" height="90"/>
+    <rect x="310" y="240" width="140" height="90"/>
+    <rect x="540" y="240" width="140" height="90"/>
+    <rect x="770" y="240" width="140" height="90"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+    <line x1="15" y1="285" x2="70" y2="285"/>
+    <line x1="220" y1="285" x2="300" y2="285"/>
+    <line x1="450" y1="285" x2="530" y2="285"/>
+    <line x1="680" y1="285" x2="760" y2="285"/>
+    <line x1="910" y1="285" x2="968" y2="285"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <polygon points="80,285 68,280 68,290"/>
+    <polygon points="310,285 298,280 298,290"/>
+    <polygon points="540,285 528,280 528,290"/>
+    <polygon points="770,285 758,280 758,290"/>
+    <polygon points="978,285 966,280 966,290"/>
+  </g>
+
+  <!-- block symbols -->
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+    <!-- transformer -->
+    <path d="M140,246 a5,5.5 0 1 0 0,11 a5,5.5 0 1 0 0,11 a5,5.5 0 1 0 0,11"/>
+    <line x1="148" y1="244" x2="148" y2="281"/>
+    <line x1="153" y1="244" x2="153" y2="281"/>
+    <path d="M161,246 a5,5.5 0 1 1 0,11 a5,5.5 0 1 1 0,11 a5,5.5 0 1 1 0,11"/>
+    <!-- rectifier (diode) -->
+    <line x1="345" y1="262" x2="366" y2="262"/>
+    <line x1="392" y1="249" x2="392" y2="275"/>
+    <line x1="392" y1="262" x2="415" y2="262"/>
+    <!-- filter (capacitor) -->
+    <line x1="575" y1="262" x2="604" y2="262"/>
+    <line x1="604" y1="248" x2="604" y2="276"/>
+    <line x1="616" y1="248" x2="616" y2="276"/>
+    <line x1="616" y1="262" x2="645" y2="262"/>
+    <!-- regulator (Zener) -->
+    <line x1="805" y1="262" x2="826" y2="262"/>
+    <path d="M845,243 L852,249 L852,275 L845,281"/>
+    <line x1="852" y1="262" x2="875" y2="262"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <path d="M366,249 L366,275 L392,262 Z"/>
+    <path d="M826,249 L826,275 L852,262 Z"/>
+  </g>
+
+  <!-- block names and roles -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="150" y="315" font-size="14" font-weight="bold">TRANSFORMER</text>
+    <text x="380" y="315" font-size="14" font-weight="bold">RECTIFIER</text>
+    <text x="610" y="315" font-size="14" font-weight="bold">FILTER</text>
+    <text x="840" y="315" font-size="14" font-weight="bold">REGULATOR</text>
+
+    <text x="47" y="312" font-size="13">120 V AC in</text>
+    <text x="942" y="312" font-size="13">steady DC out</text>
+
+    <text x="150" y="352" font-size="12.5">steps the line voltage</text>
+    <text x="150" y="367" font-size="12.5">up or down — and isolates</text>
+    <text x="380" y="352" font-size="12.5">turns AC into pulsating DC;</text>
+    <text x="380" y="367" font-size="12.5">full-wave uses all 360°</text>
+    <text x="610" y="352" font-size="12.5">capacitor smooths the pulses;</text>
+    <text x="610" y="367" font-size="12.5">bleeder drains it when off</text>
+    <text x="840" y="352" font-size="12.5">holds the output voltage</text>
+    <text x="840" y="367" font-size="12.5">steady as the load changes</text>
+
+    <text x="500" y="402" font-size="12.5" font-style="italic">A switchmode supply instead chops at high frequency — which is what allows much smaller, lighter components.</text>
+  </g>
+</svg>

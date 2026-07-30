@@ -1,0 +1,8 @@
+{
+  "id": "ch09-antenna-heights",
+  "chapter": 9,
+  "caption": "Height in wavelengths sets where a horizontal dipole's power goes. Low (0.1-0.25 wavelengths up): the pattern balloons nearly straight up - the NVIS cloud-warmer that blankets 0-300 miles - and the feed-point impedance drops steadily as it gets lower. High (half a wavelength or more): the lobes flatten toward the horizon, giving the low takeoff angles that make long skip and DX.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "Two panels show the same dipole at different heights above ground. In the low panel the antenna sits a tenth to a quarter wavelength up; its pattern is a dome aimed nearly straight up - near-vertical radiation that blankets everything within about 300 miles, the NVIS case - and its feed impedance falls as it gets lower. In the high panel the antenna is at least half a wavelength up; the pattern splits into low lobes aimed just above the horizon, the low takeoff angles that produce long skip for DX, with the impedance back near the free-space value. Height is measured in wavelengths, not feet, so the same wire is low on 80 meters and high on 10."
+}

@@ -1,0 +1,352 @@
+{
+  "ch00-what-general-opens": {
+    "id": "ch00-what-general-opens",
+    "chapter": 0,
+    "number": "0.1",
+    "caption": "Technician versus General as two worlds: today your all-band VHF/UHF privileges reach locally and regionally, with only CW slivers on 80/40/15 m and one SSB slice of 10 m at 200 W PEP; passing Element 3 lights up phone and data segments on every HF band from 80 through 10 m at up to 1.5 kW PEP while keeping all VHF/UHF — though the lowest slices of 80, 40, 20, and 15 m remain Advanced/Amateur Extra territory, and 160, 60, 30, 17, and 12 m open as well.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch00-what-general-opens.svg",
+    "spoken": "two panels — your Technician world today: local VHF-UHF with small CW slivers of HF; and your General world after Element 3: worldwide, with phone and data lit up on every HF band"
+  },
+  "ch00-upgrade-journey": {
+    "id": "ch00-upgrade-journey",
+    "chapter": 0,
+    "number": "0.2",
+    "caption": "The upgrade path: pass Element 3 (35 questions, 26 correct to pass, Element 2 already credited); at the session the Form 605 is properly submitted to the VEs and the CSCE is in your hand — and from that moment you may use General privileges immediately under §97.9(b), signing /AG on every transmission that uses them. When the ULS record shows General — typically within days — you drop the suffix; you keep your call sign. The interim authority ends at final disposition of the application or 365 days after passing, whichever comes first.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch00-upgrade-journey.svg",
+    "spoken": "five boxes — pass Element 3; CSCE plus Form 605; on the air at once signing slash A G; ULS shows General; drop the A G"
+  },
+  "ch01-general-band-chart": {
+    "id": "ch01-general-band-chart",
+    "chapter": 1,
+    "number": "1.1",
+    "caption": "General-class HF privileges band by band (ITU Region 2, §97.301(d)/§97.305): CW+data and phone+CW segments on 80/75, 40, 20, 15, and 10 m with the Extra-only slices left bare; 17 and 12 m entire; 30 m CW and data only at the General 200 W PEP limit; 60 m in its current two-part form (contiguous 5351.5–5366.5 kHz at 9.15 W ERP plus four channels at 100 W ERP); up to 1.5 kW PEP everywhere else; VHF/UHF unchanged from Technician. CW is permitted on every authorized frequency.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-general-band-chart.svg",
+    "spoken": "one bar per HF band from 80 meters to 10 meters showing the General CW-and-data and phone segments, the bare Extra-only slices, and each band's power limit, plus a VHF-UHF row unchanged from Technician"
+  },
+  "ch01-60m-structure": {
+    "id": "ch01-60m-structure",
+    "chapter": 1,
+    "number": "1.2",
+    "caption": "60 meters under the current rules: a contiguous 5351.5–5366.5 kHz segment you may use anywhere inside at 9.15 W ERP, plus four discrete channels centered on 5332, 5348, 5373, and 5405 kHz at 100 W ERP each; emissions are USB phone, CW, RTTY, and data, never wider than 2.8 kHz anywhere on the band. The old 5358.5 kHz channel is gone as a discrete assignment — it lies inside the new segment.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-60m-structure.svg",
+    "spoken": "a frequency axis from 5300 to 5420 kHz showing the contiguous 5351.5 to 5366.5 segment at 9.15 watts ERP and four narrow channels at 5332, 5348, 5373, and 5405 at 100 watts ERP"
+  },
+  "ch01-ag-indicator": {
+    "id": "ch01-ag-indicator",
+    "chapter": 1,
+    "number": "1.3",
+    "caption": "Anatomy of the /AG indicator: a temporary suffix on your (unchanged) call sign whenever you operate with your new General privileges before the grant shows in ULS. It is required once the Form 605 is properly submitted to the VEs and the CSCE is in your hand (§97.9(b)); on phone you say “temporary AG,” on CW and digital you send /AG, and you drop it as soon as the ULS record shows General.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch01-ag-indicator.svg",
+    "spoken": "the call sign K X 9 A B C with the slash-A G indicator highlighted, above three boxes: when you need it, how you sign it, and when you drop it"
+  },
+  "ch02-split-operation": {
+    "id": "ch02-split-operation",
+    "chapter": 2,
+    "number": "2.2",
+    "caption": "Split operation: the DX station transmits on one frequency (14.240 MHz) and listens 5–10 kHz higher, announcing \"listening 5 to 10 up.\" You call inside his listening window — never on his transmit frequency — giving your own call once, then listening. Your radio's split function receives on one VFO and transmits on the other. If you run split yourself, check that both frequencies are clear before transmitting.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-split-operation.svg",
+    "spoken": "In split operation, the DX station transmits on one frequency but listens several kilohertz higher — he announces, listening five to ten up. You call inside that listening window, never on his transmit frequency, giving your own call once, then listening. Your radio's split setting receives on one V F O and transmits on the other."
+  },
+  "ch02-bandplan-map": {
+    "id": "ch02-bandplan-map",
+    "chapter": 2,
+    "number": "2.1",
+    "caption": "The 20-meter band plan as a zoning map: CW at the bottom of the band, digital modes at 14.070–14.100 MHz (RTTY, packet, PSK31 at 14.070, FT8 at 14.074), the NCDXF beacon at 14.100 MHz, then SSB phone from 14.150 to 14.350 MHz with SSTV at 14.230 and the AM calling frequency at 14.286. The sideband conventions are custom, not law: voice is LSB below 10 MHz and USB at 10 MHz and above, while AFSK RTTY traditionally uses LSB and FT8, FT4, JT65, and JT9 use USB on every band — only 60-meter phone (USB) is written into FCC rules.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-bandplan-map.svg",
+    "spoken": "A band plan is a voluntary zoning map. On 20 meters: CW at the bottom of the band, digital modes between 14.070 and 14.100 megahertz, the beacon at 14.100, then SSB phone from 14.150 to 14.350. Sideband use is convention, not law: voice is lower sideband below 10 megahertz and upper sideband at 10 megahertz and above — so 20 meter phone is USB — while digital modes follow their own pair of conventions."
+  },
+  "ch02-contest-exchange": {
+    "id": "ch02-contest-exchange",
+    "chapter": 2,
+    "number": "2.3",
+    "caption": "A contest contact on phone, from CQ to log. The runner calls \"CQ contest\"; you answer once with your call sign. The runner sends the signal report and the contest information — in November Sweepstakes that is report, serial number, precedence code, his call sign, check (the last two digits of the year he was first licensed), and ARRL section — you send yours back, and he closes with \"QSL, thanks, K1ZZ, contest,\" signing off, identifying, and re-calling CQ in three words. The contact goes into the log in UTC. In contests the 59 report is a formality; FCC identification rules still apply, and other contests define other information (ARRL DX: RST + state/province; Field Day: class + section; IARU HF: RST + ITU zone).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch02-contest-exchange.svg",
+    "spoken": "A contest contact: the runner calls C Q contest, and you answer with your call sign, once. In November Sweepstakes the exchange is a signal report, a serial number, a precedence code, the call sign, a check — the year first licensed — and the ARRL section. The runner closes and re-calls C Q in one breath, and the contact goes into the log in U T C."
+  },
+  "ch03-ionosphere-layers": {
+    "id": "ch03-ionosphere-layers",
+    "chapter": 3,
+    "number": "3.1",
+    "caption": "The ionospheric regions from lowest to highest - D, E, F1, F2 - by day and by night. In daylight the D region absorbs everything below about 10 MHz (40/60/80/160 m stay local) while the F2 region refracts the higher bands; at night the D region fades, F1 merges into F2, and the low bands open for long-distance skywave.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-ionosphere-layers.svg",
+    "spoken": "Two panels compare the ionosphere by day and by night, with the layers stacked in the same order, lowest to highest: D, E, F1, F2. In the day panel, an 80 or 40 meter signal launched from a station dies inside the D region - absorbed, so no long-distance skip - while a 20 meter signal passes through and is refracted by the F2 layer back to Earth far away. In the night panel the D region has faded away and F1 and F2 have merged into a single F layer, so now the 80 meter signal is refracted and reaches distant stations. F2, the highest region, gives the longest skip."
+  },
+  "ch03-muf-angles": {
+    "id": "ch03-muf-angles",
+    "chapter": 3,
+    "number": "3.2",
+    "caption": "The two controls on a skywave path. Left: at one frequency, a higher takeoff angle returns closer in - but steeper than the critical angle the signal punches through and is lost to space. Right: the path supports only the window between the LUF (below it, absorption wins) and the MUF (above it, signals escape); the best DX frequency is just below the MUF, so the higher bands open only when solar activity lifts the MUF above them.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-muf-angles.svg",
+    "spoken": "On the left, three rays leave one station at the same frequency. A low takeoff angle refracts off the ionosphere and lands far away - long skip. A higher angle lands nearer - short skip. A ray steeper than the critical angle does not return at all: it punches through the layer and is lost to space. On the right, a vertical frequency scale shows the usable window on one path: below the LUF, absorption kills the signal; above the MUF, the signal escapes to space; between them the ionosphere refracts it back, and just below the MUF is best. In the example, 10 meters is above the MUF - no path; 15 meters, just below the MUF, is best; 20 and 40 meters work; 80 meters is below the LUF. More sunspots mean a higher MUF, so the high bands open only then, and low solar activity kills 15, 12, and 10 meters first."
+  },
+  "ch03-nvis": {
+    "id": "ch03-nvis",
+    "chapter": 3,
+    "number": "3.3",
+    "caption": "NVIS - near vertical incidence skywave. On a frequency below the critical frequency, even a signal launched nearly straight up comes back down, blanketing everything within roughly 0-300 miles. The skip zone disappears - exactly why regional and emergency-communications nets choose it, typically 40 m by day and 80 m by night.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-nvis.svg",
+    "spoken": "A station in the center launches several rays at steep, nearly vertical angles into the F layer. Each ray refracts and returns close by, landing all around the station out to about 300 miles in every direction - a continuous blanket of coverage with no skip zone. A dashed low-angle ray shows the contrast: it skips over the entire region and lands far beyond 300 miles. NVIS works because the frequency is below the critical frequency, so even a straight-up signal is refracted back; typical bands are 40 meters by day and 80 meters by night."
+  },
+  "ch03-grayline": {
+    "id": "ch03-grayline",
+    "chapter": 3,
+    "number": "3.4",
+    "caption": "The gray line - the day/night terminator - is a twilight band ringing the whole globe. Along it the D layer has gone quiet while the F layer still refracts, so a path that follows the terminator is briefly enhanced at local sunrise and sunset, especially on the low bands.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch03-grayline.svg",
+    "spoken": "The Earth is shown as a circle with sunlight arriving from the right: the right half is day, the left half night. Between them runs a vertical twilight band - the gray line, the terminator that circles the globe. Two stations sit on that band, and the signal path between them runs along the band rather than across the day or night sides. Along the terminator the absorbing D layer has faded, as at night, while the refracting F layer is still going, as by day. The result is a short window of enhanced propagation at sunrise and sunset."
+  },
+  "ch04-hf-station": {
+    "id": "ch04-hf-station",
+    "chapter": 4,
+    "number": "4.1",
+    "caption": "An HF station as a signal-flow map. The RF path runs in a straight line — transceiver, optional linear amplifier (dashed), directional wattmeter reading forward and reflected power (SWR follows from the pair), antenna tuner, coax feed line, antenna — while power, audio, and control hook in around it: a 13.8 V supply good for roughly 20 A at 100 W, the microphone or paddle (a keyer forms the dits and dahs), and a computer whose isolated interface carries audio plus PTT while a CAT line carries frequency and mode control. The amplifier's ALC line back to the rig limits drive power, and the tuner makes the rig see a matched load without changing the SWR on the antenna side.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-hf-station.svg",
+    "spoken": "a block diagram of an HF station: the RF path runs transceiver, optional amplifier, directional wattmeter, antenna tuner, feed line, antenna, with the power supply, microphone or paddle, and a computer with a digital interface hooked into the transceiver"
+  },
+  "ch04-grounding-bonding": {
+    "id": "ch04-grounding-bonding",
+    "chapter": 4,
+    "number": "4.3",
+    "caption": "How an HF shack is grounded. Inside, every chassis — transceiver, amplifier, computer and supply — gets its own short strap to a single-point ground bus; the bonding kills ground loops (whose symptom is hum on your transmitted audio) and RF hot spots. Outside, every feed line enters through a lightning arrestor on a grounded entrance panel, panel and bus share a short, direct path to the entry ground rod, and all rods — entry and mast — are bonded together and to the house AC service ground. Ground leads stay short and direct because a long wire can be resonant at RF and leave the chassis RF-hot, and lightning-protection joints are clamped or welded, never soldered: lightning heat destroys solder.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-grounding-bonding.svg",
+    "spoken": "a diagram of shack grounding: equipment chassis bonded one strap each to a single ground bus, feed lines entering through arrestors on a grounded panel, and all ground rods bonded together with short, direct, never-soldered conductors"
+  },
+  "ch04-test-gear": {
+    "id": "ch04-test-gear",
+    "chapter": 4,
+    "number": "4.2",
+    "caption": "Three test instruments, three hookups. A dummy load — a 50 Ω non-inductive resistor on a heat sink — replaces the antenna so the transmitter can be tuned up and checked at full power with nothing on the air. A directional wattmeter sits inline in the feed line on the air and reads forward and reflected power, from which SWR follows (100 W forward with 4 W reflected is 1.5:1). An antenna analyzer connects to the antenna and feed line in place of the rig — transmitter off — and uses its own low-power signal source to read SWR and impedance across frequency, though strong nearby signals can corrupt its readings.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch04-test-gear.svg",
+    "spoken": "three panels showing where test gear connects: a dummy load replacing the antenna for off-air transmitter tests, a directional wattmeter inline in the feed line, and an antenna analyzer connected at the antenna system with the transmitter off"
+  },
+  "ch05-reactance-curves": {
+    "id": "ch05-reactance-curves",
+    "chapter": 5,
+    "number": "5.1",
+    "caption": "Reactance opposes AC, and frequency moves it — in opposite directions for the two component types. Left: inductive reactance X_L = 2πfL rises in direct proportion to frequency, a straight line through the origin; the worked point is the pool's 20 mH inductor at 7 MHz, X_L ≈ 880 kΩ (G5C11 values, the G5A05 concept). Right: capacitive reactance X_C = 1/(2πfC) falls inversely with frequency; the worked point is the pool's 100 µF capacitor at 60 Hz, X_C ≈ 26.5 Ω, and at 120 Hz it has halved to 13.3 Ω (G5C09 values, the G5A06 concept). Amplitude appears in neither formula — only frequency moves reactance.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-reactance-curves.svg",
+    "spoken": "two plots: inductive reactance rising in a straight line with frequency, the 20 mH at 7 MHz point marked near 880 kΩ, and capacitive reactance falling with frequency, the 100 µF at 60 Hz point marked at 26.5 Ω"
+  },
+  "ch05-resonance-curves": {
+    "id": "ch05-resonance-curves",
+    "chapter": 5,
+    "number": "5.4",
+    "caption": "Impedance versus frequency near a 7.0 MHz resonance, where X_L = X_C and the reactances cancel (G5A12). Left: a series LC circuit's impedance dips very low at resonance, bottoming at the circuit's resistance — 10 Ω for the high-Q curve, 100 Ω for the lower-Q one, which is shallower and broader. Right: a parallel LC circuit's impedance peaks very high at resonance — 88 kΩ for the high-Q curve, 8.8 kΩ for the lower-Q one, which is low and broad. Higher Q sharpens the notch or peak, which is why Q sets selectivity. Series low, parallel high (G5A01 — the swapped pairing is the classic distractor).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-resonance-curves.svg",
+    "spoken": "two plots of impedance against frequency: series resonance showing an impedance minimum at 7 MHz, parallel resonance showing an impedance maximum, each with a sharp high-Q curve and a broad low-Q curve"
+  },
+  "ch05-impedance-vectors": {
+    "id": "ch05-impedance-vectors",
+    "chapter": 5,
+    "number": "5.3",
+    "caption": "The impedance plane: resistance R lies along the horizontal axis, reactance X on the vertical — positive (inductive, voltage leads current) above, negative (capacitive, voltage lags) below. Z = R + jX is the vector sum, so 50 Ω of resistance plus 50 Ω of inductive reactance gives not 100 Ω but |Z| = √(R² + X²) = √(50² + 50²) ≈ 70.7 Ω, at phase angle φ = arctan(X/R) = 45° — the pool's 50 Ω family (G5B06 values). A capacitive 50 − j50 mirrors below the axis with the same magnitude and φ = −45°. Resistance dissipates power; reactance only stores and returns it — that is why they add as vectors.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-impedance-vectors.svg",
+    "spoken": "a coordinate plane with a vector from the origin to 50 + j50 ohms, its 70.7 ohm magnitude and 45 degree phase angle marked, and a dashed mirror vector to 50 − j50 below the resistance axis"
+  },
+  "ch05-time-constants": {
+    "id": "ch05-time-constants",
+    "chapter": 5,
+    "number": "5.2",
+    "caption": "The time constant τ sets how fast energy moves in and out of storage. Left: capacitor voltage — charging climbs to 63% of the supply after one τ = R × C and is effectively full (99%+) by 5τ; discharging falls to 37% after one τ. Right: inductor current builds and decays on the same clock with τ = L / R. This store-and-release is the mechanism behind the G5A reactance concepts: inductors and capacitors oppose AC by storing and returning energy, never by dissipating it. (The 2023–2027 pool tests no time-constant arithmetic; the curves underpin G5A02–G5A06.)",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-time-constants.svg",
+    "spoken": "two plots of exponential curves marked at one time constant — 63 percent for charging, 37 percent for discharging — one for capacitor voltage, one for inductor current"
+  },
+  "ch05-transformer": {
+    "id": "ch05-transformer",
+    "chapter": 5,
+    "number": "5.6",
+    "caption": "A transformer sets its voltage ratio by its turns ratio, V_s = V_p × (N_s/N_p) — the pool's worked example: 120 V applied to a 500-turn primary with a 1,500-turn secondary gives 360 V (G5C06). Impedance transforms as the square of the turns ratio, Z_p/Z_s = (N_p/N_s)², so matching a 600 Ω feed point to 50 Ω coax — a 12:1 impedance ratio — needs √12 ≈ 3.5:1 turns (G5C07, drawn as 7 turns to 2; the 12:1 and 144:1 distractors forget the square). Fed backwards the ratio inverts (G5C02), and a step-up's primary carries the higher current, hence heavier wire (G5C05).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-transformer.svg",
+    "spoken": "a transformer drawn with seven primary turns and two secondary turns stepping 600 ohms down to 50 ohms, with the voltage-ratio formula and the squared impedance-ratio formula worked below"
+  },
+  "ch05-rms-peak-pep": {
+    "id": "ch05-rms-peak-pep",
+    "chapter": 5,
+    "number": "5.5",
+    "caption": "Left: one sine wave, three yardsticks — V_pk = 100 V, V_pp = 200 V peak-to-peak, and V_rms = 0.707 × V_pk ≈ 70.7 V, the value that heats a resistor like the same DC voltage (G5B07). The pool's drills: 17 V peak ≈ 12 V RMS (G5B09), 120 V RMS ≈ 339.4 V p-p (G5B08). Right: an SSB signal's power lives at the envelope peak — PEP uses the peak RF voltage, PEP = V_pp²/(8R), so 200 V p-p into 50 Ω is 100 W (G5B06) and 500 V p-p is 625 W (G5B14); average voice power sits well below. For an unmodulated carrier PEP equals average power, ratio 1.00 (G5B11).",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch05-rms-peak-pep.svg",
+    "spoken": "a sine wave with peak, peak-to-peak, and RMS levels marked, and an SSB waveform with its speech envelope, the envelope peak where PEP is figured drawn above the lower average voice power"
+  },
+  "ch06-device-panel": {
+    "id": "ch06-device-panel",
+    "chapter": 6,
+    "number": "6.1",
+    "caption": "Eleven components to recognize on sight. Four diodes: the ordinary PN junction diode conducts once its forward threshold is reached (about 0.7 V silicon, 0.3 V germanium); the Zener conducts in reverse at a set voltage and works as a shunt regulator; the varactor is a diode run as a voltage-variable capacitor for tuning oscillators; the LED emits light when forward biased. Three transistors: the NPN (emitter arrow points out) and its complement the PNP (arrow in) are current-controlled amplifiers or switches; the JFET's gate voltage controls its channel current with very high input impedance. Around them: the op-amp, an analog gain block; the integrated circuit, a whole circuit on one chip (op-amps through MMICs); the ferrite bead and toroid, which concentrate magnetic fields and choke common-mode current; and the quartz crystal, which vibrates on one precise frequency and anchors oscillators.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch06-device-panel.svg",
+    "spoken": "a labeled panel of eleven component symbols — PN, Zener, varactor, and light-emitting diodes; NPN, PNP, and junction field-effect transistors; an op-amp; an integrated circuit; a ferrite toroid; and a quartz crystal — each with its name and a one-line role"
+  },
+  "ch07-pool-fig-g71": {
+    "id": "ch07-pool-fig-g71",
+    "chapter": 7,
+    "number": "7.2",
+    "caption": "Pool figure G7-1, redrawn for this book: a varactor-tuned variable-frequency oscillator built around the FET (symbol 1), feeding an amplifier/buffer built around the NPN transistor (symbol 2). The tapped inductor (symbol 7) is the oscillator's tank coil, the varactor (symbol 4) does the voltage tuning, the Zener (symbol 5) regulates the +DC rail, and the solid-core transformer (symbol 6) couples the amplified RF to the OUT terminal. Also shown: an ordinary PN diode (3), rail and coupling electrolytics (8, 10), an emitter resistor (9), and a variable resistor (11). Exam questions G7A09–G7A13 ask you to identify symbols 1, 5, 2, 6, and 7 — drill all eleven as one symbol-recognition set, and don't confuse the three diodes (3 plain, 4 varactor, 5 Zener).",
+    "kind": "original",
+    "source": "redrawn from NCVEC pool figure G7-1",
+    "file": "figures/ch07-pool-fig-g71.svg",
+    "spoken": "a schematic of a two-stage circuit: an FET oscillator with a tapped-inductor tank and varactor tuning on the left, an NPN amplifier on the right, a Zener regulating the supply rail, and a solid-core transformer coupling the output, with eleven numbered component symbols"
+  },
+  "ch07-power-supply": {
+    "id": "ch07-power-supply",
+    "chapter": 7,
+    "number": "7.1",
+    "caption": "A linear power supply, stage by stage, with the waveform at each step. The transformer steps the 120 V line AC up or down (and isolates). The rectifier turns AC into pulsating DC — a full-wave rectifier conducts through all 360° of the cycle, so the pulses arrive at twice the line frequency, which is exactly why full-wave output is easier to filter. The filter (capacitors and inductors) smooths those pulses to nearly flat DC with a little ripple left; a bleeder resistor discharges the filter capacitors when power is removed — a safety device, not a luxury. The regulator holds the output voltage steady as the load changes. The alternative: a switchmode supply chops at high frequency, which is what allows much smaller, lighter components.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-power-supply.svg",
+    "spoken": "a four-block chain — transformer, rectifier, filter, regulator — with small waveform insets above it showing AC, then pulsating DC, then smoothed DC with ripple, then a steady regulated line"
+  },
+  "ch07-amp-classes": {
+    "id": "ch07-amp-classes",
+    "chapter": 7,
+    "number": "7.3",
+    "caption": "Amplifier classes by conduction angle — how much of each input cycle the device actually conducts (dashed curve is the input drive, solid curve is the output current). Class A conducts 100 percent of the cycle: the most linear, the least efficient. Class AB conducts more than half, a compromise. Class B conducts 180 degrees — half the cycle — and a push-pull pair restores the full waveform. Class C conducts less than half: the highest efficiency, but it distorts amplitude, so it suits constant-envelope modes only — fine for FM and CW, never for SSB, which needs a linear amplifier that preserves the input waveform.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-amp-classes.svg",
+    "spoken": "four waveform panels showing output current versus input drive for amplifier classes A, AB, B, and C, with the conduction angle marked under each — 360 degrees for A, down to a narrow pulse for C"
+  },
+  "ch07-filter-responses": {
+    "id": "ch07-filter-responses",
+    "chapter": 7,
+    "number": "7.4",
+    "caption": "The four filter personalities, gain versus frequency. A low-pass filter passes everything below its cutoff frequency — the point where output falls to half power — and rejects energy above it. A high-pass does the mirror image. A band-pass filter passes one band, and its bandwidth is measured between the upper and lower half-power frequencies. A notch (band-reject) filter digs out one narrow band — the tool for removing an interfering carrier inside the receiver passband. Two vocabulary traps: insertion loss is attenuation inside the passband, where the filter is supposed to pass signals; ultimate rejection is the maximum attenuation it can deliver in the stopband.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch07-filter-responses.svg",
+    "spoken": "four response curves — low-pass, high-pass, band-pass, and notch — showing gain versus frequency with the half-power level marked"
+  },
+  "ch08-heterodyne": {
+    "id": "ch08-heterodyne",
+    "chapter": 8,
+    "number": "8.1",
+    "caption": "Heterodyning: a mixer fed with the incoming RF (14.250 MHz) and the local oscillator (23.250 MHz) outputs both the sum (37.500 MHz, filtered out) and the difference (9.000 MHz). The difference is the intermediate frequency — the IF — which a fixed IF amplifier and narrow filter process no matter which station is tuned, because tuning a superheterodyne receiver means varying the local oscillator. Watch for the image: an unwanted signal exactly twice the IF away (14.250 + 2 × 9.000 = 32.250 MHz) also mixes to the IF, and the receiver's front end must reject it.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch08-heterodyne.svg",
+    "spoken": "Mixing two signals is called heterodyning. A mixer outputs the sum and the difference of the radio frequency and the local oscillator. The difference becomes the intermediate frequency, which the rest of the superheterodyne receiver amplifies and filters. You tune the radio by changing the local oscillator. Beware the image: a signal twice the I F away from the one you want also lands on the I F."
+  },
+  "ch08-emission-designator": {
+    "id": "ch08-emission-designator",
+    "chapter": 8,
+    "number": "8.2",
+    "caption": "Anatomy of the ITU emission designator 2K80J3E, read field by field. The first four characters give the necessary bandwidth — 2K80 is 2.80 kHz, with the unit letter marking the decimal point (H = Hz, K = kHz, M = MHz, G = GHz). The first symbol is the modulation of the main carrier: J is single sideband with suppressed carrier (A = double sideband, F = FM, G = PM). The second symbol is the modulating signal: 3 is one channel of analog information (1 = one digital channel, 0 = no modulation). The third symbol is the information sent: E is telephony, voice (A/B = telegraphy, D = data, F = video). Read aloud, 2K80J3E is a 2.8 kHz-wide SSB phone signal; the same grammar gives A3E for AM voice, F3E for FM voice, and F1B for FSK RTTY.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch08-emission-designator.svg",
+    "spoken": "An I T U emission designator packs a signal's description into a short code. In 2 K 80 J 3 E, the first four characters give the necessary bandwidth: 2.80 kilohertz, with the letter K marking the decimal point for kilohertz. J means single sideband with suppressed carrier, 3 means one channel of analog information, and E means telephony — voice. Read aloud: a 2.8 kilohertz wide single-sideband phone signal. The same grammar describes A M voice as A 3 E, F M voice as F 3 E, and F S K R T T Y as F 1 B."
+  },
+  "ch08-digital-waterfalls": {
+    "id": "ch08-digital-waterfalls",
+    "chapter": 8,
+    "number": "8.3",
+    "caption": "Three stylized waterfalls, each with frequency across and time flowing down. FT8: short tone bursts about 50 Hz wide, each keyed for roughly 13 seconds inside 15-second transmit/receive slots, with several stations sharing one dial frequency at different audio pitches and alternating slots. PSK31: a single narrow trace, about 31 Hz wide, running continuously for the whole contact. RTTY: two continuous traces — the mark and space tones — separated by the standard 170 Hz shift. Each mode has an instantly recognizable signature once you know what to look for.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch08-digital-waterfalls.svg",
+    "spoken": "A waterfall display shows frequency across, time flowing down, and signal strength as brightness. Each digital mode has its own signature. F T 8 appears as short tone bursts inside 15-second slots, with many stations sharing one dial frequency at different audio pitches. P S K 31 is one narrow continuous trace. R T T Y shows two steady traces, the mark and space tones, 170 hertz apart."
+  },
+  "ch09-feedline-basics": {
+    "id": "ch09-feedline-basics",
+    "chapter": 9,
+    "number": "9.1",
+    "caption": "The two feed-line families. Coax (unbalanced): jacket, braided shield, dielectric, center conductor - about 50 ohms, velocity factor ~0.66, and loss that climbs fast with frequency. Ladder/open-wire line (balanced): two wires held a fixed spacing apart by spacers in a mostly-air dielectric - about 450 ohms, velocity factor ~0.9, and far lower loss. Characteristic impedance is set by the geometry, never by length or frequency.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-feedline-basics.svg",
+    "spoken": "A coax cross-section on the left shows four concentric parts: outer jacket, braided shield, dielectric, and center conductor, giving about 50 ohms and a velocity factor around 0.66. On the right, ladder line is two parallel wires held a spacing D apart by spacers, with air as most of the dielectric: about 450 ohms and a velocity factor around 0.9. For both, impedance comes from geometry - conductor sizes and spacing - not from the line's length or the frequency. A chart at the bottom plots loss against frequency: the coax curve climbs steeply while the ladder-line curve stays nearly flat, because loss is quoted in dB per 100 feet and a lossy line loses even more when SWR is high."
+  },
+  "ch09-standing-waves": {
+    "id": "ch09-standing-waves",
+    "chapter": 9,
+    "number": "9.2",
+    "caption": "Voltage along the feed line, antenna at the right. Matched (top): no reflection, so the voltage magnitude is flat - SWR 1:1. Mismatched (bottom): a 100 ohm load on 50 ohm line reflects a third of the voltage; forward and reflected waves add to V_max and cancel to V_min in a fixed pattern along the line, and SWR = V_max / V_min = 2:1.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-standing-waves.svg",
+    "spoken": "Two plots show voltage magnitude against position along a feed line, in wavelengths from the antenna. The matched plot is a flat line - the load equals the line impedance, nothing reflects, and the SWR is 1:1. The mismatched plot shows a 100 ohm load on 50 ohm line: the reflected wave alternately adds to and cancels the forward wave, so the voltage undulates between V_max and V_min every half wavelength. SWR is V_max divided by V_min - here four-thirds over two-thirds equals 2:1, and by convention the larger number always comes first."
+  },
+  "ch09-antenna-heights": {
+    "id": "ch09-antenna-heights",
+    "chapter": 9,
+    "number": "9.3",
+    "caption": "Height in wavelengths sets where a horizontal dipole's power goes. Low (0.1-0.25 wavelengths up): the pattern balloons nearly straight up - the NVIS cloud-warmer that blankets 0-300 miles - and the feed-point impedance drops steadily as it gets lower. High (half a wavelength or more): the lobes flatten toward the horizon, giving the low takeoff angles that make long skip and DX.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-antenna-heights.svg",
+    "spoken": "Two panels show the same dipole at different heights above ground. In the low panel the antenna sits a tenth to a quarter wavelength up; its pattern is a dome aimed nearly straight up - near-vertical radiation that blankets everything within about 300 miles, the NVIS case - and its feed impedance falls as it gets lower. In the high panel the antenna is at least half a wavelength up; the pattern splits into low lobes aimed just above the horizon, the low takeoff angles that produce long skip for DX, with the impedance back near the free-space value. Height is measured in wavelengths, not feet, so the same wire is low on 80 meters and high on 10."
+  },
+  "ch09-yagi-stack": {
+    "id": "ch09-yagi-stack",
+    "chapter": 9,
+    "number": "9.4",
+    "caption": "Yagi anatomy and stacking. Top view: the driven element is about a half wavelength and takes the feed line; the reflector behind it is longer, the directors ahead are shorter, and the beam fires off the director end. Front-to-back ratio compares the main lobe to the back lobe. Two identical Yagis stacked a half-wavelength apart capture twice the power - about 3 dB over one.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch09-yagi-stack.svg",
+    "spoken": "The top of the figure is a Yagi seen from above: a boom carrying, from back to front, a reflector longer than the driven element, the driven element itself at about a half wavelength with the feed point at its center, and progressively shorter directors - the main lobe points off the director end. Below left, a pattern sketch shows a large forward lobe and a small back lobe: front-to-back ratio is the forward power divided by the backward power. Below right, two identical Yagis are stacked a half-wavelength apart and fed in phase through equal line lengths - twice the capture, about 3 dB more gain than one, and dBi always equals dBd plus 2.15."
+  },
+  "ch10-mpe-evaluation": {
+    "id": "ch10-mpe-evaluation",
+    "chapter": 10,
+    "number": "10.2",
+    "caption": "The RF-exposure evaluation loop. Every station with time-averaged transmission over one milliwatt is covered by the rules and evaluates per FCC OET Bulletin 65 - by estimate (OET-65 tables), by model (computer calculation), or by measurement with a calibrated field-strength meter and antenna; any one of the three works. If accessible areas could exceed the limits, act - cut power, raise the antenna, restrict access, keep the main lobe off people. Then re-evaluate routinely and whenever the station changes.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch10-mpe-evaluation.svg",
+    "spoken": "A flowchart runs top to bottom. First box: the rules apply to every station whose time-averaged transmission exceeds one milliwatt. Next: evaluate per FCC OET Bulletin 65, with three acceptable methods side by side - estimate from the OET-65 tables, model the power density by computer, or measure with a calibrated field-strength meter and calibrated antenna, noting an SWR meter does not qualify. A decision diamond asks whether fields in accessible areas could exceed the limits. If yes, an act box lists the fixes: cut power, raise the antenna, restrict access, keep the main lobe off people. Both paths land in the final box: re-evaluate routinely, and whenever the station changes - new band, more power, new antenna or feed line - with an arrow looping back to the start."
+  },
+  "ch10-duty-factor": {
+    "id": "ch10-duty-factor",
+    "chapter": 10,
+    "number": "10.1",
+    "caption": "Duty factor sets the average exposure. In one averaging window, SSB voice averages about a fifth of PEP while keyed, CW about two-fifths, and constant-carrier FT8 runs at full PEP - and each mode is keyed only half the window - so the same 100 watt PEP radio averages roughly 10, 20, and 50 watts. Exposure is judged on the average, so a lower duty factor permits higher power for the same exposure.",
+    "kind": "original",
+    "source": "original",
+    "file": "figures/ch10-duty-factor.svg",
+    "spoken": "The top panel shows a 60-second averaging window with three timelines. For SSB voice the key is down half the window but speech averages only about a fifth of peak envelope power, for about 10 percent average. CW is keyed half the time at about two-fifths average power, for about 20 percent. FT8 transmits a continuous carrier on alternate 15-second slots, for about 50 percent. The bottom panel bars the results - SSB near 10 percent, CW 20, FT8 50, and a continuous FM or RTTY carrier at 100 - making the point that the same PEP produces very different averages, and a lower duty factor means more headroom under the exposure limits."
+  }
+}

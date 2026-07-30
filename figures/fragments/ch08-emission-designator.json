@@ -1,0 +1,8 @@
+{
+  "id": "ch08-emission-designator",
+  "chapter": 8,
+  "caption": "Anatomy of the ITU emission designator 2K80J3E, read field by field. The first four characters give the necessary bandwidth — 2K80 is 2.80 kHz, with the unit letter marking the decimal point (H = Hz, K = kHz, M = MHz, G = GHz). The first symbol is the modulation of the main carrier: J is single sideband with suppressed carrier (A = double sideband, F = FM, G = PM). The second symbol is the modulating signal: 3 is one channel of analog information (1 = one digital channel, 0 = no modulation). The third symbol is the information sent: E is telephony, voice (A/B = telegraphy, D = data, F = video). Read aloud, 2K80J3E is a 2.8 kHz-wide SSB phone signal; the same grammar gives A3E for AM voice, F3E for FM voice, and F1B for FSK RTTY.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "An I T U emission designator packs a signal's description into a short code. In 2 K 80 J 3 E, the first four characters give the necessary bandwidth: 2.80 kilohertz, with the letter K marking the decimal point for kilohertz. J means single sideband with suppressed carrier, 3 means one channel of analog information, and E means telephony — voice. Read aloud: a 2.8 kilohertz wide single-sideband phone signal. The same grammar describes A M voice as A 3 E, F M voice as F 3 E, and F S K R T T Y as F 1 B."
+}

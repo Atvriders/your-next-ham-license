@@ -1,0 +1,8 @@
+{
+  "id": "ch08-digital-waterfalls",
+  "chapter": 8,
+  "caption": "Three stylized waterfalls, each with frequency across and time flowing down. FT8: short tone bursts about 50 Hz wide, each keyed for roughly 13 seconds inside 15-second transmit/receive slots, with several stations sharing one dial frequency at different audio pitches and alternating slots. PSK31: a single narrow trace, about 31 Hz wide, running continuously for the whole contact. RTTY: two continuous traces — the mark and space tones — separated by the standard 170 Hz shift. Each mode has an instantly recognizable signature once you know what to look for.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "A waterfall display shows frequency across, time flowing down, and signal strength as brightness. Each digital mode has its own signature. F T 8 appears as short tone bursts inside 15-second slots, with many stations sharing one dial frequency at different audio pitches. P S K 31 is one narrow continuous trace. R T T Y shows two steady traces, the mark and space tones, 170 hertz apart."
+}

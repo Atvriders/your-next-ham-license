@@ -1,0 +1,8 @@
+{
+  "id": "ch02-split-operation",
+  "chapter": 2,
+  "caption": "Split operation: the DX station transmits on one frequency (14.240 MHz) and listens 5–10 kHz higher, announcing \"listening 5 to 10 up.\" You call inside his listening window — never on his transmit frequency — giving your own call once, then listening. Your radio's split function receives on one VFO and transmits on the other. If you run split yourself, check that both frequencies are clear before transmitting.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "In split operation, the DX station transmits on one frequency but listens several kilohertz higher — he announces, listening five to ten up. You call inside that listening window, never on his transmit frequency, giving your own call once, then listening. Your radio's split setting receives on one V F O and transmits on the other."
+}

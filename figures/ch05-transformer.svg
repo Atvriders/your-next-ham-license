@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- ===== Title ===== -->
+  <g fill="currentColor" stroke="none" text-anchor="middle">
+    <text x="400" y="32" font-size="18" font-weight="bold">A TRANSFORMER SETS VOLTAGE BY TURNS — IMPEDANCE BY TURNS²</text>
+    <text x="400" y="53" font-size="12">the voltage ratio is the turns ratio; the impedance ratio is its square</text>
+  </g>
+
+  <!-- ===== Transformer symbol: 7 primary humps : 2 secondary humps (3.5:1) ===== -->
+  <!-- pool G5C07: 600 ohm feed point to 50 ohm coax -->
+  <g stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <!-- primary leads + coil (humps face the core) -->
+    <line x1="200" y1="110" x2="290" y2="110"/>
+    <path d="M 290 110 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20 a 10 10 0 0 1 0 20"/>
+    <line x1="290" y1="250" x2="200" y2="250"/>
+    <!-- core -->
+    <line x1="330" y1="100" x2="330" y2="262"/>
+    <line x1="342" y1="100" x2="342" y2="262"/>
+    <!-- secondary coil + leads (humps face the core) -->
+    <path d="M 394 165 a 10 10 0 0 0 0 20 a 10 10 0 0 0 0 20"/>
+    <line x1="394" y1="165" x2="470" y2="165"/>
+    <line x1="394" y1="205" x2="470" y2="205"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <circle cx="196" cy="110" r="3.2"/>
+    <circle cx="196" cy="250" r="3.2"/>
+    <circle cx="474" cy="165" r="3.2"/>
+    <circle cx="474" cy="205" r="3.2"/>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <text x="200" y="94" font-size="11.5" font-weight="bold" text-anchor="middle">PRIMARY · 600 Ω side</text>
+    <text x="282" y="186" font-size="10" text-anchor="end">N<tspan baseline-shift="sub" font-size="70%">p</tspan> = 7 turns</text>
+    <text x="474" y="149" font-size="11.5" font-weight="bold" text-anchor="middle">SECONDARY · 50 Ω side</text>
+    <text x="402" y="188" font-size="10">N<tspan baseline-shift="sub" font-size="70%">s</tspan> = 2 turns</text>
+    <text x="335" y="288" font-size="12.5" font-weight="bold" text-anchor="middle">N<tspan baseline-shift="sub" font-size="70%">p</tspan> : N<tspan baseline-shift="sub" font-size="70%">s</tspan> = 3.5 : 1 → impedance ratio = 3.5² = 12 : 1</text>
+  </g>
+
+  <!-- ===== Panel 1: voltage follows the turns ratio (pool G5C06 numbers) ===== -->
+  <rect x="40" y="320" width="350" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <g fill="currentColor" stroke="none">
+    <text x="215" y="346" font-size="12.5" font-weight="bold" text-anchor="middle">VOLTAGE follows the turns ratio</text>
+    <text x="58" y="374" font-size="11">V<tspan baseline-shift="sub" font-size="70%">s</tspan> = V<tspan baseline-shift="sub" font-size="70%">p</tspan> × (N<tspan baseline-shift="sub" font-size="70%">s</tspan> / N<tspan baseline-shift="sub" font-size="70%">p</tspan>)</text>
+    <text x="58" y="396" font-size="11">worked (the pool's): 120 V in, 500-turn</text>
+    <text x="58" y="418" font-size="11">primary and 1,500-turn secondary →</text>
+    <text x="58" y="440" font-size="11">V<tspan baseline-shift="sub" font-size="70%">s</tspan> = 120 × (1500 / 500) = 360 V — step-UP</text>
+    <text x="58" y="466" font-size="10" font-style="italic">fed in backwards, the ratio inverts (× 1/3)</text>
+  </g>
+
+  <!-- ===== Panel 2: impedance follows the square (pool G5C07 numbers) ===== -->
+  <rect x="410" y="320" width="350" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <g fill="currentColor" stroke="none">
+    <text x="585" y="346" font-size="12.5" font-weight="bold" text-anchor="middle">IMPEDANCE follows the SQUARE</text>
+    <text x="428" y="374" font-size="11">Z<tspan baseline-shift="sub" font-size="70%">p</tspan> / Z<tspan baseline-shift="sub" font-size="70%">s</tspan> = (N<tspan baseline-shift="sub" font-size="70%">p</tspan> / N<tspan baseline-shift="sub" font-size="70%">s</tspan>)²</text>
+    <text x="428" y="396" font-size="11">worked (the pool's): match 600 Ω to 50 Ω —</text>
+    <text x="428" y="418" font-size="11">a 12 : 1 impedance ratio needs turns of</text>
+    <text x="428" y="440" font-size="11">√12 ≈ 3.5 : 1 (forgetting the square → 12:1, 144:1)</text>
+    <text x="428" y="466" font-size="10" font-style="italic">a step-UP's primary carries the higher current — heavier wire</text>
+  </g>
+
+  <!-- ===== bottom note (G5A10 cross-link) ===== -->
+  <text x="400" y="548" font-size="11.5" font-style="italic" fill="currentColor" stroke="none" text-anchor="middle">matching at RF can use a transformer, a pi-network, or a transmission-line section — the transformer is the turns-ratio one</text>
+
+</svg>

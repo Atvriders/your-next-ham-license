@@ -1,0 +1,8 @@
+{
+  "id": "ch05-reactance-curves",
+  "chapter": 5,
+  "caption": "Reactance opposes AC, and frequency moves it — in opposite directions for the two component types. Left: inductive reactance X_L = 2πfL rises in direct proportion to frequency, a straight line through the origin; the worked point is the pool's 20 mH inductor at 7 MHz, X_L ≈ 880 kΩ (G5C11 values, the G5A05 concept). Right: capacitive reactance X_C = 1/(2πfC) falls inversely with frequency; the worked point is the pool's 100 µF capacitor at 60 Hz, X_C ≈ 26.5 Ω, and at 120 Hz it has halved to 13.3 Ω (G5C09 values, the G5A06 concept). Amplitude appears in neither formula — only frequency moves reactance.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "two plots: inductive reactance rising in a straight line with frequency, the 20 mH at 7 MHz point marked near 880 kΩ, and capacitive reactance falling with frequency, the 100 µF at 60 Hz point marked at 26.5 Ω"
+}

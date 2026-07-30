@@ -1,0 +1,8 @@
+{
+  "id": "ch07-amp-classes",
+  "chapter": 7,
+  "caption": "Amplifier classes by conduction angle — how much of each input cycle the device actually conducts (dashed curve is the input drive, solid curve is the output current). Class A conducts 100 percent of the cycle: the most linear, the least efficient. Class AB conducts more than half, a compromise. Class B conducts 180 degrees — half the cycle — and a push-pull pair restores the full waveform. Class C conducts less than half: the highest efficiency, but it distorts amplitude, so it suits constant-envelope modes only — fine for FM and CW, never for SSB, which needs a linear amplifier that preserves the input waveform.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "four waveform panels showing output current versus input drive for amplifier classes A, AB, B, and C, with the conduction angle marked under each — 360 degrees for A, down to a narrow pulse for C"
+}

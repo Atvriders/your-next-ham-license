@@ -1,0 +1,8 @@
+{
+  "id": "ch04-test-gear",
+  "chapter": 4,
+  "caption": "Three test instruments, three hookups. A dummy load — a 50 Ω non-inductive resistor on a heat sink — replaces the antenna so the transmitter can be tuned up and checked at full power with nothing on the air. A directional wattmeter sits inline in the feed line on the air and reads forward and reflected power, from which SWR follows (100 W forward with 4 W reflected is 1.5:1). An antenna analyzer connects to the antenna and feed line in place of the rig — transmitter off — and uses its own low-power signal source to read SWR and impedance across frequency, though strong nearby signals can corrupt its readings.",
+  "kind": "original",
+  "source": "original",
+  "spoken": "three panels showing where test gear connects: a dummy load replacing the antenna for off-air transmitter tests, a directional wattmeter inline in the feed line, and an antenna analyzer connected at the antenna system with the transmitter off"
+}
