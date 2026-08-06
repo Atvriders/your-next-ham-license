@@ -265,8 +265,11 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     ["Signals & Emissions",""],["Antennas & Feedlines at General Depth",""],
     ["Safety & RF Exposure at General Depth",""]
   ];
-  // Track 0 = intro; tracks 1..11 = chapters (ch index 0..10)
-  var TRACKS = [{ intro: true, title: "Introduction — How This Was Made", year: "" }];
+  // Track 0 = intro; track 1 = preface; tracks 2..12 = chapters (ch index 0..10)
+  var TRACKS = [
+    { intro: true, title: "Introduction — How This Was Made", year: "" },
+    { preface: true, title: "Preface — Why & How This Book Was Made", year: "" }
+  ];
   CHAPTERS.forEach(function (c, i) { TRACKS.push({ intro: false, ch: i, title: c[0], year: c[1] }); });
 
   var VOICES = [
@@ -284,6 +287,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
   function voiceByKey(k) { for (var i = 0; i < VOICES.length; i++) if (VOICES[i].key === k) return VOICES[i]; return VOICES[2]; }
   function srcFor(voiceKey, track) {
     if (track.intro) return "intro.mp3";
+    if (track.preface) return voiceKey === "ryan" ? "preface.mp3" : voiceKey + "-preface.mp3";
     var n = ("0" + track.ch).slice(-2);
     return voiceKey === "ryan" ? "ch" + n + ".mp3" : voiceKey + "-ch" + n + ".mp3";
   }
@@ -331,8 +335,8 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     var li = document.createElement("li");
     var b = document.createElement("button");
     b.className = "trk"; b.type = "button"; b.dataset.i = i;
-    var num = t.intro ? "&bull;" : String(i);
-    var title = t.intro ? '<span class="intro-tag">' + t.title + '</span>' : t.title;
+    var num = t.ch === undefined ? "&bull;" : String(t.ch + 1);
+    var title = (t.intro || t.preface) ? '<span class="intro-tag">' + t.title + '</span>' : t.title;
     var yr = t.year ? '<span class="yr tnum"> ' + t.year + '</span>' : "";
     b.innerHTML =
       '<span class="num tnum">' + num + '</span>' +
