@@ -134,6 +134,19 @@ def test_series_bar_renders_with_current_book_highlighted():
     assert 'href="#ch01"' in html
 
 
+def test_title_block_links_audiobook_practice_and_flashcards():
+    html = build_html([pathlib.Path("tests/fixtures/ch_sample.md")], {})
+    # nav line sits in the title block: after the subtitle, before the TOC
+    title_start = html.index('class="title-block"')
+    toc_start = html.index('<nav class="toc"')
+    block = html[title_start:toc_start]
+    assert '<nav class="extras"' in block
+    # relative links (the book page is served at the series mount root)
+    assert '<a href="audiobook/">Listen to the audiobook</a>' in block
+    assert '<a href="practice.html">Practice test</a>' in block
+    assert '<a href="flashcards.html">Flashcards</a>' in block
+
+
 def test_no_absolute_links_beyond_series_paths():
     # sub-path proxying (spec §9) requires every link to be relative/anchor,
     # except the configurable series mount paths in the switcher bar

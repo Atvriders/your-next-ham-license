@@ -423,6 +423,9 @@ h1, h2, h3, h4 { line-height: 1.25; }
 h4 { font-size: 1.05rem; color: var(--muted); margin: 2rem 0 0.5rem; }
 a { color: var(--link); }
 header.title-block { text-align: center; margin-bottom: 2.5rem; }
+nav.extras { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+nav.extras a { color: var(--link); text-decoration: none; }
+nav.extras a:hover { text-decoration: underline; }
 nav.toc { margin-bottom: 3rem; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
 nav.toc ul { list-style: none; padding: 0; }
 nav.toc li { margin: 0.35rem 0; }
@@ -537,7 +540,12 @@ def build_html(chapter_paths: list, figreg: dict) -> str:
         "<body>\n"
         f"{_render_series_bar()}"
         '<header class="title-block"><h1>Your Next Ham License</h1>'
-        "<p>The General Course (2023–2027)</p></header>\n"
+        "<p>The General Course (2023–2027)</p>"
+        '<nav class="extras" aria-label="Study companions">'
+        '<a href="audiobook/">Listen to the audiobook</a> &middot; '
+        '<a href="practice.html">Practice test</a> &middot; '
+        '<a href="flashcards.html">Flashcards</a>'
+        "</nav></header>\n"
         '<nav class="toc" aria-label="Table of contents">'
         f"<h2>Contents</h2><ul>{toc_items}</ul></nav>\n"
         f"<main>{sections}</main>\n"
