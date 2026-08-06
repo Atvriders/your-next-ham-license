@@ -240,6 +240,17 @@ def test_flashcards_page_embeds_every_record_with_hints_and_marks():
     assert_fully_rendered(html)
 
 
+def test_flashcards_card_has_fixed_height_and_internal_scroll():
+    records = build_fixture_records()
+    titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))
+    html = make_study.render_flashcards_html(
+        records, fixture_figures(), make_study.subelement_summaries(records, titles))
+    # fixed-height card box: flipping must never move the controls below the card
+    assert "height: 28rem" in html
+    # the rare longer card scrolls inside the card instead of growing it
+    assert "overflow-y: auto" in html
+
+
 def test_practice_page_states_the_35_26_rule_and_drill_mode():
     records = build_fixture_records()
     titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))

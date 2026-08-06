@@ -333,7 +333,8 @@ _FLASHCARDS_TEMPLATE = """<!DOCTYPE html>
 .controls { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
   align-items: center; margin: 0 0 1.6rem; }
 .card { border: 1px solid var(--rule); border-radius: 14px; background: var(--panel);
-  padding: 1.5rem 1.6rem 1.3rem; cursor: pointer; min-height: 16em; }
+  padding: 1.5rem 1.6rem 1.3rem; cursor: pointer;
+  height: 28rem; overflow-y: auto; }
 .card:hover { border-color: var(--beam); }
 .card:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; }
 .badge { color: var(--muted); }
