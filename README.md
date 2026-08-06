@@ -17,9 +17,8 @@ propagation in depth, station setup and good practice, AC theory, components,
 practical circuits, signals and emissions, antennas and feedlines at General depth,
 and safety and RF exposure — and every teaching chapter ends with an **Exam Focus**
 section quoting the exact pool questions that chapter unlocks, verbatim, with the
-keyed answer and a one-line plain-language why. It is **Book 3 of the three-book
-program** begun with *[200 Meters and
-Down](https://github.com/Atvriders/200-meters-and-down)* and *[Your First Ham
+keyed answer and a one-line plain-language why. It is **the middle book of the
+three-book program** — after *[Your First Ham
 License](https://github.com/Atvriders/your-first-ham-license)* (the Technician
 course); the Extra course follows the same template.
 
@@ -209,8 +208,7 @@ accuracy canon carrying the entire 423-question pool verbatim (double-parsed fro
 the official .docx and .pdf and cross-checked to zero disagreement, with the
 six-errata ledger and the nine withdrawn questions cataloged), pinned Part 97 facts,
 notation, glossary, the chapter map, and the copyright ledger — reusing the
-production machinery of its sibling projects, *[200 Meters and
-Down](https://github.com/Atvriders/200-meters-and-down)* and *[Your First Ham
+production machinery of its sibling project, *[Your First Ham
 License](https://github.com/Atvriders/your-first-ham-license)*.
 
 | | |

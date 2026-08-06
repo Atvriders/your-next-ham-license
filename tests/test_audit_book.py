@@ -43,7 +43,7 @@ def test_audit_main_still_checks_preface_for_banned_phrases(tmp_path, monkeypatc
     assert "preface.md" in out and "banned phrase" in out.lower()
 
 
-# --- Book 1 carry-overs ---------------------------------------------------
+# --- Series carry-overs -----------------------------------------------------
 
 def test_banned_phrases_flagged():
     errs = check_banned_phrases("…and little did they know it would grow.")

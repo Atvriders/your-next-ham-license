@@ -6,7 +6,7 @@
 
 **Architecture:** Same two tracks as Book 2. **(A) Tooling** — the Technician repo's toolchain copied wholesale (it is the newest base: h4 support, series machinery, 50-test suite, `make_exam.py`, 8-check audit incl. pool fidelity) and retargeted at constants level only, plus one TDD extension (`mathsvg` for the General formula set). **(B) Content** — canon (incl. verbatim pool) → figures → 11 chapters + 2 appendices, produced by parallel writer/figure/auditor agents and gated by the Track-A harness. Track A first so Track B writes into a green gate. Spec phase letters: A = spec/plan (done) · B = scaffold (Phases 0–1) · C1 = canon (Phase 2) · C2 = figures (Phase 3) · C3 = chapters (Phase 4) · D = front matter (Phase 5) · E = verify & ship (Phase 6).
 
-**Tech Stack:** Python 3 (stdlib + `edge-tts`, `matplotlib`), headless `google-chrome` for PDF, `ffmpeg` for audio, nginx/Docker, GitHub Actions → GHCR. Base for all copying: `/home/kasm-user/your-first-ham-license/` ("Book 2", the Technician repo — **NOT** `200-meters-and-down`; the Tech repo carries the newer machinery). Design spec: `docs/superpowers/specs/2026-07-23-your-next-ham-license-design.md` (approved).
+**Tech Stack:** Python 3 (stdlib + `edge-tts`, `matplotlib`), headless `google-chrome` for PDF, `ffmpeg` for audio, nginx/Docker, GitHub Actions → GHCR. Base for all copying: `/home/kasm-user/your-first-ham-license/` (the Technician repo — it carries the newer machinery). Design spec: `docs/superpowers/specs/2026-07-23-your-next-ham-license-design.md` (approved).
 
 ## Global Constraints
 
@@ -20,7 +20,7 @@
 - **Depth law:** the book **assumes Book 2 knowledge — no more, no less**. Concepts beyond Technician scope are taught before use; Technician-scope material gets at most a one-line refresher + pointer to Book 2. Span auditors enforce this per chapter (Task 4.4).
 - **Self-contained output:** inline SVG figures, math pre-rendered to inline SVG, inline CSS; no external refs (`src="http"`, `<link rel="stylesheet">`, `@import` are failures; SVG `xmlns` URIs are fine).
 - **Environment:** `python3` (not `python`); `matplotlib`, `edge-tts`, `ffmpeg`, `google-chrome` present; no local Docker (CI builds the image).
-- **Naming:** title *Your Next Ham License: The General Course (2023–2027)* (US spelling); audio ID3 `artist=Claude Opus 4.8`, `album=Your Next Ham License`; GHCR image `ghcr.io/atvriders/your-next-ham-license`; audiobook player `localStorage` key `ynhl-audio`; series mount path `/general/`.
+- **Naming:** title *Your Next Ham License: The General Course (2023–2027)* (US spelling); audio ID3 `artist=Kimi K3`, `album=Your Next Ham License`; GHCR image `ghcr.io/atvriders/your-next-ham-license`; audiobook player `localStorage` key `ynhl-audio`; series mount path `/general/`.
 - **sys.path gotcha:** every runnable script keeps `sys.path.insert(0, str(Path(__file__).resolve().parent.parent))`.
 - **CI gotcha:** copy the Tech repo's *fixed* workflow (`seq -f "%02g"`, not `seq -w`), then adjust repo/image names and release URLs.
 - **Notation law (series consistency):** identical to Book 2 — prose uses V and ×, verbatim pool quotes keep the pool's E/x form, unit case (kHz, MHz, mA, µV, pF) is load-bearing, λ(m) = 300 / f(MHz) taught as the pool's own approximation of c = f·λ.
@@ -103,7 +103,7 @@ your-next-ham-license/
 - [x] **Verify:** `pytest tests/test_mathsvg.py` green incl. the new formula tests.
 
 ### Task 1.5: `make_audiobook.py` + `make_intro.py` retarget
-- [x] Chapter range 00–10 (11 chapters); `spoken_heading()` for `## <N>. <Title>`; ID3 `album=Your Next Ham License`, `artist=Claude Opus 4.8`; exclude `appendices/` from narration (Appendix A is print-only — decision carried from Book 2); keep sys.path bootstrap, chunking/retries, ffmpeg stitch.
+- [x] Chapter range 00–10 (11 chapters); `spoken_heading()` for `## <N>. <Title>`; ID3 `album=Your Next Ham License`, `artist=Kimi K3`; exclude `appendices/` from narration (Appendix A is print-only — decision carried from Book 2); keep sys.path bootstrap, chunking/retries, ffmpeg stitch.
 - [x] New INTRO text (~1 min spoken): welcome to the upgrade — for licensed Technicians going farther to HF; keep `--dry`.
 - [x] **Verify:** `pytest tests/test_audiobook_prepare.py` green; `python3 tools/make_intro.py --dry` prints sane text.
 
@@ -201,7 +201,7 @@ your-next-ham-license/
 
 - [ ] Clean rebuild from scratch; `pytest` green; `audit_book.py` exit 0; human-style spot-read.
 - [ ] **Ship gate (human confirms before outward actions).**
-- [ ] One commit (trailer `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>`).
+- [ ] One commit (trailer `Co-Authored-By: Kimi K3 <noreply@moonshot.cn>`).
 - [ ] Create GitHub repo via REST API (`POST /user/repos`, `private:false`; token from `~/.config/gh/hosts.yml`; never `gh`); push `master`.
 - [ ] Generate audiobook: `make_audiobook.py --all` (8 voices × 11 chapters, chapters only) + `make_intro.py`.
 - [ ] Create release **v1.0**; upload audio assets (audio ships on the release, not in git).

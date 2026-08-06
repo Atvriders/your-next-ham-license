@@ -2,8 +2,8 @@
 
 A short spoken preface that opens the audiobook: a welcome back to the
 licensed Technician upgrading to General, what Your Next Ham License is,
-that it was written by Claude Opus 4.8 running in Claude Code, and how to
-use the eight-voice edition. Kept separate from the chapter tracks so it
+that it was written by Kimi K3 — an artificial intelligence made by
+Moonshot AI — running inside Kimi Code, and how to use the eight-voice edition. Kept separate from the chapter tracks so it
 can be regenerated on its own.
 
 Usage:
@@ -26,7 +26,7 @@ OUT = Path(__file__).resolve().parent.parent / "audiobook" / "intro.mp3"
 
 INTRO = """Your Next Ham License: The General Course, 2023 to 2027. A welcome back.
 
-This audiobook was written by Claude Opus 4.8 — an artificial intelligence made by Anthropic — running inside the coding tool Claude Code. The book exists to carry a licensed Technician across one exam and onto the worldwide HF bands. It was built by a multi-agent AI workflow — dozens of cooperating agents writing, checking, and auditing every fact against an accuracy canon and every question against the official pool — at a cost of roughly four point one million tokens, an estimate, over two days.
+This audiobook was written by Kimi K3 — an artificial intelligence made by Moonshot AI — running inside the coding tool Kimi Code. The book exists to carry a licensed Technician across one exam and onto the worldwide HF bands. It was built by a multi-agent AI workflow — dozens of cooperating agents writing, checking, and auditing every fact against an accuracy canon and every question against the official pool — at a cost of roughly four point one million tokens, an estimate, over two days.
 
 You already hold your Technician license. You know your way around a repeater, you know two meters and seventy centimeters — and you have probably wondered what lives on the bands where contacts cross oceans. This course is your upgrade path: in eleven chapters it takes you from Technician to General. Your new HF privileges and the rules that come with them, operating on HF, propagation in depth, AC theory and practical circuits, signals and antennas at General depth, and safety at higher power. Every fact and every practice question is checked against the official twenty twenty-three to twenty twenty-seven General question pool, so what you hear is what the exam asks.
 
@@ -56,7 +56,7 @@ async def main() -> None:
             "ffmpeg", "-y", "-loglevel", "error", "-i", str(raw),
             "-c", "copy",
             "-metadata", "title=Introduction",
-            "-metadata", "artist=Claude Opus 4.8",
+            "-metadata", "artist=Kimi K3",
             "-metadata", "album=Your Next Ham License",
             "-metadata", "track=0/11",
             "-metadata", "genre=Audiobook",

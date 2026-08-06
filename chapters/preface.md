@@ -10,7 +10,7 @@ The method is teach-first, then exam-aligned. Each chapter teaches its topic at 
 
 Everything exam-facing is aligned to the NCVEC 2023–2027 General pool, the public document every real exam question is drawn from. **That pool is valid for exams through 2027-06-30.** Until then, what you read here is what the exam asks. After that date a successor pool takes over, and the book is designed for exactly that day: the teaching content is durable, and only the pool-facing parts — the Exam Focus picks and Appendix A — swap out, in a contained procedure pinned down in the accuracy canon. If you are reading this late in the window, schedule your exam before it closes.
 
-This is Book 3 of a series. Book 1, *200 Meters and Down*, is a technical history of amateur radio; Book 2, *Your First Ham License*, is the Technician course; Book 4, *Your Last Ham License*, is the Extra course waiting on the far side of General.
+This is the middle book of a three-book series: *Your First Ham License* is the Technician course, this book is the General course, and *Your Last Ham License* is the Extra course waiting on the far side of General.
 
 ### How This Book Was Made
 
@@ -36,6 +36,6 @@ The integrity rules were simple and absolute. All prose is original. Facts, 47 C
 
 - Calendar span 2026-07-23 → 2026-07-24, with parallel agents throughout
 
-- ~4.1 million subagent tokens (estimate): this runtime does not meter subagent tokens; the estimate models all agent reads of the canonical files plus written output volume at ~4 characters per token — Book 1's metered ~4.7M corroborates the scale
+- ~4.1 million subagent tokens (estimate): this runtime does not meter subagent tokens; the estimate models all agent reads of the canonical files plus written output volume at ~4 characters per token
 
 Two days, one canon, one pool, and a great deal of checking. The upgrade itself is yours to make.

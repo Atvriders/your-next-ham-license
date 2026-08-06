@@ -4,7 +4,7 @@
 
 Companion canonical data (part of this canon by reference): `canon/pool-general.txt` and `canon/pool-general.json` — the verified 423-question NCVEC 2023–2027 General (Element 3) pool. Question text, choices, and answer letters are quoted from those two files only, never from memory, web mirrors, or third-party study guides.
 
-Series note: this is Book 3 in the series, written for readers who hold the Technician license Book 2 (*Your First Ham License: The Technician Course (2026–2030)*) teaches to. Notation, units, and shared glossary terms are identical to Book 2's canon wherever they overlap (§3, §4); where the General material legitimately deepens a convention (e.g., the decibel formula is exam math here), the difference is stated explicitly rather than silently changed.
+Series note: this is the middle book of the series, written for readers who hold the Technician license Book 2 (*Your First Ham License: The Technician Course (2026–2030)*) teaches to. Notation, units, and shared glossary terms are identical to Book 2's canon wherever they overlap (§3, §4); where the General material legitimately deepens a convention (e.g., the decibel formula is exam math here), the difference is stated explicitly rather than silently changed.
 
 ---
 
@@ -1002,7 +1002,7 @@ Notes (binding):
 3. **The NCVEC 2023–2027 General question pool is public domain** — "The NCVEC Question Pool Committee hereby releases into public domain the 2023-2027 General, Element 3, Question pool" (statement on the pool's release page, captured in `canon/source/release-page.html`, fetched 2026-07-24) — so questions, choices, answer keys, and figure *content* may be reproduced verbatim.
 4. **The pool figure G7-1 is redrawn, not copied**: an original SVG conveying exactly the official content (same components, same labels, same numbered callouts), registered in `figures/figures.json` as `kind:"original"` with the note "redrawn from NCVEC pool figure G7-1" (see §1.4).
 5. **Bare facts, frequencies, and formulas are not copyrightable**; exam-prep explanations are always written fresh.
-6. **Archival ARRL Handbook material is optional seasoning only**, governed by the ledger below (carried over unchanged from Book 1's accuracy canon, where each status was affirmatively determined, and already governing Book 2). The book works with zero archival images.
+6. **Archival ARRL Handbook material is optional seasoning only**, governed by the ledger below (carried over unchanged from the series' original accuracy canon, where each status was affirmatively determined, and already governing Book 2). The book works with zero archival images.
 
 **ARRL *Radio Amateur's Handbook* ledger (carried over — governs any optional archival figure in this book too):** determinations rest on the US Copyright Office Public Records System and the official Catalog of Copyright Entries renewal volumes; public-domain findings are affirmatively evidenced (registration age, or confirmed absence of renewal within the 28-year window), not assumed.
 

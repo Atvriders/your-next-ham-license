@@ -38,11 +38,11 @@ your signal can cross oceans, and the deeper theory that makes it work. Math is
 expected at this level (reactance, impedance, resonance, dB, power calculations),
 taught step by step with worked examples.
 
-This is **Book 3 of the three-book "Your First Ham License" program**, following Book 1
-(*200 Meters and Down*, a technical history of amateur radio — not exam prep) and
-Book 2 (*Your First Ham License: The Technician Course (2026–2030)*). Book 4 (Extra)
-inherits this book's template. Production machinery (build, audit, figures, audiobook,
-Docker, series site) is inherited from Book 2 and retargeted; new here are the
+This is **the middle book of the three-book "Your First Ham License" program**,
+following *Your First Ham License: The Technician Course (2026–2030)*; the Extra
+course inherits this book's template. Production machinery (build, audit, figures,
+audiobook, Docker, series site) is inherited from the Technician book and
+retargeted; new here are the
 builder's markdown-table support, the `mathsvg` extension for the real formula set,
 ch10 as a full teaching chapter (only ch00 is exempt from Exam Focus), and a messier
 pool (six errata, nine deletions, non-contiguous IDs).
@@ -367,11 +367,10 @@ and as an imported module.
   with subscripts, `\pi`, `\sqrt{}`, and fractions so the whole General formula set
   renders (audit check #4 is the backstop).
 - **`tools/figreg.py`** — loads/validates `figures/figures.json`; protected-years set
-  (1968–1983) unchanged from Book 1.
+  (1968–1983), unchanged from the series' original ledger.
 - **`tools/narration.py`** / **`tools/make_audiobook.py`** — the 8-voice edge-tts
   audiobook pipeline (US/British/Australian/Irish × male/female), **chapters 00–10
-  only** (the verbatim pool appendix is never narrated); ID3 `artist=Claude Opus
-  4.8`, `album=Your Next Ham License`. **`tools/make_intro.py`** generates the spoken
+  only** (the verbatim pool appendix is never narrated); ID3 `artist=Kimi K3`, `album=Your Next Ham License`. **`tools/make_intro.py`** generates the spoken
   introduction (the upgrade welcome). `docker/audiobook-index.html` is the player
   (§8).
 - **`tools/make_exam.py`** — the practice-exam generator:
@@ -424,7 +423,7 @@ Technician stays live, Extra remains "coming soon."
   "General"`) and the audiobook player. Shipped books are links, current book
   highlighted, unshipped books render as inert "coming soon" labels. General's flag
   flips to `True` in this repo (inert until push; the book is live the moment it
-  ships); Extra flips when Book 4 ships.
+  ships); Extra flips when the Extra book ships.
 - **Stable sub-paths** — the books mount at `/tech/`, `/general/`, `/extra/` behind a
   series nginx proxy. **Book HTML uses only relative/anchor links** (enforced by a
   build test; the only absolute links allowed are the three series paths), so
@@ -469,7 +468,7 @@ Technician stays live, Extra remains "coming soon."
 - **The pool figure G7-1 is redrawn, not copied** (§6).
 - **Bare facts, frequencies, and formulas are not copyrightable**; all exam-prep
   explanations are written fresh.
-- **ARRL Handbook ledger (carried from Book 1, governs any optional archival
+- **ARRL Handbook ledger (carried over from the series' original canon, governs any optional archival
   figure):** of the 13 owned editions (1927–1983), **7 are public domain and
   reproducible** (1927, 1931, 1933, 1936, 1940, 1941, 1951 — each affirmatively
   evidenced) and **6 are protected and never reproduced in any form** (1968, 1974,
@@ -620,7 +619,7 @@ printing of this book after mid-2027 must state which pool exams actually use.**
 
 ## 12. How to extend
 
-**Book 4 (Extra)** inherits this template end to end (the current Extra pool is
+**The Extra book** inherits this template end to end (the current Extra pool is
 effective 2024-07-01, valid until 2028-06-30):
 
 1. Copy the repo scaffold: `tools/`, `tests/`, Docker/CI, `series/` machinery,

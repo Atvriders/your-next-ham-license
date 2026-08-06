@@ -6,7 +6,7 @@
 **Date:** 2026-07-23
 **Status:** Draft — awaiting human sign-off before implementation planning.
 
-This is **Book 3 of the series** (Book 1: *200 Meters and Down*; Book 2: *Your First Ham License: The Technician Course*, shipped from `~/your-first-ham-license/`). It reuses the Technician book's production machinery and method — the same toolchain, audit discipline (incl. pool-fidelity check), series-site machinery, and multi-agent workflow — per `/home/kasm-user/ham-book-program-plan.md` and the approved series plan. Book 4 (Extra) follows with the same template.
+This is **the middle book of the three-book series**, following *Your First Ham License: The Technician Course* (shipped from `~/your-first-ham-license/`). It reuses the Technician book's production machinery and method — the same toolchain, audit discipline (incl. pool-fidelity check), series-site machinery, and multi-agent workflow — per `/home/kasm-user/ham-book-program-plan.md` and the approved series plan. The Extra course follows with the same template.
 
 > **Series note:** mounted at `/general/` on the series site; the book-switcher bar shows General highlighted, Technician live, Extra "coming soon."
 
@@ -22,13 +22,13 @@ Two jobs at once, same method as Book 2:
 
 **Spine (organizing idea):** *going farther* — the upgrade from local VHF life to worldwide HF: what changes when your signal can cross oceans, and the deeper theory that makes it work.
 
-**Non-goals:** not a beginner book (that's Book 2); not the full reference depth of the Extra course (Book 4); not a history book (Book 1).
+**Non-goals:** not a beginner book (that's the Technician book); not the full reference depth of the Extra course; not a history book.
 
 **Tone:** competent colleague-to-colleague — respects the reader's Technician knowledge, still plain-language, still worked and repeated for retention. Math is expected now (reactance, impedance, resonance, dB, power calculations), taught step by step with worked examples.
 
 ## 2. Relationship to Book 2 (what we reuse)
 
-| Reused from Book 2 | Retargeted to Book 3 |
+| Reused from Book 2 | Retargeted to this book |
 |---|---|
 | Toolchain (`tools/`, tests, CI, Docker, series machinery) | Copied; constants retargeted (title, chapters, ID3, GHCR image, `/general/` series highlight) |
 | Canon discipline + pool-fidelity audit (check #8) | Same law; canon carries the **2023–2027 General pool verbatim** |
@@ -45,7 +45,7 @@ Two jobs at once, same method as Book 2:
 - Source: <https://ncvec.org/index.php/2023-2027-general-question-pool> (verify exact URL at ingestion; ARRL mirror if hosted). Any errata since release incorporated, with the revision record pinned in the canon.
 - **FCC Part 97** (public domain) — especially §97.301/§97.305 General privileges, §97.313 power limits.
 - **Owned references:** ARRL Handbooks 1927–1983 at `~/leehite-callbooks/handbooks-arrl/` (depth reference only; reproduction only from the 7 PD editions, same ledger).
-- **Book 2 itself** — Book 3 references it as the series' foundation (cross-series consistency: same notation, same voice).
+- **Book 2 itself** — this book references it as the series' foundation (cross-series consistency: same notation, same voice).
 - Research workflow as before: pool ingestion → parallel researchers (Part 97 General privileges, per-subelement teaching notes G1–G5 / G6–G0, HF operating-practice color) → assembler writes `accuracy-canon.md` with zero UNVERIFIED.
 
 ## 4. Chapter outline (~9–11 chapters + 2 appendices, ~45–60k words, ~25–35 figures)
