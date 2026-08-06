@@ -126,6 +126,30 @@ Writes `build/practice-exam.md` (questions and choices A–D, never the answers 
 print it and circle) and `build/practice-exam-key.md` (the answer key with a
 subelement tally). Pass `--out` to write elsewhere.
 
+## Practice tests & flashcards
+
+Two interactive study pages, generated from the same canonical pool data and served in
+the container at **`/practice.html`** and **`/flashcards.html`** (themed like the
+audiobook player, light/dark, fully self-contained — they work offline):
+
+- **`/practice.html`** draws a valid exam — one question per group, 35 questions, 26
+  to pass — reseeding with every **New exam** click. Answer by clicking; grading shows
+  your score, pass/fail, and a full review list (your answer, the correct answer, and
+  the one-line why). A per-subelement **drill mode** gives immediate feedback with the
+  why after each question.
+- **`/flashcards.html`** flips through all **423 questions**: front is the question and
+  choices, back is the correct answer, the why, and a hint naming the published pool
+  group and the chapter that teaches it. Filter by subelement, shuffle, and mark cards
+  **review later** (persisted in `localStorage`). Keyboard-friendly: space/enter flips,
+  arrows move, M marks.
+
+The redrawn pool figure G7-1 appears inline on the five cards and exam questions that
+reference it (G7A09–G7A13). Regenerate after any pool update:
+
+```sh
+python3 tools/make_study.py --out build/
+```
+
 ## Pool currency — this pool expires 2027-06-30
 
 **This book tracks the NCVEC 2023–2027 General question pool, valid for exams
@@ -158,7 +182,7 @@ in the canon (§7.13).
 ## Development
 
 ```sh
-python3 -m pytest -q                              # 79 tooling tests
+python3 -m pytest -q                              # 117 tooling tests
 python3 tools/audit_book.py                       # the 8-check accuracy/format/pool gate (exit 0 = green)
 python3 tools/build_book.py --html --txt --pdf --out build/   # rebuild the editions
 ```
@@ -196,7 +220,7 @@ License](https://github.com/Atvriders/your-first-ham-license)*.
 | **Figures** | 35 (all original — hand-authored themeable SVG + matplotlib-plotted curves; the NCVEC pool figure G7-1 redrawn, never copied) |
 | **Pool questions annotated** | 423/423 — every active question verbatim, answer keyed, one-line why (six errata incorporated, nine withdrawals omitted) |
 | **Agents** | ~45 subagent launches across tooling, canon, figures, chapters, appendix, and audit phases (estimate), plus retries after transient engine errors |
-| **Tooling tests** | 79 pytest tests |
+| **Tooling tests** | 117 pytest tests |
 | **Audit checks** | 8, including mechanical verbatim-pool verification: 423/423 questions in Appendix A, every quote byte-exact, every answer key matching the pool |
 | **Calendar build span** | 2026-07-23 → 2026-07-24, with parallel agents throughout |
 | **Subagent tokens** | **~4.1M subagent tokens** (estimate — modeled from agent reads + written volume at ~4 chars/token; this runtime does not meter subagent tokens) |

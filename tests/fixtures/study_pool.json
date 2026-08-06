@@ -1,0 +1,80 @@
+{
+ "G1A01": {
+  "group": "G1A",
+  "subelement": "G1",
+  "question": "On which HF and/or MF amateur bands are there portions where General class licensees cannot transmit?",
+  "choices": {
+   "A": "60 meters, 30 meters, 17 meters, and 12 meters",
+   "B": "160 meters, 60 meters, 15 meters, and 12 meters",
+   "C": "80 meters, 40 meters, 20 meters, and 15 meters",
+   "D": "80 meters, 20 meters, 15 meters, and 10 meters"
+  },
+  "answer": "C",
+  "figure": null
+ },
+ "G1A02": {
+  "group": "G1A",
+  "subelement": "G1",
+  "question": "On which of the following bands is phone operation prohibited?",
+  "choices": {
+   "A": "160 meters",
+   "B": "30 meters",
+   "C": "17 meters",
+   "D": "12 meters"
+  },
+  "answer": "B",
+  "figure": null
+ },
+ "G1B01": {
+  "group": "G1B",
+  "subelement": "G1",
+  "question": "What is the maximum height above ground for an antenna structure without notification?",
+  "choices": {
+   "A": "50 feet",
+   "B": "100 feet",
+   "C": "200 feet",
+   "D": "300 feet"
+  },
+  "answer": "C",
+  "figure": null
+ },
+ "G2A01": {
+  "group": "G2A",
+  "subelement": "G2",
+  "question": "Which sideband is most commonly used for voice operation on frequencies of 14 MHz or higher?",
+  "choices": {
+   "A": "Upper sideband",
+   "B": "Lower sideband",
+   "C": "Vestigial sideband",
+   "D": "Double sideband"
+  },
+  "answer": "A",
+  "figure": null
+ },
+ "G5A01": {
+  "group": "G5A",
+  "subelement": "G5",
+  "question": "What is impedance?",
+  "choices": {
+   "A": "The opposition to AC current flow",
+   "B": "The inverse of resistance",
+   "C": "The power stored in an inductor",
+   "D": "The charge stored in a capacitor"
+  },
+  "answer": "A",
+  "figure": null
+ },
+ "G7A09": {
+  "group": "G7A",
+  "subelement": "G7",
+  "question": "What is the purpose of C1 in the circuit shown in Figure G7-1?",
+  "choices": {
+   "A": "It resonates with L1",
+   "B": "It removes RF from the supply rail",
+   "C": "It couples the output",
+   "D": "It sets the bias"
+  },
+  "answer": "A",
+  "figure": "G7-1"
+ }
+}

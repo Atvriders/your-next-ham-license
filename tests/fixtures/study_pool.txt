@@ -1,0 +1,52 @@
+# sample published pool text for make_study tests (mirrors canon/pool-general.txt layout: en-dash headings)
+SUBELEMENT G1 – COMMISSION'S RULES [2 Exam Questions – 2 Groups]
+G1A – General class control operator frequency privileges; primary and secondary allocations
+G1A01 (C) [97.301(d)]
+On which HF and/or MF amateur bands are there portions where General class licensees cannot transmit?
+A. 60 meters, 30 meters, 17 meters, and 12 meters
+B. 160 meters, 60 meters, 15 meters, and 12 meters
+C. 80 meters, 40 meters, 20 meters, and 15 meters
+D. 80 meters, 20 meters, 15 meters, and 10 meters
+~~
+G1A02 (B) [97.305]
+On which of the following bands is phone operation prohibited?
+A. 160 meters
+B. 30 meters
+C. 17 meters
+D. 12 meters
+~~
+G1B – Antenna structure limitations; Beacon operations; Prohibited transmissions
+G1B01 (C) [97.15(d)]
+What is the maximum height above ground for an antenna structure without notification?
+A. 50 feet
+B. 100 feet
+C. 200 feet
+D. 300 feet
+~~
+SUBELEMENT G2 – OPERATING PROCEDURES [1 Exam Question – 1 Group]
+G2A – Phone operating procedures; USB/LSB conventions
+G2A01 (A)
+Which sideband is most commonly used for voice operation on frequencies of 14 MHz or higher?
+A. Upper sideband
+B. Lower sideband
+C. Vestigial sideband
+D. Double sideband
+~~
+SUBELEMENT G5 – ELECTRICAL PRINCIPLES [1 Exam Question – 1 Group]
+G5A – Reactance, inductance, capacitance, impedance, resonance
+G5A01 (A)
+What is impedance?
+A. The opposition to AC current flow
+B. The inverse of resistance
+C. The power stored in an inductor
+D. The charge stored in a capacitor
+~~
+SUBELEMENT G7 – PRACTICAL CIRCUITS [1 Exam Question – 1 group]
+G7A – Power supplies and schematic symbols
+G7A09 (A)
+What is the purpose of C1 in the circuit shown in Figure G7-1?
+A. It resonates with L1
+B. It removes RF from the supply rail
+C. It couples the output
+D. It sets the bias
+~~
