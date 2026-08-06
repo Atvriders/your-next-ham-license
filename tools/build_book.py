@@ -74,7 +74,7 @@ from tools.narration import speak_math, strip_markup
 SERIES_BOOKS = [
     ("Technician", "/tech/", True),
     ("General", "/general/", True),
-    ("Extra", "/extra/", False),
+    ("Extra", "/extra/", True),
 ]
 SERIES_CURRENT = "General"  # this book; retargeted per book in the series
 
