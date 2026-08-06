@@ -3,10 +3,19 @@
 #
 #   docker compose -f series-docker-compose.yml up -d
 #
-# Browse http://localhost:8080/         -> landing page (series/index.html)
+# No host files needed — the compose file is fully self-contained (safe to
+# paste into the Portainer web editor or run from any checkout): the proxy
+# is a prebuilt image with the nginx config and landing page baked in, so
+# nothing is bind-mounted from the host.
+#
+# Browse http://localhost:8080/         -> landing page (baked into the proxy image)
 #        http://localhost:8080/tech/    -> the Technician book + audiobook
 #        http://localhost:8080/general/ -> the General book + audiobook
 #        http://localhost:8080/extra/   -> the Extra book + audiobook
+#
+# The proxy image (ghcr.io/atvriders/series-proxy) is built and pushed by
+# the your-first-ham-license repo's CI from its series/ directory (the
+# source of truth); the series/ files here are mirror copies.
 #
 # Ports:
 #   proxy                  -> host :8080 (the only published port)
@@ -28,12 +37,9 @@ services:
     restart: unless-stopped
 
   proxy:
-    image: nginx:alpine
+    image: ghcr.io/atvriders/series-proxy:latest
     ports:
       - "8080:80"
-    volumes:
-      - ./series/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./series:/usr/share/nginx/html:ro
     depends_on:
       - tech
       - general
