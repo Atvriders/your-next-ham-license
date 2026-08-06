@@ -17,6 +17,8 @@ Consumes (all optional at this stage of the project -- the checks that
 depend on missing inputs are skipped, not failed):
 
     chapters/ch*.md            -- chapter markdown files
+    chapters/preface.md        -- optional front matter (exempt from the
+                                  format laws; banned-phrase check applies)
     appendices/pool.md         -- Appendix A (the verbatim pool)
     figures/figures.json       -- figure registry (via figreg.load())
     accuracy-canon.md          -- the accuracy canon / "bible"
@@ -88,12 +90,16 @@ _CHAPTER_STEM_RE = re.compile(r"^ch(0\d|10)$")
 CANON_PATH = "accuracy-canon.md"
 FIGREG_PATH = "figures/figures.json"
 CHAPTERS_GLOB = "chapters/ch*.md"
+PREFACE_PATH = "chapters/preface.md"
+PREFACE_STEM = "preface"
 APPENDIX_POOL_PATH = "appendices/pool.md"
 POOL_JSON_PATH = "canon/pool-general.json"
 
 # Chapters exempt from the worked-example / Exam Focus format laws (only the
 # ch00 welcome is not a teaching chapter here -- ch10 owns subelement G0 and
-# is a full teaching chapter in this book).
+# is a full teaching chapter in this book). The preface goes further: it is
+# front matter, exempt from ALL chapter format laws (but never from the
+# banned-phrase check).
 _EXEMPT_FROM_TEACHING_LAWS = ("ch00",)
 
 # Check #8: pool-quote markup (see module docstring for the convention).
@@ -152,8 +158,13 @@ def check_format_laws(stem: str, text: str) -> list[str]:
         ``**FACT:**`` lines.
 
     Banned phrases are a separate check (check_banned_phrases).
+
+    The preface (stem ``preface``) is front matter: exempt from every law in
+    this function, so it returns an empty list unconditionally.
     """
     errors = []
+    if stem == PREFACE_STEM:
+        return errors
     lines = text.splitlines()
 
     m = _HEADING_RE.match(lines[0]) if lines else None
@@ -318,6 +329,11 @@ def main() -> int:
     warnings = []
 
     chapter_paths = sorted(glob(CHAPTERS_GLOB))
+    # The ch*.md glob never matches the preface; add it explicitly so the
+    # shared scans (figures, math, canon, pool quotes, banned phrases) cover
+    # it too -- check #7 exempts it from the chapter format laws only.
+    if pathlib.Path(PREFACE_PATH).exists():
+        chapter_paths.insert(0, PREFACE_PATH)
     chapter_texts = []
     for p in chapter_paths:
         chapter_texts.append(pathlib.Path(p).read_text(encoding="utf-8"))
@@ -432,6 +448,12 @@ def main() -> int:
         format_errors = 0
         for path, text in zip(chapter_paths, chapter_texts):
             stem = pathlib.Path(path).stem
+            if stem == PREFACE_STEM:
+                # front matter: exempt from all format laws, NOT from banned phrases
+                for pe in check_banned_phrases(text):
+                    format_errors += 1
+                    errors.append(f"format law: {path}: {pe}")
+                continue
             if not _CHAPTER_STEM_RE.match(stem):
                 continue
 

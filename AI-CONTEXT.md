@@ -658,8 +658,8 @@ non-contiguous IDs (audit and exam generator tolerate the gaps), and the series-
 General flip (Technician + General live, Extra coming soon). The gate the content was
 written into: **79 pytest tests, 8 audit checks** (including mechanical verification
 of all 423/423 pool quotes and answer keys), full HTML/PDF/TXT build. This runtime
-does not meter subagent tokens, so no measured token total exists; the README's stats
-block carries a clearly-labeled estimate instead.
+does not meter subagent tokens; the ~4.1M figure in the README's stats block is an
+estimate modeled from agent reads + written volume at ~4 chars/token.
 
 ## 14. Commands
 

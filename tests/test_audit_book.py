@@ -18,6 +18,29 @@ POOL_PATH = "tests/fixtures/pool_sample.json"
 POOL = json.loads(pathlib.Path(POOL_PATH).read_text(encoding="utf-8"))
 
 CH_SAMPLE = pathlib.Path("tests/fixtures/ch_sample.md").read_text(encoding="utf-8")
+PREFACE_SAMPLE = pathlib.Path("tests/fixtures/preface.md").read_text(encoding="utf-8")
+
+
+# --- Preface (front matter) -------------------------------------------------
+
+def test_preface_is_exempt_from_format_laws():
+    # the preface carries no numbered heading, Exam Focus, worked example,
+    # Key Takeaways, or FACT lines — and must not trip any format law
+    assert check_format_laws("preface", PREFACE_SAMPLE) == []
+
+def test_audit_main_still_checks_preface_for_banned_phrases(tmp_path, monkeypatch, capsys):
+    # exempt from format laws does NOT mean exempt from banned phrases
+    monkeypatch.chdir(tmp_path)
+    chdir = tmp_path / "chapters"
+    chdir.mkdir()
+    (chdir / "preface.md").write_text(
+        "## Preface — Why & How This Book Was Made\n\n"
+        "Little did they know, the book was made.\n",
+        encoding="utf-8",
+    )
+    assert main() == 1
+    out = capsys.readouterr().out
+    assert "preface.md" in out and "banned phrase" in out.lower()
 
 
 # --- Book 1 carry-overs ---------------------------------------------------

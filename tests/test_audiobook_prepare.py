@@ -15,6 +15,16 @@ def test_parse_chapters_defaults_to_eleven():
     assert parse_chapters("") == list(range(11))
     assert parse_chapters("0-12") == list(range(11))  # clamped to 0..10
 
+def test_audiobook_never_narrates_preface():
+    # chapter sources are synthesized as ch{n:02d}.md for n in 0..10, so
+    # chapters/preface.md (print front matter) can never be picked up —
+    # and the ch*.md glob used elsewhere must not match it either
+    sources = [f"ch{n:02d}.md" for n in parse_chapters("")]
+    assert not any("preface" in s for s in sources)
+    import pathlib
+    names = [p.name for p in pathlib.Path("chapters").glob("ch*.md")]
+    assert "preface.md" not in names
+
 def test_prepare_text_speaks_math_and_drops_fig_markup():
     out = prepare_text("The tank obeys $E = IR$ here.\n\n{{fig:x}}\n", {"x": ("1", "a tank")})
     assert "E equals I R" in out

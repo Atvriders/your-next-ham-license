@@ -1,7 +1,13 @@
 import pathlib
 import re
 
-from tools.build_book import SERIES_BOOKS, build_html, build_txt, compute_chapter_id
+from tools.build_book import (
+    SERIES_BOOKS,
+    build_html,
+    build_txt,
+    compute_chapter_id,
+    discover_chapter_paths,
+)
 
 
 def test_build_html_embeds_figure_toc_and_math():
@@ -42,6 +48,49 @@ def test_compute_chapter_id_numbered_and_appendix_headings():
                               "Appendix A: The Complete 2023–2027 Pool") == "appendix-a"
     assert compute_chapter_id("appendices/glossary-and-formulas.md",
                               "Appendix B: Glossary & Formulas") == "appendix-b"
+
+
+def test_compute_chapter_id_preface():
+    assert compute_chapter_id("chapters/preface.md",
+                              "Preface — Why & How This Book Was Made") == "preface"
+
+
+def test_preface_renders_first_with_working_toc_link():
+    html = build_html(
+        [pathlib.Path("tests/fixtures/preface.md"),
+         pathlib.Path("tests/fixtures/ch_sample.md")],
+        {},
+    )
+    assert 'id="preface"' in html                    # preface anchor
+    assert 'href="#preface"' in html                 # TOC link resolves
+    # TOC entry: fixed front-matter title, no chapter number
+    assert '>Preface: Why &amp; How This Book Was Made</a>' in html
+    # body heading keeps the file's own em-dash form
+    assert 'Preface — Why &amp; How This Book Was Made' in html
+    # preface first: before ch01 in both the TOC and the body
+    assert html.index('href="#preface"') < html.index('href="#ch01"')
+    assert html.index('id="preface"') < html.index('id="ch01"')
+
+
+def test_txt_includes_preface_first():
+    txt = build_txt([pathlib.Path("tests/fixtures/preface.md"),
+                     pathlib.Path("tests/fixtures/ch_sample.md")])
+    assert txt.index("Preface — Why & How This Book Was Made") < txt.index("AC Theory")
+    assert "##" not in txt
+
+
+def test_discover_chapter_paths_puts_preface_first(tmp_path):
+    chdir = tmp_path / "chapters"
+    chdir.mkdir()
+    (chdir / "ch00.md").write_text("## 0. Welcome\n\nHi.\n", encoding="utf-8")
+    (chdir / "ch01.md").write_text("## 1. AC\n\nHi.\n", encoding="utf-8")
+    # no preface: plain ch* ordering, unchanged
+    assert [p.name for p in discover_chapter_paths(chdir)] == ["ch00.md", "ch01.md"]
+    # with a preface: it leads, chapters follow in order
+    (chdir / "preface.md").write_text(
+        "## Preface — Why & How This Book Was Made\n\nHi.\n", encoding="utf-8")
+    assert [p.name for p in discover_chapter_paths(chdir)] == \
+        ["preface.md", "ch00.md", "ch01.md"]
 
 
 def test_txt_strips_markup_and_math():

@@ -199,4 +199,4 @@ License](https://github.com/Atvriders/your-first-ham-license)*.
 | **Tooling tests** | 79 pytest tests |
 | **Audit checks** | 8, including mechanical verbatim-pool verification: 423/423 questions in Appendix A, every quote byte-exact, every answer key matching the pool |
 | **Calendar build span** | 2026-07-23 → 2026-07-24, with parallel agents throughout |
-| **Subagent tokens** | This runtime does not meter subagent tokens, so no measured total exists. Estimate: **~4M subagent tokens** (estimate, extrapolated from Book 1's metered ~4.7M for a somewhat smaller scope) |
+| **Subagent tokens** | **~4.1M subagent tokens** (estimate — modeled from agent reads + written volume at ~4 chars/token; this runtime does not meter subagent tokens) |
