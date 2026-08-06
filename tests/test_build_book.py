@@ -25,8 +25,23 @@ def test_build_html_embeds_figure_toc_and_math():
     assert 'Your Next Ham License' in html      # retargeted title
     # self-contained: no external RESOURCE fetches (namespace xmlns http URIs are fine)
     assert 'src="http' not in html
-    assert '<link ' not in html.lower()
     assert '@import' not in html
+    # the only <link> allowed is the inline data-URI favicon (no network fetch)
+    for link in re.findall(r"<link\b[^>]*>", html.lower()):
+        assert 'rel="icon"' in link and 'href="data:image/svg+xml,' in link, link
+
+
+def test_figure_css_scales_wide_svgs_to_the_column():
+    """Wide inline SVG figures (this book has 980/1000px figures vs a 600px
+    column) must scale to the column instead of clipping behind an invisible
+    horizontal scroll; any still-overflowing figure gets a visible scrollbar."""
+    html = build_html([pathlib.Path("tests/fixtures/ch_sample.md")], {})
+    assert "figure.figure svg { max-width: 100%; height: auto; }" in html
+    assert "max-width: none" not in html                # the old clipping override is gone
+    assert "figure.figure .figure-media" in html
+    assert "overflow-x: auto" in html                   # escape hatch for the overflow case
+    assert "scrollbar-width: thin" in html              # …made visible (Firefox)
+    assert ".figure-media::-webkit-scrollbar-thumb" in html  # …and Chrome
 
 
 def test_build_html_appendix_is_final_toc_section():
@@ -140,7 +155,8 @@ def test_title_block_links_audiobook_practice_and_flashcards():
     title_start = html.index('class="title-block"')
     toc_start = html.index('<nav class="toc"')
     block = html[title_start:toc_start]
-    assert '<nav class="extras"' in block
+    assert '<nav class="book-extras"' in block
+    assert 'aria-label="Book extras"' in block
     # relative links (the book page is served at the series mount root)
     assert '<a href="audiobook/">Listen to the audiobook</a>' in block
     assert '<a href="practice.html">Practice test</a>' in block

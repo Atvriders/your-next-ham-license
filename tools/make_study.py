@@ -210,6 +210,7 @@ def _embed_json(obj) -> str:
 
 def _render(template: str, records: list, figures: dict, subelements: list) -> str:
     html = template.replace("__HEAD_CSS__", _HEAD_CSS)
+    html = html.replace("__FAVICON__", _FAVICON)
     html = html.replace("__SERIES_BAR__", _SERIES_BAR)
     html = html.replace("__RECORDS_JSON__", _embed_json(records))
     html = html.replace("__FIGURES_JSON__", _embed_json(figures))
@@ -236,7 +237,7 @@ def render_practice_html(records: list, figures: dict, subelements: list) -> str
 _HEAD_CSS = """
 :root {
   color-scheme: light dark;
-  --paper: #f7f3ec; --ink: #2b2620; --muted: #7a7060; --rule: #cfc6b6;
+  --paper: #f7f3ec; --ink: #2b2620; --muted: #746a5b; --rule: #cfc6b6;
   --link: #8a6a24; --panel: #efe9dd;
   --beam: #e8c877; --beam-hi: #ffe6ac; --glow: rgba(232,200,119,.55);
   --ok: #3f7d3f; --bad: #b04a32;
@@ -248,8 +249,6 @@ _HEAD_CSS = """
     --ok: #7fbf7f; --bad: #d98a76;
   }
 }
-:root[data-theme="light"] { --paper:#f7f3ec; --ink:#2b2620; --muted:#7a7060; --rule:#cfc6b6; --link:#8a6a24; --panel:#efe9dd; }
-:root[data-theme="dark"] { --paper:#131110; --ink:#ddd6c9; --muted:#968d7c; --rule:#322d25; --link:#d8c390; --panel:#1b1815; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -289,6 +288,7 @@ h1 { font-size: 2.5rem; font-weight: normal; letter-spacing: .05em; margin: .7re
   font-size: .7rem; text-transform: uppercase; letter-spacing: .14em;
   color: var(--muted); background: none; border: 1px solid var(--rule);
   border-radius: 999px; padding: .55em 1.3em; cursor: pointer;
+  min-height: 36px; display: inline-flex; align-items: center; justify-content: center;
   transition: border-color .18s, color .18s, box-shadow .25s; }
 .btn:hover { border-color: var(--beam); color: var(--ink); }
 .btn:focus-visible { outline: 2px solid var(--beam); outline-offset: 3px; }
@@ -322,11 +322,26 @@ _SERIES_BAR = """<nav class="series-bar" aria-label="Books in this series">
 </nav>
 """
 
+# Inline SVG favicon (data URI, no network fetch): the series lantern in the
+# theme accent on an ink ground. Shared by both study pages; the same glyph
+# marks the book, the audiobook player, and the series landing.
+_FAVICON = (
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E"
+    "%3Crect width='64' height='64' rx='14' fill='%23131110'/%3E"
+    "%3Cpath d='M27 13a5 5 0 0 1 10 0' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3Cpath d='M25 20h14' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3Cpath d='M26.5 23.5 24 46 40 46 37.5 23.5Z' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linejoin='round'/%3E"
+    "%3Ccircle cx='32' cy='34' r='5' fill='%23ffe6ac'/%3E"
+    "%3Cpath d='M24 50h16' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3C/svg%3E"
+)
+
 _FLASHCARDS_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="__FAVICON__">
 <title>Your Next Ham License — Flashcards</title>
 <style>__HEAD_CSS__
 /* ---- flashcards ---- */
@@ -369,10 +384,10 @@ __SERIES_BAR__
   <p class="sub">The General Course (2023&ndash;2027)</p>
   <p class="tagline">all 423 pool questions &middot; hints &amp; explanations &middot; marks that stick</p>
   <p class="back">
-    <a href="../">&larr; Read the book</a> <span class="dot">&middot;</span>
-    <a href="practice.html">Practice exam</a> <span class="dot">&middot;</span>
-    <a href="../your-next-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
-    <a href="../your-next-ham-license.txt">Text</a>
+    <a href="./">&larr; Read the book</a> <span class="dot">&middot;</span>
+    <a href="practice.html">Practice test</a> <span class="dot">&middot;</span>
+    <a href="./your-next-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
+    <a href="./your-next-ham-license.txt">Text</a>
   </p>
 </header>
 
@@ -401,7 +416,7 @@ __SERIES_BAR__
 <section class="note">
   <h2 class="label">About these cards</h2>
   <p>Every question, choice, and answer key is verbatim from the NCVEC 2023&ndash;2027 General pool (public domain; valid for exams 2023-07-01 through 2027-06-30). The one-line explanations are this book&rsquo;s own, and each card&rsquo;s hint names the published pool group and the chapter that teaches it. Figure G7-1 is redrawn from the pool original.</p>
-  <p><a href="../">Read the book</a> &middot; <a href="practice.html">Take a practice exam</a></p>
+  <p><a href="./">Read the book</a> &middot; <a href="practice.html">Take a practice test</a></p>
 </section>
 
 </div>
@@ -583,9 +598,10 @@ _PRACTICE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Next Ham License — Practice Exam</title>
+<link rel="icon" href="__FAVICON__">
+<title>Your Next Ham License — Practice Test</title>
 <style>__HEAD_CSS__
-/* ---- practice exam ---- */
+/* ---- practice test ---- */
 .rule { text-align: center; color: var(--muted); max-width: 34em; margin: 0 auto 1.6rem; }
 .rule b { color: var(--ink); font-weight: normal; }
 .tabs { display: flex; gap: .6rem; justify-content: center; margin-bottom: 1.8rem; }
@@ -637,15 +653,15 @@ _PRACTICE_TEMPLATE = """<!DOCTYPE html>
 
 __SERIES_BAR__
 <header>
-  <p class="over label">Practice exam</p>
+  <p class="over label">Practice test</p>
   <h1>Your Next Ham License</h1>
   <p class="sub">The General Course (2023&ndash;2027)</p>
   <p class="tagline">drawn fresh every time &middot; graded with explanations</p>
   <p class="back">
-    <a href="../">&larr; Read the book</a> <span class="dot">&middot;</span>
+    <a href="./">&larr; Read the book</a> <span class="dot">&middot;</span>
     <a href="flashcards.html">Flashcards</a> <span class="dot">&middot;</span>
-    <a href="../your-next-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
-    <a href="../your-next-ham-license.txt">Text</a>
+    <a href="./your-next-ham-license.pdf">PDF</a> <span class="dot">&middot;</span>
+    <a href="./your-next-ham-license.txt">Text</a>
   </p>
 </header>
 
@@ -684,9 +700,9 @@ below, or drill a single subelement with immediate feedback.</p>
 </section>
 
 <section class="note">
-  <h2 class="label">About this exam</h2>
+  <h2 class="label">About this test</h2>
   <p>Every question, choice, and answer key is verbatim from the NCVEC 2023&ndash;2027 General pool (public domain; valid for exams 2023-07-01 through 2027-06-30), drawn one per group exactly as the real exam does. The explanations are this book&rsquo;s own. Figure G7-1 is redrawn from the pool original.</p>
-  <p><a href="../">Read the book</a> &middot; <a href="flashcards.html">Study the flashcards</a></p>
+  <p><a href="./">Read the book</a> &middot; <a href="flashcards.html">Study the flashcards</a></p>
 </section>
 
 </div>
@@ -920,7 +936,8 @@ below, or drill a single subelement with immediate feedback.</p>
           "Hint: this is " + rec.groupTheme + " — review chapter " + rec.chapter + "."));
         feedback.style.display = "";
         drillNextBtn.style.display = "";
-        drillTally.textContent = drillCorrect + " / " + drillAnswered + " correct";
+        drillTally.textContent = drillCorrect + " / " + drillAnswered + " correct" +
+          " · question " + (drillIdx + 1) + " of " + drillQueue.length;
       }));
     });
     block.appendChild(feedback);

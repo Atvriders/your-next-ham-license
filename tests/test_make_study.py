@@ -36,8 +36,10 @@ def assert_self_contained(html):
     assert 'src="http' not in html and "src='http" not in html
     assert 'href="http' not in html and "href='http" not in html
     assert "<script src" not in html
-    assert "<link" not in html
     assert "<img" not in html
+    # the only <link> allowed is the inline data-URI favicon (no network fetch)
+    for link in re.findall(r"<link\b[^>]*>", html):
+        assert 'rel="icon"' in link and 'href="data:image/svg+xml,' in link, link
 
 
 def assert_fully_rendered(html):
@@ -249,6 +251,35 @@ def test_flashcards_card_has_fixed_height_and_internal_scroll():
     assert "height: 28rem" in html
     # the rare longer card scrolls inside the card instead of growing it
     assert "overflow-y: auto" in html
+
+
+def render_both_fixture_pages():
+    records = build_fixture_records()
+    titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))
+    subs = make_study.subelement_summaries(records, titles)
+    return (make_study.render_practice_html(records, fixture_figures(), subs),
+            make_study.render_flashcards_html(records, fixture_figures(), subs))
+
+
+def test_study_pages_link_within_their_own_directory():
+    """practice.html/flashcards.html are served next to the book (site root on
+    the series proxy), so book/PDF/TXT links must be same-dir (./): href="../"
+    resolves off the book (PDF/TXT 404, "Read the book" lands off-book)."""
+    for html in render_both_fixture_pages():
+        assert 'href="../"' not in html
+        assert 'href="../your-next-ham-license.pdf"' not in html
+        assert 'href="../your-next-ham-license.txt"' not in html
+        assert '<a href="./">' in html                      # Read the book
+        assert 'href="./your-next-ham-license.pdf"' in html
+        assert 'href="./your-next-ham-license.txt"' in html
+
+
+def test_both_pages_carry_the_same_inline_favicon():
+    practice, flashcards = render_both_fixture_pages()
+    for html in (practice, flashcards):
+        assert html.count('<link rel="icon" href="data:image/svg+xml,') == 1
+    icon = re.search(r'<link rel="icon" href="([^"]+)"', practice).group(1)
+    assert f'<link rel="icon" href="{icon}">' in flashcards
 
 
 def test_practice_page_states_the_35_26_rule_and_drill_mode():

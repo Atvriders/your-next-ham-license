@@ -7,8 +7,9 @@ inline math rendered as SVG, and produces:
   - build_html(chapter_paths, figreg) -> str
       A single self-contained HTML document. Every figure and math
       expression is embedded as inline ``<svg>``; all CSS is inline. No
-      external resource references (no ``<link>``, no ``@import``, no
-      ``src="http..."``), so the file works fully offline.
+      external resource references (no ``@import``, no ``src="http..."``;
+      the one ``<link>`` is a data-URI favicon), so the file works fully
+      offline.
 
   - build_txt(chapter_paths) -> str
       A plain-text edition: markdown markup stripped, math spoken as
@@ -85,6 +86,20 @@ SERIES_CURRENT = "General"  # this book; retargeted per book in the series
 
 # Fixed TOC label for the optional preface (front matter, no chapter number).
 PREFACE_TOC_LABEL = "Preface: Why & How This Book Was Made"
+
+# Inline SVG favicon (data URI, no network fetch): the series lantern in the
+# theme accent on an ink ground — the same glyph the audiobook player, the
+# study pages, and the series landing carry.
+_FAVICON = (
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E"
+    "%3Crect width='64' height='64' rx='14' fill='%23131110'/%3E"
+    "%3Cpath d='M27 13a5 5 0 0 1 10 0' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3Cpath d='M25 20h14' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3Cpath d='M26.5 23.5 24 46 40 46 37.5 23.5Z' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linejoin='round'/%3E"
+    "%3Ccircle cx='32' cy='34' r='5' fill='%23ffe6ac'/%3E"
+    "%3Cpath d='M24 50h16' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "%3C/svg%3E"
+)
 
 # --------------------------------------------------------------------------
 # Chapter parsing
@@ -390,24 +405,6 @@ _CSS = """
     --worked-bg: #332b1a;
   }
 }
-:root[data-theme="light"] {
-  --bg: #fdfaf3;
-  --fg: #1b1b1b;
-  --muted: #666666;
-  --rule: #cccccc;
-  --link: #2a5db0;
-  --sidebar-bg: #eef3f8;
-  --worked-bg: #fff7e6;
-}
-:root[data-theme="dark"] {
-  --bg: #181818;
-  --fg: #eaeaea;
-  --muted: #aaaaaa;
-  --rule: #444444;
-  --link: #8ab4f8;
-  --sidebar-bg: #1f2937;
-  --worked-bg: #332b1a;
-}
 * { box-sizing: border-box; }
 html, body { background: var(--bg); }
 body {
@@ -423,9 +420,9 @@ h1, h2, h3, h4 { line-height: 1.25; }
 h4 { font-size: 1.05rem; color: var(--muted); margin: 2rem 0 0.5rem; }
 a { color: var(--link); }
 header.title-block { text-align: center; margin-bottom: 2.5rem; }
-nav.extras { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
-nav.extras a { color: var(--link); text-decoration: none; }
-nav.extras a:hover { text-decoration: underline; }
+nav.book-extras { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+nav.book-extras a { color: var(--link); text-decoration: none; }
+nav.book-extras a:hover { text-decoration: underline; }
 nav.toc { margin-bottom: 3rem; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
 nav.toc ul { list-style: none; padding: 0; }
 nav.toc li { margin: 0.35rem 0; }
@@ -451,9 +448,17 @@ blockquote.worked-example {
   border-radius: 4px;
 }
 figure.figure { margin: 2rem 0; text-align: center; }
-figure.figure .figure-media { overflow-x: auto; }
+figure.figure .figure-media {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+figure.figure .figure-media::-webkit-scrollbar { height: 8px; }
+figure.figure .figure-media::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 4px;
+}
 figure.figure svg { max-width: 100%; height: auto; }
-figure.figure .figure-media svg { max-width: none; }
 figcaption { font-size: 0.85em; color: var(--muted); margin-top: 0.5rem; }
 span.math { display: inline-block; vertical-align: middle; line-height: 0; }
 span.math svg { height: 1em; width: auto; vertical-align: middle; }
@@ -534,6 +539,7 @@ def build_html(chapter_paths: list, figreg: dict) -> str:
         "<head>\n"
         '<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        f'<link rel="icon" href="{_FAVICON}">\n'
         "<title>Your Next Ham License</title>\n"
         f"<style>{_CSS}</style>\n"
         "</head>\n"
@@ -541,7 +547,7 @@ def build_html(chapter_paths: list, figreg: dict) -> str:
         f"{_render_series_bar()}"
         '<header class="title-block"><h1>Your Next Ham License</h1>'
         "<p>The General Course (2023–2027)</p>"
-        '<nav class="extras" aria-label="Study companions">'
+        '<nav class="book-extras" aria-label="Book extras">'
         '<a href="audiobook/">Listen to the audiobook</a> &middot; '
         '<a href="practice.html">Practice test</a> &middot; '
         '<a href="flashcards.html">Flashcards</a>'

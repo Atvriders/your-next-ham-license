@@ -4,7 +4,7 @@ This appendix is the complete 2023–2027 General question pool: all 423 active 
 
 How to use it: every group of questions maps to one chapter of this book — read that chapter first, then come back and drill its questions here. Each entry shows the question and choices verbatim, then the correct answer with a one-line plain-language why naming the chapter that teaches it. Beneath each entry, the Published ID line carries the question's official answer letter and Part 97 rule reference exactly as printed in the pool document — including a few small printing quirks in the original, preserved rather than repaired: G1D12's misprinted citation `[97.507]`, G1B05's malformed `[97.111((5)(b)]`, and a stray trailing space on G9C01's ID line.
 
-The exam itself draws 35 questions from this pool — one from each of the 35 groups — and 26 correct answers pass. Five questions in group G7A refer to the pool's one official graphic, Figure G7-1; it is redrawn here as an original diagram, embedded with the questions that use it. When you are ready to test yourself, `python3 tools/make_exam.py` draws a valid 35-question practice exam — one question per group — from the same canonical pool files.
+The exam itself draws 35 questions from this pool — one from each of the 35 groups — and 26 correct answers pass. Five questions in group G7A refer to the pool's one official graphic, Figure G7-1; it is redrawn here as an original diagram, embedded with the questions that use it. When you are ready to test yourself, the book's practice page draws a valid 35-question practice test — one question per group — from this same pool.
 
 ### G1 — Commission's Rules (52 questions, 5 on the exam)
 
