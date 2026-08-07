@@ -369,10 +369,10 @@ and as an imported module.
 - **`tools/figreg.py`** — loads/validates `figures/figures.json`; protected-years set
   (1968–1983), unchanged from the series' original ledger.
 - **`tools/narration.py`** / **`tools/make_audiobook.py`** — the 8-voice edge-tts
-  audiobook pipeline (US/British/Australian/Irish × male/female), **chapters 00–10
-  only** (the verbatim pool appendix is never narrated); ID3 `artist=Kimi K3`, `album=Your Next Ham License`. **`tools/make_intro.py`** generates the spoken
-  introduction (the upgrade welcome). `docker/audiobook-index.html` is the player
-  (§8).
+  audiobook pipeline (US/British/Australian/Irish × male/female), **preface +
+  chapters 00–10 only** (the verbatim pool appendix is never narrated); ID3
+  `artist=Kimi K3`, `album=Your Next Ham License`. `docker/audiobook-index.html`
+  is the player (§8).
 - **`tools/make_exam.py`** — the practice-exam generator:
   `python3 tools/make_exam.py [--seed N] [--out build/] [--pool canon/pool-general.json]`
   draws exactly **one question per NCVEC group** (35 groups → a valid 35-question
@@ -381,7 +381,7 @@ and as an imported module.
   `build/practice-exam-key.md` (letters + subelement tally). The group model
   **tolerates the deleted-ID gaps** — one uniform-random draw per group from whatever
   ids exist.
-- **`tests/`** — **79 pytest tests** covering all tooling (including the four
+- **`tests/`** — **128 pytest tests** covering all tooling (including the four
   check-#8 fixture tests: a correct quote passes; a one-word-off quote fails; a wrong
   answer letter fails; missing pool → skip — with a pool fixture that carries a
   **deleted-ID gap** so the coverage check is proven to tolerate non-contiguous
@@ -439,7 +439,7 @@ Technician stays live, Extra remains "coming soon."
   a placeholder. Each book's standalone image (`docker-compose.yml`, also :8080) runs
   fine alone.
 - **Audiobook player** (`docker/audiobook-index.html`) — themed page with 12 tracks
-  (intro + 11 chapters), a **voice switcher** grouped by accent (8 voices: Andrew,
+  (preface + 11 chapters), a **voice switcher** grouped by accent (8 voices: Andrew,
   Ava, Ryan, Sonia, William, Natasha, Connor, Emily), continuous chapter-to-chapter
   playback, a live visualizer, and **resume** (voice/track/position persisted in
   `localStorage` under **`ynhl-audio`** — this book's key; Book 2's player uses
@@ -449,7 +449,8 @@ Technician stays live, Extra remains "coming soon."
 - **Hosting/CI** — `Dockerfile` (nginx serving `build/index.html`, the TXT/PDF,
   `chapters/`, and `audiobook/` with the player at `/audiobook/`); GitHub Actions
   (`.github/workflows/build.yml`, push to `master`/`main` or `workflow_dispatch`)
-  fetches the audiobook from **release v1.0** (intro + 8 voices × 11 chapters; the
+  fetches the audiobook from **release v1.0** (8 voices × 12 tracks — preface +
+  11 chapters; the
   fetch loop stays `seq -f "%02g" 0 10`), rebuilds the book, and pushes
   `ghcr.io/atvriders/your-next-ham-license:latest`. GitHub-only CI; no Gitea path.
   **Audio ships on the release, not in git.**

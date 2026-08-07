@@ -21,7 +21,6 @@ jobs:
         run: |
           mkdir -p audiobook
           base="https://github.com/Atvriders/your-next-ham-license/releases/download/v1.0"
-          curl -sSfL -o audiobook/intro.mp3 "$base/intro.mp3"
           # 8 voices: ryan -> chNN.mp3, the rest -> <voice>-chNN.mp3
           : > urls.txt
           for i in $(seq -f "%02g" 0 10); do
@@ -29,10 +28,6 @@ jobs:
             for v in andrew ava sonia william natasha connor emily; do
               echo "$base/${v}-ch${i}.mp3 audiobook/${v}-ch${i}.mp3" >> urls.txt
             done
-          done
-          # intro: ryan -> intro.mp3 (fetched above), the rest -> <voice>-intro.mp3
-          for v in andrew ava sonia william natasha connor emily; do
-            echo "$base/${v}-intro.mp3 audiobook/${v}-intro.mp3" >> urls.txt
           done
           # preface: ryan -> preface.mp3, the rest -> <voice>-preface.mp3
           echo "$base/preface.mp3 audiobook/preface.mp3" >> urls.txt

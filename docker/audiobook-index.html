@@ -155,7 +155,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
 .trk:focus-visible { outline: 2px solid var(--beam); outline-offset: -2px; }
 .trk .num { width: 1.7em; text-align: right; color: var(--muted); font-size: .8rem; }
 .trk .ti { flex: 1; }
-.trk .ti .intro-tag { font-style: italic; }
+.trk .ti .front-tag { font-style: italic; }
 .trk .yr { color: var(--muted); font-size: .85rem; }
 .trk .eq { width: 16px; height: 14px; display: none; align-items: flex-end; gap: 2px; }
 .trk .eq i { width: 3px; background: var(--beam); border-radius: 1px; height: 30%; }
@@ -210,7 +210,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     <canvas id="beam" aria-hidden="true"></canvas>
     <button class="face" id="faceBtn" aria-label="Play"></button>
   </div>
-  <p class="nowtitle" id="nowTitle">Introduction — How This Was Made</p>
+  <p class="nowtitle" id="nowTitle">Preface — Why &amp; How This Book Was Made</p>
   <p class="readby">read by <b id="readBy">Ryan</b> <span id="readAcc" class="tnum"></span></p>
 </div>
 
@@ -247,7 +247,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
 <section class="note">
   <h2 class="label">How this was made</h2>
   <p><b>Your Next Ham License</b> &mdash; the book and its narration alike &mdash; was written by <b>Kimi&nbsp;K3</b>. A verified <em>accuracy canon</em> &mdash; pinned Part&nbsp;97 facts, a notation standard, and the complete 2023&ndash;2027 NCVEC General question pool carried verbatim &mdash; governed every chapter-writing and technical-accuracy-auditing agent in the build, so the eleven chapters agree on every rule, frequency, formula, and answer key.</p>
-  <p>The narration is synthesized: eight neural voices &mdash; men and women in American, British, Australian, and Irish accents &mdash; each reading all eleven chapters, from the upgrade welcome to RF-exposure safety. (The verbatim pool appendix is print-only and is not narrated.) Start with the <em>Introduction</em> for a one-minute welcome back.</p>
+  <p>The narration is synthesized: eight neural voices &mdash; men and women in American, British, Australian, and Irish accents &mdash; each reading the preface and all eleven chapters, from the upgrade welcome to RF-exposure safety. (The verbatim pool appendix is print-only and is not narrated.)</p>
   <p class="links"><a href="https://github.com/Atvriders/your-next-ham-license">GitHub &amp; README</a> &middot; <a href="https://github.com/Atvriders/your-next-ham-license/blob/master/accuracy-canon.md">Accuracy canon</a> &middot; <a href="../">Read the book</a> &middot; <a href="../practice.html">Practice test</a> &middot; <a href="../flashcards.html">Flashcards</a></p>
 </section>
 
@@ -267,12 +267,11 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     ["Signals & Emissions",""],["Antennas & Feedlines at General Depth",""],
     ["Safety & RF Exposure at General Depth",""]
   ];
-  // Track 0 = intro; track 1 = preface; tracks 2..12 = chapters (ch index 0..10)
+  // Track 0 = preface; tracks 1..11 = chapters (ch index 0..10)
   var TRACKS = [
-    { intro: true, title: "Introduction — How This Was Made", year: "" },
     { preface: true, title: "Preface — Why & How This Book Was Made", year: "" }
   ];
-  CHAPTERS.forEach(function (c, i) { TRACKS.push({ intro: false, ch: i, title: c[0], year: c[1] }); });
+  CHAPTERS.forEach(function (c, i) { TRACKS.push({ ch: i, title: c[0], year: c[1] }); });
 
   var VOICES = [
     { key: "andrew",  name: "Andrew",  accent: "US",         g: "M" },
@@ -288,7 +287,6 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
 
   function voiceByKey(k) { for (var i = 0; i < VOICES.length; i++) if (VOICES[i].key === k) return VOICES[i]; return VOICES[2]; }
   function srcFor(voiceKey, track) {
-    if (track.intro) return voiceKey === "ryan" ? "intro.mp3" : voiceKey + "-intro.mp3";
     if (track.preface) return voiceKey === "ryan" ? "preface.mp3" : voiceKey + "-preface.mp3";
     var n = ("0" + track.ch).slice(-2);
     return voiceKey === "ryan" ? "ch" + n + ".mp3" : voiceKey + "-ch" + n + ".mp3";
@@ -338,7 +336,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     var b = document.createElement("button");
     b.className = "trk"; b.type = "button"; b.dataset.i = i;
     var num = t.ch === undefined ? "&bull;" : String(t.ch + 1);
-    var title = (t.intro || t.preface) ? '<span class="intro-tag">' + t.title + '</span>' : t.title;
+    var title = t.preface ? '<span class="front-tag">' + t.title + '</span>' : t.title;
     var yr = t.year ? '<span class="yr tnum"> ' + t.year + '</span>' : "";
     b.innerHTML =
       '<span class="num tnum">' + num + '</span>' +
