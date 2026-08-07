@@ -30,6 +30,10 @@ jobs:
               echo "$base/${v}-ch${i}.mp3 audiobook/${v}-ch${i}.mp3" >> urls.txt
             done
           done
+          # intro: ryan -> intro.mp3 (fetched above), the rest -> <voice>-intro.mp3
+          for v in andrew ava sonia william natasha connor emily; do
+            echo "$base/${v}-intro.mp3 audiobook/${v}-intro.mp3" >> urls.txt
+          done
           # preface: ryan -> preface.mp3, the rest -> <voice>-preface.mp3
           echo "$base/preface.mp3 audiobook/preface.mp3" >> urls.txt
           for v in andrew ava sonia william natasha connor emily; do

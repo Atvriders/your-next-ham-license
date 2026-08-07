@@ -6,14 +6,23 @@ that it was written by Kimi K3 — an artificial intelligence made by
 Moonshot AI — running inside Kimi Code, and how to use the eight-voice edition. Kept separate from the chapter tracks so it
 can be regenerated on its own.
 
+Eight voices in four accents are supported, mirroring make_audiobook.py:
+the default voice (Ryan, British male) writes `intro.mp3`; every other
+voice writes `<key>-intro.mp3`, so the intro is voice-switchable in the
+player like every other track.
+
 Usage:
-  python tools/make_intro.py        # writes audiobook/intro.mp3
-  python tools/make_intro.py --dry  # print the intro text and exit (no synth, no network)
+  python tools/make_intro.py                 # default voice (ryan) -> audiobook/intro.mp3
+  python tools/make_intro.py --voice sonia   # one voice -> audiobook/sonia-intro.mp3
+  python tools/make_intro.py --all           # every voice
+  python tools/make_intro.py --dry           # print the intro text and exit (no synth, no network)
 
 Requires: edge-tts (pip install edge-tts) and ffmpeg on PATH.
-Edit VOICE or INTRO and rerun to change the narration.
+Edit INTRO and rerun to change the narration. Resumable: a voice whose
+MP3 already exists (> 100 KB) is skipped unless --force is given.
 """
 
+import argparse
 import asyncio
 import subprocess
 import sys
@@ -21,8 +30,11 @@ from pathlib import Path
 
 import edge_tts
 
-VOICE = "en-GB-RyanNeural"
-OUT = Path(__file__).resolve().parent.parent / "audiobook" / "intro.mp3"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from tools.make_audiobook import DEFAULT_VOICE, VOICES
+
+OUT_DIR = Path(__file__).resolve().parent.parent / "audiobook"
 
 INTRO = """Your Next Ham License: The General Course, 2023 to 2027. A welcome back.
 
@@ -35,13 +47,22 @@ This edition is offered in eight voices — American, British, Australian, and I
 And now — Your Next Ham License. Your upgrade begins whenever you are ready."""
 
 
-async def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    raw = OUT.with_suffix(".raw.mp3")
+def dest_name(voice_key: str) -> str:
+    """MP3 filename for a voice's intro: intro.mp3 for the default voice,
+    <key>-intro.mp3 for the rest — the same convention as the chapters."""
+    return "intro.mp3" if voice_key == DEFAULT_VOICE else f"{voice_key}-intro.mp3"
+
+
+async def synth_voice(voice_key: str, force: bool) -> str:
+    voice, label, accent, gender = VOICES[voice_key]
+    out = OUT_DIR / dest_name(voice_key)
+    if not force and out.exists() and out.stat().st_size > 100_000:
+        return f"skip  {out.name} (exists)"
+    raw = out.with_suffix(".raw.mp3")
     last = None
     for attempt in range(1, 6):
         try:
-            await edge_tts.Communicate(INTRO, VOICE).save(str(raw))
+            await edge_tts.Communicate(INTRO, voice).save(str(raw))
             if raw.stat().st_size > 500:
                 break
             raise RuntimeError("empty audio")
@@ -61,16 +82,41 @@ async def main() -> None:
             "-metadata", "track=0/11",
             "-metadata", "genre=Audiobook",
             "-metadata", "date=2026",
-            str(OUT),
+            "-metadata", f"composer={label}",
+            "-metadata", f"comment=Read by {label} ({accent} {gender})",
+            str(out),
         ],
         check=True,
     )
     raw.unlink(missing_ok=True)
-    print(f"wrote {OUT} ({OUT.stat().st_size} bytes)")
+    return f"done  {out.name} ({out.stat().st_size} bytes) — {label}"
+
+
+async def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--voice", choices=list(VOICES), default=DEFAULT_VOICE)
+    ap.add_argument("--all", action="store_true", help="build every voice")
+    ap.add_argument("--force", action="store_true", help="rebuild existing files")
+    ap.add_argument("--dry", action="store_true",
+                    help="print the intro text and exit (no synth, no network)")
+    args = ap.parse_args()
+
+    if args.dry:
+        print(INTRO)
+        return
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    keys = list(VOICES) if args.all else [args.voice]
+    failed = []
+    for key in keys:
+        try:
+            print(await synth_voice(key, args.force), flush=True)
+        except Exception as e:  # noqa: BLE001 - report and continue with other voices
+            failed.append(f"{key}: {e}")
+    if failed:
+        print("FAILED:\n" + "\n".join(failed), flush=True)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
-    if "--dry" in sys.argv[1:]:
-        print(INTRO)
-        sys.exit(0)
     asyncio.run(main())

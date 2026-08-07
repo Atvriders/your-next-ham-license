@@ -288,7 +288,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
 
   function voiceByKey(k) { for (var i = 0; i < VOICES.length; i++) if (VOICES[i].key === k) return VOICES[i]; return VOICES[2]; }
   function srcFor(voiceKey, track) {
-    if (track.intro) return "intro.mp3";
+    if (track.intro) return voiceKey === "ryan" ? "intro.mp3" : voiceKey + "-intro.mp3";
     if (track.preface) return voiceKey === "ryan" ? "preface.mp3" : voiceKey + "-preface.mp3";
     var n = ("0" + track.ch).slice(-2);
     return voiceKey === "ryan" ? "ch" + n + ".mp3" : voiceKey + "-ch" + n + ".mp3";
@@ -369,8 +369,7 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     var t = TRACKS[index], v = voiceByKey(voiceKey);
     au.src = srcFor(voiceKey, t);
     nowTitle.innerHTML = t.title + (t.year ? ' <span class="yr">' + t.year + '</span>' : "");
-    if (t.intro) { readBy.textContent = "Ryan"; readAcc.textContent = "· British"; }
-    else { readBy.textContent = v.name; readAcc.textContent = "· " + v.accent; }
+    readBy.textContent = v.name; readAcc.textContent = "· " + v.accent;
     updateRows();
     au.load();
     if (autoplay) au.play().catch(function () {});
@@ -392,17 +391,15 @@ input[type="range"].seek:focus-visible { outline: 2px solid var(--beam); outline
     var v = voiceByKey(k);
     // switch source for current track, keep position where possible
     var t = TRACKS[index];
-    if (!t.intro) {
-      readBy.textContent = v.name; readAcc.textContent = "· " + v.accent;
-      var at = au.currentTime, wasPlaying = !au.paused;
-      au.src = srcFor(voiceKey, t); au.load();
-      var onMeta = function () {
-        au.removeEventListener("loadedmetadata", onMeta);
-        try { au.currentTime = Math.min(at, (au.duration || at) - 0.3); } catch (e) {}
-        if (wasPlaying) au.play().catch(function () {});
-      };
-      au.addEventListener("loadedmetadata", onMeta);
-    }
+    readBy.textContent = v.name; readAcc.textContent = "· " + v.accent;
+    var at = au.currentTime, wasPlaying = !au.paused;
+    au.src = srcFor(voiceKey, t); au.load();
+    var onMeta = function () {
+      au.removeEventListener("loadedmetadata", onMeta);
+      try { au.currentTime = Math.min(at, (au.duration || at) - 0.3); } catch (e) {}
+      if (wasPlaying) au.play().catch(function () {});
+    };
+    au.addEventListener("loadedmetadata", onMeta);
     persist();
   }
 
