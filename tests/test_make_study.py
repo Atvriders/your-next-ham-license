@@ -282,6 +282,18 @@ def test_both_pages_carry_the_same_inline_favicon():
     assert f'<link rel="icon" href="{icon}">' in flashcards
 
 
+def test_practice_drill_tally_keeps_the_question_position_after_answering():
+    records = build_fixture_records()
+    titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))
+    html = make_study.render_practice_html(
+        records, fixture_figures(), make_study.subelement_summaries(records, titles))
+    # one tally writer, called both when a drill question renders and after
+    # answering it, so "question n of N" survives the correctness update
+    assert "function updateDrillTally()" in html
+    assert html.count("updateDrillTally();") >= 2
+    assert '" of " + drillQueue.length' in html
+
+
 def test_practice_page_states_the_35_26_rule_and_drill_mode():
     records = build_fixture_records()
     titles = make_study.parse_subelement_titles((FIX / "study_pool.txt").read_text(encoding="utf-8"))

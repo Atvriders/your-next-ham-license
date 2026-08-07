@@ -87,17 +87,15 @@ SERIES_CURRENT = "General"  # this book; retargeted per book in the series
 # Fixed TOC label for the optional preface (front matter, no chapter number).
 PREFACE_TOC_LABEL = "Preface: Why & How This Book Was Made"
 
-# Inline SVG favicon (data URI, no network fetch): the series lantern in the
-# theme accent on an ink ground — the same glyph the audiobook player, the
-# study pages, and the series landing carry.
+# Inline SVG favicon (data URI, no network fetch): the series glyph in the
+# theme link color — the same glyph the audiobook player, the study pages,
+# and the series landing carry.
 _FAVICON = (
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E"
-    "%3Crect width='64' height='64' rx='14' fill='%23131110'/%3E"
-    "%3Cpath d='M27 13a5 5 0 0 1 10 0' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
-    "%3Cpath d='M25 20h14' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
-    "%3Cpath d='M26.5 23.5 24 46 40 46 37.5 23.5Z' fill='none' stroke='%23e8c877' stroke-width='3' stroke-linejoin='round'/%3E"
-    "%3Ccircle cx='32' cy='34' r='5' fill='%23ffe6ac'/%3E"
-    "%3Cpath d='M24 50h16' stroke='%23e8c877' stroke-width='3' stroke-linecap='round'/%3E"
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E"
+    "%3Cpath d='M8 6.5 4 15h8z' fill='none' stroke='%238a6a24' stroke-width='1.3' stroke-linejoin='round'/%3E"
+    "%3Cpath d='M8 6.5V15M6.1 11h3.8' stroke='%238a6a24' stroke-width='1.1'/%3E"
+    "%3Ccircle cx='8' cy='4.8' r='1.3' fill='%238a6a24'/%3E"
+    "%3Cpath d='M5.7 2.4a3.3 3.3 0 0 1 4.6 0M4 .7a5.7 5.7 0 0 1 8 0' fill='none' stroke='%238a6a24' stroke-width='1' stroke-linecap='round'/%3E"
     "%3C/svg%3E"
 )
 
@@ -420,7 +418,12 @@ h1, h2, h3, h4 { line-height: 1.25; }
 h4 { font-size: 1.05rem; color: var(--muted); margin: 2rem 0 0.5rem; }
 a { color: var(--link); }
 header.title-block { text-align: center; margin-bottom: 2.5rem; }
-nav.book-extras { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+nav.book-extras {
+  margin-top: 0.6rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
 nav.book-extras a { color: var(--link); text-decoration: none; }
 nav.book-extras a:hover { text-decoration: underline; }
 nav.toc { margin-bottom: 3rem; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
@@ -448,16 +451,11 @@ blockquote.worked-example {
   border-radius: 4px;
 }
 figure.figure { margin: 2rem 0; text-align: center; }
-figure.figure .figure-media {
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--rule) transparent;
-}
-figure.figure .figure-media::-webkit-scrollbar { height: 8px; }
-figure.figure .figure-media::-webkit-scrollbar-thumb {
-  background: var(--rule);
-  border-radius: 4px;
-}
+figure.figure .figure-media { overflow-x: auto; padding-bottom: 0.4rem;
+  scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
+figure.figure .figure-media::-webkit-scrollbar { height: 6px; }
+figure.figure .figure-media::-webkit-scrollbar-track { background: transparent; }
+figure.figure .figure-media::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 figure.figure svg { max-width: 100%; height: auto; }
 figcaption { font-size: 0.85em; color: var(--muted); margin-top: 0.5rem; }
 span.math { display: inline-block; vertical-align: middle; line-height: 0; }
